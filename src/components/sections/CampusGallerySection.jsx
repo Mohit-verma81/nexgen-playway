@@ -6,8 +6,11 @@ import SectionHeading from '../ui/SectionHeading.jsx'
 export default function CampusGallerySection() {
   const [lightbox, setLightbox] = useState(null)
 
-  // Duplicate images for seamless 100% infinite marquee loop
-  const marqueeList = [...GALLERY_IMAGES, ...GALLERY_IMAGES]
+  // Duplicate arrays for seamless 100% infinite marquee loops
+  const topList = [...GALLERY_IMAGES, ...GALLERY_IMAGES]
+  // Bottom row uses offset order for visual diversity across the two strips
+  const bottomImages = [...GALLERY_IMAGES.slice(5), ...GALLERY_IMAGES.slice(0, 5)]
+  const bottomList = [...bottomImages, ...bottomImages]
 
   useEffect(() => {
     if (!lightbox) return
@@ -33,9 +36,9 @@ export default function CampusGallerySection() {
         />
       </div>
 
-      {/* ================= CONTINUOUS HORIZONTAL MARQUEE STRIP ================= */}
-      <div className="relative w-full overflow-hidden py-4">
-        {/* Soft Left & Right Fade Edges */}
+      {/* ================= DUAL HORIZONTAL MARQUEE STRIPS ================= */}
+      <div className="relative w-full overflow-hidden py-4 flex flex-col gap-4 sm:gap-6">
+        {/* Soft Left & Right Fade Edges spanning both strips */}
         <div
           className="pointer-events-none absolute inset-y-0 left-0 z-10 w-12 sm:w-28 bg-gradient-to-r from-slate-50 to-transparent"
           aria-hidden="true"
@@ -45,15 +48,35 @@ export default function CampusGallerySection() {
           aria-hidden="true"
         />
 
-        {/* Marquee Track (Right to Left Moving Strip, Pauses on Hover) */}
+        {/* Strip 1: Moves Right to Left */}
         <div className="marquee-track flex gap-4 sm:gap-6">
-          {marqueeList.map((img, idx) => (
+          {topList.map((img, idx) => (
             <div
-              key={idx}
-              className="group relative shrink-0 cursor-pointer overflow-hidden rounded-3xl bg-white shadow-sm ring-1 ring-black/5 transition-transform duration-300 hover:scale-[1.02] hover:shadow-lg"
+              key={`top-${idx}`}
+              className="group relative shrink-0 cursor-pointer overflow-hidden rounded-2xl sm:rounded-3xl bg-white shadow-sm ring-1 ring-black/5 transition-transform duration-300 hover:scale-[1.02] hover:shadow-lg"
               onClick={() => setLightbox(img)}
             >
-              <div className="h-48 w-64 sm:h-60 sm:w-80 md:h-64 md:w-96 overflow-hidden bg-gray-100">
+              <div className="h-40 w-56 sm:h-52 sm:w-72 md:h-56 md:w-80 overflow-hidden bg-gray-100">
+                <img
+                  src={img.src}
+                  alt={img.alt}
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Strip 2: Moves Left to Right */}
+        <div className="marquee-track-reverse flex gap-4 sm:gap-6">
+          {bottomList.map((img, idx) => (
+            <div
+              key={`bottom-${idx}`}
+              className="group relative shrink-0 cursor-pointer overflow-hidden rounded-2xl sm:rounded-3xl bg-white shadow-sm ring-1 ring-black/5 transition-transform duration-300 hover:scale-[1.02] hover:shadow-lg"
+              onClick={() => setLightbox(img)}
+            >
+              <div className="h-40 w-56 sm:h-52 sm:w-72 md:h-56 md:w-80 overflow-hidden bg-gray-100">
                 <img
                   src={img.src}
                   alt={img.alt}
