@@ -1,0 +1,303 @@
+================================================================
+  NEXGEN LEARNING HUB — WEBSITE CONTENT & ASSET REFERENCE
+================================================================
+
+----------------------------------------------------------------
+  BRAND & IDENTITY
+----------------------------------------------------------------
+Brand Name        : NexGen Learning Hub
+Sub-brand         : Playway
+Tagline           : Play… Learn… Grow Together!
+Sub-tagline       : Dance · Friends · Fun · NexGen
+
+Logo              : asset/logo.png
+  (Official PNG logo — use as-is; do NOT create a fake wordmark)
+
+----------------------------------------------------------------
+  CONTACT DETAILS
+----------------------------------------------------------------
+Phone 1           : +919914300819
+Phone 2           : +919463150819
+
+WhatsApp Link     : https://wa.me/919914300819?text=Hi%2C%20I%20want%20to%20know%20about%20Playway%20admission.
+
+Address           : House No. 7, Sector 20 B, Motia Khan, Mandi Gobindgarh
+
+Google Maps Embed :
+  <iframe
+    title="Map of NexGen Learning Hub Playway"
+    loading="lazy"
+    src="https://maps.google.com/maps?q=Motia%20Khan%20Sector%2020B%20Mandi%20Gobindgarh&output=embed">
+  </iframe>
+
+Google Maps Directions Link:
+  https://www.google.com/maps/search/?api=1&query=NexGen+Learning+Hub+Motia+Khan+Mandi+Gobindgarh
+
+Founder           : Sonia Arya
+Instagram Handle  : @nexgenhub123
+Instagram URL     : https://www.instagram.com/nexgenhub123
+
+----------------------------------------------------------------
+  CONTACT SECTION BUTTONS (ready-to-use HTML)
+----------------------------------------------------------------
+<div class="vbtns">
+  <a class="btn btn-navy" href="tel:+919914300819">📞 Call Now</a>
+  <a class="btn btn-green" id="waVisit"
+     href="https://wa.me/919914300819?text=Hi%2C%20I%20want%20to%20know%20about%20Playway%20admission."
+     target="_blank" rel="noopener">💬 WhatsApp</a>
+  <a class="btn btn-line"
+     href="https://www.google.com/maps/search/?api=1&query=NexGen+Learning+Hub+Motia+Khan+Mandi+Gobindgarh"
+     target="_blank" rel="noopener">🧭 Directions</a>
+</div>
+
+----------------------------------------------------------------
+  NAVIGATION LINKS
+----------------------------------------------------------------
+Programs | Why NexGen | Activities | Campus | Parent Speak | FAQ | Contact
+CTA: Admission Enquiry
+
+----------------------------------------------------------------
+  HERO SECTION
+----------------------------------------------------------------
+Badge             : 🎈 Admissions Open
+Headline          : Where Little Learners Play, Learn & Grow Together
+Supporting Copy   : A joyful beginning with caring teachers, creative activities and play-based learning.
+Primary CTA       : Book a School Visit
+Secondary Link    : Call 99143 00819
+
+Hero Image        : asset/Girl Building Colorful Blocks-1.png
+  (Cheerful girl with colourful building blocks — use as hero photo)
+
+Hero Decorations  :
+  - asset/Smiling sun.jfif
+  - asset/Paper airplane.jfif
+  - asset/Stars and doodles.jfif
+
+----------------------------------------------------------------
+  ADMISSION ENQUIRY FORM
+----------------------------------------------------------------
+Fields:
+  1. Parent's Name *      (required)
+  2. Mobile Number *      (required, +91 prefix, Indian 10-digit validation)
+  3. Program *            (required select):
+       - Playgroup
+       - Nursery
+       - LKG
+       - UKG
+       - Tuition (Class 4–10)
+       - Other programs
+  4. Child's Age          (optional, e.g. 3 years)
+  5. Consent checkbox *   (required):
+       "I agree to be contacted by NexGen Learning Hub about admissions."
+
+Submit Button     : Request a Call Back
+Helper Text       : Leave your details and we'll call you back shortly.
+
+WhatsApp fallback : https://wa.me/919914300819?text=Hi%2C%20I%20want%20to%20know%20about%20Playway%20admission.
+
+----------------------------------------------------------------
+  HIGHLIGHTS BAR (below hero)
+----------------------------------------------------------------
+🧘 Yoga & Meditation
+💃 Dance & Music
+🎨 Art & Creativity
+📺 Smart Screen Learning
+🛝 Safe Play Zone
+
+----------------------------------------------------------------
+  PROGRAMS SECTION
+----------------------------------------------------------------
+Heading     : Our Programs — The Right Start for Every Age
+Subheading  : Gentle, activity-based learning that grows with your child,
+              from first steps in school to getting ready for Class 1.
+
+Cards:
+  [1] Playgroup   | 2–3 years | A happy first step into school with songs, play, movement and making friends.      | CTA: Enquire for Playgroup →
+  [2] Nursery     | 3–4 years | Early letters, numbers, colours and shapes through stories, rhymes and activities. | CTA: Enquire for Nursery →
+  [3] LKG         | 4–5 years | Building reading, writing and number skills with confidence and curiosity.         | CTA: Enquire for LKG →
+  [4] UKG         | 5–6 years | School-readiness with stronger basics, communication skills and good habits.       | CTA: Enquire for UKG →
+
+----------------------------------------------------------------
+  WHY NEXGEN SECTION
+----------------------------------------------------------------
+Heading     : Why NexGen Playway — A Place Where Children Love to Learn
+Subheading  : Dedication today, success tomorrow. Here is what parents value most.
+
+Feature Points:
+  👩‍🏫  Friendly, Experienced Faculty  — Warm teachers who make every child feel safe and seen.
+  🤝  Personal Attention              — Small batch sizes so each child gets individual focus.
+  🏫  Child-Friendly Campus           — Bright murals, soft foam flooring and kid-sized furniture.
+  📺  Smart Learning                  — Visual lessons on a smart screen make ideas easy to grasp.
+  🧘  Yoga & Dance                    — Movement every week for fitness, focus and happy hearts.
+  🎨  Creative Expression             — "Every child is an artist": colours, crafts and imagination.
+  👨‍👩‍👧  Parent–Teacher Connect          — Regular interaction so parents always know how their child is doing.
+  🌱  Overall Growth                  — Confidence, communication and good habits, not just academics.
+
+----------------------------------------------------------------
+  ACTIVITIES SECTION
+----------------------------------------------------------------
+Heading     : Learning Through Joy — Every Day Is an Adventure
+Subheading  : At NexGen Playway, children learn through play, music, movement and creativity.
+
+Activity Cards:
+  [1] Yoga Activity   — Meditation, breathing exercises and simple yoga poses. Little yogis in action!
+  [2] Dance Activity  — Fun dance moves, rhythm and coordination. Happy feet, happy hearts!
+  [3] Art & Creativity — Colours, crafts and imagination.
+  [4] Play Zone        — A safe space for slides, balls and big smiles.
+  [5] Smart Learning   — Visual lessons that make ideas click.
+
+----------------------------------------------------------------
+  CAMPUS GALLERY SECTION
+----------------------------------------------------------------
+Heading     : Campus Tour — Take a Peek Inside
+Subheading  : Tap any photo to see it bigger. Better still, visit us in person.
+
+Gallery image subjects (replace placeholders with real photos):
+  - NexGen Playway & Academy building
+  - Children in classroom
+  - Activity hall with green carpet
+  - "Every child is an artist" wall
+  - Decorated entrance with tree mural
+  - Play area
+  - Classroom with smart screen
+  - NexGen Playway wall sign
+  - Welcome board with monkey mural
+  - Smart screen with alphabets
+  - Reception area
+  - Counselling room
+
+Available asset for gallery : asset/Building blocks.jfif
+
+----------------------------------------------------------------
+  LEARNING HUB SECTION
+----------------------------------------------------------------
+Heading     : NexGen Learning Hub — Growing Together, Beyond Playway
+Subheading  : As your child grows, NexGen grows with them.
+              Our Learning Hub offers guidance for every stage.
+
+Offerings:
+  - Tuition · Classes 4–10
+  - +1 & +2 Commerce
+  - Computer Courses
+  - Spoken English
+  - Personality Development
+  - AI Classes
+  - Vedic Math
+
+CTA         : 🎁 Book a Free Demo / Visit
+Helper Text : Come see how your child enjoys learning with us. No obligation.
+
+----------------------------------------------------------------
+  PARENT SPEAK SECTION
+----------------------------------------------------------------
+Heading     : What Parents Say About Us
+
+STATUS: Placeholder only — do NOT fabricate reviews, names, videos or ratings.
+  🎥 Parent video #1     → [Add a short parent video or quote here]
+  💬 Parent review #2    → [Add a real parent review here]
+  ⭐ Google rating        → [Show the Google Business rating here]
+
+----------------------------------------------------------------
+  FAQ SECTION
+----------------------------------------------------------------
+Heading     : FAQs — Questions Parents Often Ask
+
+Q1. What is the admission process?
+    Fill in the enquiry form or call us. Our team will call you back,
+    invite you for a school visit, and guide you through the next steps.
+
+Q2. Which age groups do you take?
+    [Contact school for details — do not invent]
+
+Q3. What activities will my child do?
+    [Contact school for details — do not invent]
+
+Q4. What are the fees and timings?
+    [Contact school for details — do not invent]
+
+Q5. Can I visit the school before admission?
+    [Contact school for details — do not invent]
+
+Q6. Do you offer classes for older children too?
+    [Contact school for details — do not invent]
+
+----------------------------------------------------------------
+  CONTACT SECTION
+----------------------------------------------------------------
+Heading     : Visit Us — Come, Say Hello!
+
+Address     : House No. 7, Sector 20 B, Motia Khan, Mandi Gobindgarh
+Phone       : 99143 00819 · 94631 50819
+Founder     : Sonia Arya
+Instagram   : @nexgenhub123 → https://www.instagram.com/nexgenhub123
+
+Map Embed   :
+  <iframe
+    title="Map of NexGen Learning Hub Playway"
+    loading="lazy"
+    src="https://maps.google.com/maps?q=Motia%20Khan%20Sector%2020B%20Mandi%20Gobindgarh&output=embed">
+  </iframe>
+
+Buttons     :
+  📞 Call Now   → tel:+919914300819
+  💬 WhatsApp   → https://wa.me/919914300819?text=Hi%2C%20I%20want%20to%20know%20about%20Playway%20admission.
+  🧭 Directions → https://www.google.com/maps/search/?api=1&query=NexGen+Learning+Hub+Motia+Khan+Mandi+Gobindgarh
+
+----------------------------------------------------------------
+  FOOTER
+----------------------------------------------------------------
+Logo        : asset/logo.png
+Brand Name  : NexGen Learning Hub
+Sub-brand   : Playway
+Tagline     : Play… Learn… Grow Together!
+Sub-tagline : Dance · Friends · Fun · NexGen
+
+Quick Links : Programs | Why NexGen | Campus | FAQs | Admission Enquiry | Contact
+
+Address     : House No. 7, Sector 20 B, Motia Khan, Mandi Gobindgarh
+Phone 1     : 99143 00819
+Phone 2     : 94631 50819
+Instagram   : @nexgenhub123 → https://www.instagram.com/nexgenhub123
+
+Copyright   : © 2026 NexGen Learning Hub Playway.
+
+Sticky mobile bar (bottom-right floating buttons):
+  💬 WhatsApp → https://wa.me/919914300819
+  📞 Call     → tel:+919914300819
+
+----------------------------------------------------------------
+  AVAILABLE ASSETS SUMMARY
+----------------------------------------------------------------
+asset/logo.png                       → Official logo (use everywhere)
+asset/Girl Building Colorful Blocks-1.png → Hero image (primary)
+asset/Girl Building Colorful Blocks.png   → Hero image (alternate)
+asset/hero-section-idea.png          → Design reference only
+asset/Smiling sun.jfif               → Hero decoration SVG-style
+asset/Paper airplane.jfif            → Hero decoration
+asset/Stars and doodles.jfif         → Hero decoration
+asset/Building blocks.jfif           → Gallery / activities image
+asset/treeimage-1.svg                → Decorative tree mural SVG
+../Cheerful Girl Building a Colorful Block Tower-2.png → Hero alternate
+
+MISSING (use placeholders):
+  - Yoga activity photo
+  - Dance activity photo
+  - Art & creativity photo
+  - Play zone photo
+  - Smart learning / classroom photo
+  - Full campus gallery photos (10–12 images)
+  - Parent testimonial videos/quotes
+
+----------------------------------------------------------------
+  SEO METADATA
+----------------------------------------------------------------
+Page Title    : NexGen Learning Hub Playway | Preschool in Mandi Gobindgarh
+Meta Desc     : Discover NexGen Learning Hub Playway in Mandi Gobindgarh.
+                Explore play-based preschool learning, activities and admission enquiries.
+                Book a school visit today.
+OG Image      : asset/hero-section-idea.png (or hero child photo when available)
+Favicon       : asset/logo.png (crop/resize to 32×32 or 64×64)
+
+================================================================
+  END OF FILE
+================================================================

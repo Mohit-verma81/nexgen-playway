@@ -1,0 +1,222 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+
+  body {
+    overflow-x: hidden;
+    cursor: url('/paper-pointer.png') 3 3, auto;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Custom Paper Airplane Cursor for interactive elements */
+  a,
+  button,
+  [role="button"],
+  input[type="submit"],
+  select,
+  .custom-pointer-area {
+    cursor: url('/paper-pointer.png') 3 3, pointer;
+  }
+
+  section[id] {
+    scroll-margin-top: 76px;
+  }
+
+  /* Reset cursor to auto on touch devices for zero latency */
+  @media (pointer: coarse) {
+    body,
+    a,
+    button,
+    [role="button"],
+    input,
+    select,
+    .custom-pointer-area {
+      cursor: auto !important;
+    }
+  }
+}
+
+@layer components {
+  .custom-pointer-area {
+    cursor: url('/paper-pointer.png') 3 3, pointer;
+  }
+
+  /* Extra large cursor variant */
+  .custom-pointer-xl {
+    cursor: url('/paper-pointer-64.png') 4 4, pointer;
+  }
+
+  .container-content {
+    max-width: 1240px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    @screen sm {
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+    }
+
+    @screen md {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+
+    @screen lg {
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
+    }
+  }
+
+  .section-pad {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
+    @screen md {
+      padding-top: 4.5rem;
+      padding-bottom: 4.5rem;
+    }
+
+    @screen lg {
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+    }
+  }
+
+  .hero-blob {
+    border-radius: 60% 40% 50% 60% / 50% 55% 45% 60%;
+  }
+
+  .btn-primary,
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 font-extrabold rounded-full transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary;
+  }
+
+  .btn-primary {
+    @apply bg-primary hover:bg-primary-hover text-white shadow-sm hover:shadow-md px-5 py-3 text-sm sm:px-6 sm:text-base;
+  }
+
+  .btn-outline {
+    @apply border-2 border-primary text-primary hover:bg-primary hover:text-white px-5 py-3 text-sm sm:px-6 sm:text-base;
+  }
+
+  /* Continuous Horizontal Marquee Strip */
+  .marquee-track {
+    display: flex;
+    width: max-content;
+    animation: marqueeScroll 45s linear infinite;
+  }
+
+  .marquee-track:hover {
+    animation-play-state: paused;
+  }
+
+  /* Butterfly 3D Wing Flutter Animation */
+  .animate-butterfly-flap-left {
+    animation: butterflyFlapLeft 0.22s ease-in-out infinite alternate;
+    transform-style: preserve-3d;
+  }
+
+  .animate-butterfly-flap-right {
+    animation: butterflyFlapRight 0.22s ease-in-out infinite alternate;
+    transform-style: preserve-3d;
+  }
+
+  /* Gentle Floating Cloud Illustrations */
+  .animate-float-slow {
+    animation: floatSlow 4.5s ease-in-out infinite;
+  }
+
+  .animate-float-delayed {
+    animation: floatDelayed 5.5s ease-in-out infinite 1s;
+  }
+
+  /* Organic Testimonial Cloud / Speech Bubble Mask */
+  .testimonial-one__bg {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    max-width: 1119px;
+    background-color: #6FBD30;
+    -webkit-mask-image: url('/assets/illustrations/testimonial-bubble.svg');
+    mask-image: url('/assets/illustrations/testimonial-bubble.svg');
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+  }
+}
+
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(2deg);
+  }
+}
+
+@keyframes floatDelayed {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(7px) rotate(-2deg);
+  }
+}
+
+@keyframes butterflyFlapLeft {
+  0% {
+    transform: rotateY(0deg) scaleX(1);
+  }
+  100% {
+    transform: rotateY(72deg) scaleX(0.2);
+  }
+}
+
+@keyframes butterflyFlapRight {
+  0% {
+    transform: rotateY(0deg) scaleX(1);
+  }
+  100% {
+    transform: rotateY(-72deg) scaleX(0.2);
+  }
+}
+
+@keyframes marqueeScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .marquee-track {
+    animation: none !important;
+    overflow-x: auto;
+  }
+}
