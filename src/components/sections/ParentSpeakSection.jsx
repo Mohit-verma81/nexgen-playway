@@ -107,13 +107,20 @@ export default function ParentSpeakSection() {
         <div className="relative mx-auto max-w-4xl">
 
           {/* ================= ORGANIC CLOUD / SPEECH BUBBLE TESTIMONIAL ================= */}
-          <div className="relative mx-auto flex items-center justify-center py-6 sm:py-10 md:py-12">
+          <div className="relative mx-auto flex items-center justify-center py-4 sm:py-10 md:py-12">
             
-            {/* Masked Organic Background using .testimonial-one__bg */}
-            <div className="testimonial-one__bg drop-shadow-2xl" aria-hidden="true" />
+            {/* Masked Organic Background using .testimonial-one__bg (active on sm+ screens) */}
+            <div className="hidden sm:block testimonial-one__bg drop-shadow-2xl" aria-hidden="true" />
 
-            {/* Testimonial Content sitting on top of the organic cloud shape */}
-            <div className="relative z-10 w-full max-w-2xl px-6 py-12 sm:px-12 sm:py-16 md:px-14 md:py-20 text-center text-white">
+            {/* Mobile Cloud Puffs (gives genuine organic cloud contours on mobile without masking text) */}
+            <div className="sm:hidden pointer-events-none absolute -top-3 left-6 h-8 w-20 rounded-full bg-[#6FBD30]" aria-hidden="true" />
+            <div className="sm:hidden pointer-events-none absolute -top-5 left-20 h-12 w-28 rounded-full bg-[#6FBD30]" aria-hidden="true" />
+            <div className="sm:hidden pointer-events-none absolute -top-3 right-6 h-9 w-24 rounded-full bg-[#6FBD30]" aria-hidden="true" />
+            <div className="sm:hidden pointer-events-none absolute -bottom-3 left-8 h-8 w-20 rounded-full bg-[#6FBD30]" aria-hidden="true" />
+            <div className="sm:hidden pointer-events-none absolute -bottom-4 right-10 h-10 w-24 rounded-full bg-[#6FBD30]" aria-hidden="true" />
+
+            {/* Testimonial Content sitting safely inside the card */}
+            <div className="relative z-10 w-full max-w-2xl rounded-[32px] bg-[#6FBD30] sm:bg-transparent sm:rounded-none px-6 py-8 sm:px-12 sm:py-16 md:px-14 md:py-20 text-center text-white shadow-xl sm:shadow-none">
               
               {/* Playful Decorative Green Accent Doodle inside */}
               <div
@@ -127,50 +134,50 @@ export default function ParentSpeakSection() {
               </div>
 
               {/* Eyebrow: Hand-written preschool font */}
-              <span className="font-hand text-2xl sm:text-3xl text-white/95 tracking-wide block">
+              <span className="font-hand text-xl sm:text-3xl text-white/95 tracking-wide block">
                 Parent Testimonials
               </span>
 
               {/* Bubbly Headline: Fredoka font */}
-              <h2 className="mt-1 font-fredoka text-2xl font-bold text-white sm:text-4xl md:text-5xl leading-tight tracking-tight">
+              <h2 className="mt-1 font-fredoka text-xl font-bold text-white sm:text-4xl md:text-5xl leading-snug sm:leading-tight tracking-tight">
                 Parents' words are the <br className="hidden sm:inline" />
                 key to happy kids
               </h2>
 
               {/* Testimonial Quote Paragraph */}
-              <div className="mx-auto mt-6 max-w-xl sm:mt-8 min-h-[90px] sm:min-h-[80px] flex items-center justify-center">
+              <div className="mx-auto mt-4 sm:mt-8 max-w-xl min-h-[90px] sm:min-h-[80px] flex items-center justify-center">
                 <p className="font-fredoka text-sm sm:text-base md:text-lg leading-relaxed text-white/95 font-medium transition-opacity duration-300">
                   "{t.quote}"
                 </p>
               </div>
 
               {/* Bottom Row: Navigation Buttons (Left) & Parent Author (Right) */}
-              <div className="mt-8 sm:mt-10 flex flex-col-reverse sm:flex-row items-center justify-between gap-4 border-t border-white/20 pt-6">
+              <div className="mt-6 sm:mt-10 flex flex-row items-center justify-between gap-3 border-t border-white/20 pt-4 sm:pt-6">
                 
                 {/* Navigation Pill Circles (Left) */}
-                <div className="flex items-center gap-3">
+                <div className="flex items-center gap-2.5 sm:gap-3 shrink-0">
                   <button
                     onClick={prev}
                     aria-label="Previous Testimonial"
-                    className="flex h-11 w-11 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-[#529320] text-white shadow-md transition-all hover:scale-105 hover:bg-[#437A1A] active:scale-95 focus:outline-none focus:ring-2 focus:ring-white"
+                    className="flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-[#529320] text-white shadow-md transition-all hover:scale-105 hover:bg-[#437A1A] active:scale-95 focus:outline-none focus:ring-2 focus:ring-white"
                   >
-                    <ChevronLeft size={22} />
+                    <ChevronLeft size={20} className="sm:w-[22px] sm:h-[22px]" />
                   </button>
                   <button
                     onClick={next}
                     aria-label="Next Testimonial"
-                    className="flex h-11 w-11 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-[#529320] text-white shadow-md transition-all hover:scale-105 hover:bg-[#437A1A] active:scale-95 focus:outline-none focus:ring-2 focus:ring-white"
+                    className="flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-[#529320] text-white shadow-md transition-all hover:scale-105 hover:bg-[#437A1A] active:scale-95 focus:outline-none focus:ring-2 focus:ring-white"
                   >
-                    <ChevronRight size={22} />
+                    <ChevronRight size={20} className="sm:w-[22px] sm:h-[22px]" />
                   </button>
                 </div>
 
                 {/* Parent Name & Details (Right) */}
-                <div className="text-center sm:text-right">
-                  <h3 className="font-fredoka text-lg sm:text-xl font-bold text-white tracking-wide">
+                <div className="text-right">
+                  <h3 className="font-fredoka text-base sm:text-xl font-bold text-white tracking-wide leading-tight">
                     {t.author}
                   </h3>
-                  <p className="text-xs sm:text-sm font-medium text-white/80">
+                  <p className="text-xs sm:text-sm font-medium text-white/80 mt-0.5">
                     {t.role}
                   </p>
                 </div>

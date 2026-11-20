@@ -11,9 +11,9 @@ const HIGHLIGHTS = [
 
 export default function HeroSection() {
   return (
-    <section aria-label="Hero" className="overflow-hidden bg-white pt-16 sm:pt-20 md:pt-24 lg:pt-28">
+    <section aria-label="Hero" className="overflow-hidden bg-white pt-24 sm:pt-28 md:pt-28 lg:pt-28">
       <div className="container-content pb-8 sm:pb-12 md:pb-14">
-        <div className="flex flex-col items-center gap-8 lg:flex-row lg:gap-12">
+        <div className="flex flex-col items-center gap-6 sm:gap-8 lg:flex-row lg:gap-12">
 
           {/* Left: Content (Mobile: order-2, Desktop: order-1) */}
           <div className="order-2 w-full text-center lg:order-1 lg:w-[48%] lg:text-left">
@@ -49,7 +49,7 @@ export default function HeroSection() {
           </div>
 
           {/* Right: Image + decorations (Mobile: order-1, Desktop: order-2) */}
-          <div className="order-1 relative flex w-full justify-center lg:order-2 lg:w-[52%]">
+          <div className="order-1 relative flex w-full justify-center lg:order-2 lg:w-[52%] pt-3 pb-2 sm:py-0">
             {/* Soft decorative blob */}
             <div className="hero-blob absolute inset-0 bg-soft-blue" aria-hidden="true" />
 
@@ -68,19 +68,19 @@ export default function HeroSection() {
               src="/assets/illustrations/sun.jpg"
               alt=""
               aria-hidden="true"
-              className="absolute right-2 top-2 sm:right-4 sm:top-4 z-20 h-10 w-10 sm:h-14 sm:w-14 rounded-full object-cover shadow-sm mix-blend-multiply"
+              className="absolute right-0 top-1 sm:right-4 sm:top-4 z-20 h-11 w-11 sm:h-14 sm:w-14 rounded-full object-cover shadow-sm mix-blend-multiply"
             />
             <img
               src="/assets/illustrations/stars.jpg"
               alt=""
               aria-hidden="true"
-              className="absolute left-2 top-2 sm:left-4 sm:top-4 z-20 h-9 w-9 sm:h-12 sm:w-12 rounded-full object-cover mix-blend-multiply"
+              className="absolute left-0 top-1 sm:left-4 sm:top-4 z-20 h-10 w-10 sm:h-12 sm:w-12 rounded-full object-cover mix-blend-multiply"
             />
             <img
               src="/assets/illustrations/paper-plane.jpg"
               alt=""
               aria-hidden="true"
-              className="absolute bottom-4 left-4 sm:bottom-6 sm:left-6 z-20 h-9 w-9 sm:h-12 sm:w-12 rounded-full object-cover mix-blend-multiply"
+              className="absolute bottom-4 left-2 sm:bottom-6 sm:left-6 z-20 h-10 w-10 sm:h-12 sm:w-12 rounded-full object-cover mix-blend-multiply"
             />
           </div>
         </div>
