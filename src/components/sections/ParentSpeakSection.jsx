@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { ChevronLeft, ChevronRight } from 'lucide-react'
+import { ChevronLeft, ChevronRight, Play, X, Video, Sparkles, Volume2 } from 'lucide-react'
 
 const TESTIMONIALS = [
   {
@@ -28,9 +28,49 @@ const TESTIMONIALS = [
   },
 ]
 
+const VIDEO_STORIES = [
+  {
+    id: 'vid-1',
+    src: '/assets/events/parent-video-01.mp4',
+    parent: 'Simranjit Kaur',
+    child: "Aarav's Mother",
+    grade: 'Playgroup',
+    quote: 'Best decision for his early growth and smiles!',
+    accent: '#FF7043',
+  },
+  {
+    id: 'vid-2',
+    src: '/assets/events/parent-video-02.mp4',
+    parent: 'Mehulsinh Jadeja',
+    child: "Ananya's Father",
+    grade: 'Nursery',
+    quote: 'Caring teachers & wonderful joyful learning.',
+    accent: '#42A5F5',
+  },
+  {
+    id: 'vid-3',
+    src: '/assets/events/parent-video-03.mp4',
+    parent: 'Pooja Sharma',
+    child: "Reyansh's Mother",
+    grade: 'LKG',
+    quote: 'His confidence & speaking skills improved rapidly.',
+    accent: '#66BB6A',
+  },
+  {
+    id: 'vid-4',
+    src: '/assets/events/parent-video-04.mp4',
+    parent: 'Gurpreet Singh',
+    child: "Harleen's Father",
+    grade: 'UKG',
+    quote: 'Safe environment and attentive mentors every day.',
+    accent: '#AB47BC',
+  },
+]
+
 export default function ParentSpeakSection() {
   const [current, setCurrent] = useState(0)
   const [isPaused, setIsPaused] = useState(false)
+  const [activeVideo, setActiveVideo] = useState(null)
 
   const prev = () => setCurrent((c) => (c === 0 ? TESTIMONIALS.length - 1 : c - 1))
   const next = () => setCurrent((c) => (c === TESTIMONIALS.length - 1 ? 0 : c + 1))
@@ -41,6 +81,25 @@ export default function ParentSpeakSection() {
     const timer = setInterval(next, 6500)
     return () => clearInterval(timer)
   }, [isPaused])
+
+  // ESC key listener to close video modal
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') {
+        setActiveVideo(null)
+      }
+    }
+    if (activeVideo) {
+      document.body.style.overflow = 'hidden'
+      window.addEventListener('keydown', handleKeyDown)
+    } else {
+      document.body.style.overflow = ''
+    }
+    return () => {
+      document.body.style.overflow = ''
+      window.removeEventListener('keydown', handleKeyDown)
+    }
+  }, [activeVideo])
 
   const t = TESTIMONIALS[current]
 
@@ -53,7 +112,7 @@ export default function ParentSpeakSection() {
     >
       {/* ================= LEFT DOODLE: HAND-DRAWN SCHOOL BAG (OUTSIDE CLOUD) ================= */}
       <div
-        className="pointer-events-none absolute left-3 sm:left-6 lg:left-10 xl:left-16 top-1/2 -translate-y-1/2 z-20 hidden md:block select-none opacity-85 drop-shadow-sm animate-float-slow"
+        className="pointer-events-none absolute left-3 sm:left-6 lg:left-10 xl:left-16 top-40 z-20 hidden md:block select-none opacity-85 drop-shadow-sm animate-float-slow"
         aria-hidden="true"
       >
         <svg
@@ -78,7 +137,7 @@ export default function ParentSpeakSection() {
 
       {/* ================= RIGHT DOODLE: SPACE ROCKET (OUTSIDE CLOUD) ================= */}
       <div
-        className="pointer-events-none absolute right-3 sm:right-6 lg:right-10 xl:right-16 top-1/2 -translate-y-1/2 z-20 hidden md:block select-none opacity-85 drop-shadow-sm animate-float-delayed"
+        className="pointer-events-none absolute right-3 sm:right-6 lg:right-10 xl:right-16 top-40 z-20 hidden md:block select-none opacity-85 drop-shadow-sm animate-float-delayed"
         aria-hidden="true"
       >
         <svg
@@ -107,12 +166,12 @@ export default function ParentSpeakSection() {
         <div className="relative mx-auto max-w-4xl">
 
           {/* ================= ORGANIC CLOUD / SPEECH BUBBLE TESTIMONIAL ================= */}
-          <div className="relative mx-auto flex items-center justify-center py-4 sm:py-10 md:py-12">
+          <div className="relative mx-auto flex items-center justify-center py-4 sm:py-8 md:py-10">
             
             {/* Masked Organic Background using .testimonial-one__bg (active on sm+ screens) */}
             <div className="hidden sm:block testimonial-one__bg drop-shadow-2xl" aria-hidden="true" />
 
-            {/* Mobile Cloud Puffs (gives genuine organic cloud contours on mobile without masking text) */}
+            {/* Mobile Cloud Puffs */}
             <div className="sm:hidden pointer-events-none absolute -top-3 left-6 h-8 w-20 rounded-full bg-[#6FBD30]" aria-hidden="true" />
             <div className="sm:hidden pointer-events-none absolute -top-5 left-20 h-12 w-28 rounded-full bg-[#6FBD30]" aria-hidden="true" />
             <div className="sm:hidden pointer-events-none absolute -top-3 right-6 h-9 w-24 rounded-full bg-[#6FBD30]" aria-hidden="true" />
@@ -189,10 +248,155 @@ export default function ParentSpeakSection() {
           </div>
 
         </div>
+
+        {/* ================= VIDEO STORIES: 4 VERTICAL REEL CARDS ================= */}
+        <div className="mt-10 sm:mt-16 max-w-6xl mx-auto">
+          {/* Header */}
+          <div className="text-center mb-6 sm:mb-10">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-50 border border-amber-200 text-amber-700 text-xs sm:text-sm font-semibold tracking-wide">
+              <Sparkles size={14} className="text-amber-500" />
+              <span>Real Parents · Real Smiles</span>
+            </div>
+            <h3 className="mt-2.5 font-fredoka text-2xl sm:text-3xl md:text-4xl font-bold text-slate-800">
+              Watch Real Parent Stories
+            </h3>
+            <p className="mt-1.5 text-xs sm:text-base text-slate-500 max-w-lg mx-auto">
+              Tap on any story to hear directly how NexGen has transformed their child's early journey with confidence and joy.
+            </p>
+          </div>
+
+          {/* Reel Cards Grid */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-5">
+            {VIDEO_STORIES.map((item) => (
+              <div
+                key={item.id}
+                onClick={() => setActiveVideo(item)}
+                className="group relative cursor-pointer overflow-hidden rounded-2xl sm:rounded-3xl bg-slate-900 shadow-md hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1.5 ring-1 ring-slate-200/60"
+              >
+                {/* 9:14 Reel Aspect Ratio Container */}
+                <div className="relative aspect-[9/14] sm:aspect-[9/15] w-full overflow-hidden">
+                  {/* Background Video looping silently */}
+                  <video
+                    src={item.src}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    preload="metadata"
+                    className="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
+                  />
+
+                  {/* Gradient overlays for readability */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-black/30 pointer-events-none" />
+
+                  {/* Top Badge: Reel Tag */}
+                  <div className="absolute top-2.5 left-2.5 sm:top-3 sm:left-3 z-10">
+                    <span className="inline-flex items-center gap-1 sm:gap-1.5 rounded-full bg-black/40 backdrop-blur-md px-2 py-0.5 sm:px-2.5 sm:py-1 text-[10px] sm:text-xs font-medium text-white border border-white/20">
+                      <Video size={11} className="text-rose-400" />
+                      <span>Story</span>
+                    </span>
+                  </div>
+
+                  {/* Top Right: Volume Icon hint */}
+                  <div className="absolute top-2.5 right-2.5 sm:top-3 sm:right-3 z-10">
+                    <span className="flex h-6 w-6 sm:h-7 sm:w-7 items-center justify-center rounded-full bg-black/40 backdrop-blur-md text-white/80">
+                      <Volume2 size={12} className="sm:w-3.5 sm:h-3.5" />
+                    </span>
+                  </div>
+
+                  {/* Centered Play Button */}
+                  <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                    <div className="flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-full bg-white/90 text-primary shadow-xl backdrop-blur-sm transition-all duration-300 group-hover:scale-110 group-hover:bg-primary group-hover:text-white">
+                      <Play size={20} className="ml-1 sm:w-6 sm:h-6 fill-current" />
+                    </div>
+                  </div>
+
+                  {/* Bottom Info Card */}
+                  <div className="absolute bottom-0 inset-x-0 p-3 sm:p-4 text-white z-10">
+                    <span
+                      className="inline-block rounded-md px-2 py-0.5 text-[10px] sm:text-xs font-bold text-white shadow-sm mb-1.5"
+                      style={{ backgroundColor: item.accent }}
+                    >
+                      {item.grade}
+                    </span>
+                    <h4 className="font-fredoka text-sm sm:text-base font-bold leading-tight text-white drop-shadow-sm">
+                      {item.parent}
+                    </h4>
+                    <p className="text-[11px] sm:text-xs text-white/80 font-medium">
+                      {item.child}
+                    </p>
+                    <p className="mt-1 text-[10px] sm:text-xs text-white/90 italic line-clamp-1 border-t border-white/15 pt-1">
+                      "{item.quote}"
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
       </div>
 
+      {/* ================= FULLSCREEN VIDEO MODAL ================= */}
+      {activeVideo && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/85 backdrop-blur-md p-4 animate-in fade-in duration-200"
+          onClick={() => setActiveVideo(null)}
+          role="dialog"
+          aria-modal="true"
+        >
+          <div
+            className="relative w-full max-w-sm sm:max-w-md overflow-hidden rounded-3xl bg-slate-900 shadow-2xl ring-1 ring-white/20"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Modal Header */}
+            <div className="flex items-center justify-between border-b border-white/10 px-4 py-3 bg-slate-800/80">
+              <div className="flex items-center gap-2">
+                <span
+                  className="rounded-full px-2.5 py-0.5 text-xs font-bold text-white"
+                  style={{ backgroundColor: activeVideo.accent }}
+                >
+                  {activeVideo.grade}
+                </span>
+                <span className="text-xs sm:text-sm font-semibold text-white">
+                  {activeVideo.parent}
+                </span>
+              </div>
+              <button
+                onClick={() => setActiveVideo(null)}
+                aria-label="Close video"
+                className="flex h-8 w-8 items-center justify-center rounded-full bg-white/10 text-white hover:bg-white/20 transition-colors"
+              >
+                <X size={18} />
+              </button>
+            </div>
+
+            {/* Video Player */}
+            <div className="relative aspect-[9/16] max-h-[70vh] w-full bg-black">
+              <video
+                src={activeVideo.src}
+                controls
+                autoPlay
+                playsInline
+                className="h-full w-full object-contain"
+              />
+            </div>
+
+            {/* Modal Footer */}
+            <div className="p-4 bg-slate-800/80 border-t border-white/10">
+              <p className="text-xs sm:text-sm text-slate-200 font-medium">
+                "{activeVideo.quote}"
+              </p>
+              <p className="mt-1 text-[11px] sm:text-xs text-slate-400">
+                {activeVideo.child} · NexGen Learning Hub Playway
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* ================= BOTTOM BLUE WAVY ACCENT (MATCHING REFERENCE) ================= */}
-      <div className="relative w-full overflow-hidden leading-none mt-8 sm:mt-12">
+      <div className="relative w-full overflow-hidden leading-none mt-12 sm:mt-16">
         <svg
           viewBox="0 0 1440 36"
           preserveAspectRatio="none"

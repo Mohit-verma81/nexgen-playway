@@ -7,6 +7,7 @@ import EarlyEducationSection from './components/sections/EarlyEducationSection.j
 import WhyNexGenSection from './components/sections/WhyNexGenSection.jsx'
 import CampusGallerySection from './components/sections/CampusGallerySection.jsx'
 import VideoMomentsSection from './components/sections/VideoMomentsSection.jsx'
+import EventsSection from './components/sections/EventsSection.jsx'
 import ParentSpeakSection from './components/sections/ParentSpeakSection.jsx'
 import ContactSection from './components/sections/ContactSection.jsx'
 import FlyingButterfly from './components/ui/FlyingButterfly.jsx'
@@ -34,6 +35,7 @@ export default function App() {
         <WhyNexGenSection />
         <CampusGallerySection />
         <VideoMomentsSection />
+        <EventsSection />
         <ParentSpeakSection />
         <ContactSection />
         <EnquirySection />

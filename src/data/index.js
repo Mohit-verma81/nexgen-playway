@@ -2,6 +2,7 @@ export const NAV_LINKS = [
   { label: 'Programs', href: '#programs' },
   { label: 'Why NexGen', href: '#why-nexgen' },
   { label: 'Campus Tour', href: '#campus' },
+  { label: 'Events', href: '#events' },
   { label: 'Parent Speak', href: '#parent-speak' },
   { label: 'Contact', href: '#contact' },
 ]
@@ -153,10 +154,22 @@ export const GALLERY_IMAGES = [
     category: 'Campus',
   },
   {
+    src: '/assets/events/campus-activity-01.jpg',
+    alt: 'Active kids classroom engagement and toys',
+    title: 'Vibrant Play & Learning',
+    category: 'Activity',
+  },
+  {
     src: '/assets/images/campus-tour/entrance.jpg',
     alt: 'Decorated entrance with tree mural',
     title: 'Decorated Entrance & Tree Mural',
     category: 'Campus',
+  },
+  {
+    src: '/assets/events/celebration-02.jpg',
+    alt: 'Children enjoying festival celebrations',
+    title: 'Festive Celebrations & Costumes',
+    category: 'Celebration',
   },
   {
     src: '/assets/images/campus-tour/classroom-1.jpg',
@@ -165,15 +178,33 @@ export const GALLERY_IMAGES = [
     category: 'Classroom',
   },
   {
+    src: '/assets/events/campus-activity-06.jpg',
+    alt: 'Children engrossed in hands-on learning activity',
+    title: 'Hands-on Learning Fun',
+    category: 'Activity',
+  },
+  {
     src: '/assets/images/campus-tour/smart-tv.jpg',
     alt: 'Smart TV panel in classroom',
     title: 'Smart Screen Learning',
     category: 'Activity',
   },
   {
+    src: '/assets/events/celebration-15.jpg',
+    alt: 'Kids celebrating theme day at NexGen',
+    title: 'Colourful Theme Day Moments',
+    category: 'Celebration',
+  },
+  {
     src: '/assets/images/campus-tour/activity-hall.jpg',
     alt: 'Activity hall with soft green carpet',
     title: 'Activity & Movement Hall',
+    category: 'Activity',
+  },
+  {
+    src: '/assets/events/campus-activity-08.jpg',
+    alt: 'Indoor soft playroom with play blocks',
+    title: 'Safe Soft Play Zone',
     category: 'Activity',
   },
   {
@@ -183,9 +214,21 @@ export const GALLERY_IMAGES = [
     category: 'Activity',
   },
   {
+    src: '/assets/events/celebration-30.jpg',
+    alt: 'Joyful smiles during school celebration',
+    title: 'Happy Little Faces',
+    category: 'Celebration',
+  },
+  {
     src: '/assets/images/programs/playgroup-girl.jpg',
     alt: 'Children dance and musical session',
     title: 'Dance & Music Sessions',
+    category: 'Activity',
+  },
+  {
+    src: '/assets/events/campus-activity-11.jpg',
+    alt: 'Creative art and drawing session',
+    title: 'Art, Colors & Imagination',
     category: 'Activity',
   },
   {
@@ -195,10 +238,22 @@ export const GALLERY_IMAGES = [
     category: 'Activity',
   },
   {
+    src: '/assets/events/celebration-45.jpg',
+    alt: 'Group activity and friendship moments',
+    title: 'Bonding & Social Growth',
+    category: 'Celebration',
+  },
+  {
     src: '/assets/images/campus-tour/reception.jpg',
     alt: 'NexGen reception and counselling desk',
     title: 'Reception & Help Desk',
     category: 'Campus',
+  },
+  {
+    src: '/assets/events/campus-activity-14.jpg',
+    alt: 'Interactive playtime with safe toys',
+    title: 'Discovery & Motor Play',
+    category: 'Activity',
   },
   {
     src: '/assets/images/campus-tour/counselling-room.jpg',
@@ -207,15 +262,15 @@ export const GALLERY_IMAGES = [
     category: 'Campus',
   },
   {
+    src: '/assets/events/celebration-50.jpg',
+    alt: 'Little stars enjoying campus life',
+    title: 'Little Learners Growing Together',
+    category: 'Celebration',
+  },
+  {
     src: '/assets/images/campus-tour/welcome.jpg',
     alt: 'Welcome board with monkey mural',
     title: 'Welcome Board Mural',
-    category: 'Campus',
-  },
-  {
-    src: '/assets/images/campus-tour/wall-sign.jpg',
-    alt: 'NexGen Playway wall sign',
-    title: 'Campus Wall Signboard',
     category: 'Campus',
   },
   {
