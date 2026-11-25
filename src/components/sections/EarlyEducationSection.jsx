@@ -98,7 +98,7 @@ export default function EarlyEducationSection() {
               >
                 <div className="aspect-[4/3] w-full bg-amber-100 sm:aspect-[1.15/1]">
                   <img
-                    src="/assets/kindergarten.jpg"
+                    src="/assets/events/celebration-15.jpg"
                     alt="NexGen Kindergarten & Early Education Classroom"
                     className="h-full w-full object-cover"
                     loading="lazy"

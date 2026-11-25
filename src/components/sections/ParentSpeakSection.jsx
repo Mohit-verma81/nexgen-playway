@@ -250,7 +250,7 @@ export default function ParentSpeakSection() {
         </div>
 
         {/* ================= VIDEO STORIES: 4 VERTICAL REEL CARDS ================= */}
-        <div className="mt-10 sm:mt-16 max-w-6xl mx-auto">
+        <div id="parent-video-stories" className="mt-10 sm:mt-16 max-w-6xl mx-auto scroll-mt-24">
           {/* Header */}
           <div className="text-center mb-6 sm:mb-10">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-50 border border-amber-200 text-amber-700 text-xs sm:text-sm font-semibold tracking-wide">
