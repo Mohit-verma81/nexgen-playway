@@ -58,45 +58,33 @@ export default function EarlyEducationSection() {
 
           {/* ================= RIGHT IMAGE & ORGANIC BLOB COLUMN ================= */}
           <div className="lg:col-span-5 relative flex items-center justify-center">
-            <div className="relative w-full max-w-lg">
-              
-              {/* Playful Decorative Doodle Loops (matching reference design) */}
-              <svg
-                viewBox="0 0 500 450"
-                className="pointer-events-none absolute -inset-8 h-[116%] w-[116%] overflow-visible text-emerald-500"
-                aria-hidden="true"
-              >
-                {/* Green/Teal Dynamic Ribbon Loop */}
-                <path
-                  d="M 60 120 C 120 -20, 420 -30, 470 120 C 520 270, 430 430, 310 440 C 210 450, 10 380, 40 240 C 60 160, 160 80, 260 90"
-                  fill="none"
-                  stroke="#10B981"
-                  strokeWidth="5"
-                  strokeLinecap="round"
-                  opacity="0.8"
-                />
-                {/* Orange/Coral Accent Arch */}
-                <path
-                  d="M 370 70 Q 420 80 430 130"
-                  fill="none"
-                  stroke="#F59E0B"
-                  strokeWidth="5"
-                  strokeLinecap="round"
-                />
-                {/* Floating playful dot beads */}
-                <circle cx="440" cy="120" r="14" fill="#F59E0B" />
-                <circle cx="495" cy="270" r="8" fill="#10B981" />
-                <circle cx="20" cy="220" r="10" fill="#38BDF8" />
-              </svg>
-
-              {/* Organic Blob Photo Mask */}
+            <div className="relative w-full max-w-lg px-2 py-2">
+              {/* Tilted Organic Green Outline Frame (matching reference) */}
               <div
-                className="relative z-10 overflow-hidden shadow-2xl transition-transform duration-500 hover:scale-[1.01]"
-                style={{
-                  borderRadius: '42% 58% 70% 30% / 45% 45% 55% 55%',
-                }}
-              >
-                <div className="aspect-[4/3] w-full bg-amber-100 sm:aspect-[1.15/1]">
+                className="pointer-events-none absolute inset-0 rounded-[34px] sm:rounded-[40px] border-2 border-[#34D399]/85 -rotate-2 transition-transform duration-500"
+                aria-hidden="true"
+              />
+
+              {/* Floating Playful Dot Beads (matching reference positions) */}
+              {/* Top-Right Amber Circle */}
+              <div
+                className="pointer-events-none absolute -top-2 right-0 sm:-top-3 sm:-right-1 z-20 h-6 w-6 sm:h-8 sm:w-8 rounded-full bg-[#FBBF24] shadow-sm"
+                aria-hidden="true"
+              />
+              {/* Left-Middle Blue Dot */}
+              <div
+                className="pointer-events-none absolute -left-2 sm:-left-3 top-[58%] z-20 h-4 w-4 rounded-full bg-[#2563EB]/90 shadow-sm"
+                aria-hidden="true"
+              />
+              {/* Bottom-Right Emerald Dot */}
+              <div
+                className="pointer-events-none absolute -right-1.5 sm:-right-2.5 bottom-[14%] z-20 h-4 w-4 rounded-full bg-[#10B981] shadow-sm"
+                aria-hidden="true"
+              />
+
+              {/* Clean Soft Rounded-Rectangle Photo Frame (fits all kids cleanly) */}
+              <div className="relative z-10 overflow-hidden rounded-[28px] sm:rounded-[34px] border-4 border-white bg-amber-50 shadow-2xl transition-transform duration-500 hover:scale-[1.01]">
+                <div className="aspect-[4/3] w-full">
                   <img
                     src="/assets/events/celebration-15.jpg"
                     alt="NexGen Kindergarten & Early Education Classroom"

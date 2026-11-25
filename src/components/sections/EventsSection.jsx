@@ -14,12 +14,12 @@ const EVENT_CARDS = [
     iconType: 'diya',
     photos: [
       {
-        src: '/assets/events/halloween-01.jpg',
+        src: '/assets/events/halloween-02.jpg',
         title: 'Halloween Costume Assembly',
         caption: 'Children showcasing their creative and colourful costumes during the morning circle.',
       },
       {
-        src: '/assets/events/halloween-10.jpg',
+        src: '/assets/events/halloween-13.jpg',
         title: 'Classroom Costume Parade',
         caption: 'Joyful smiles as little ones share their character stories with friends.',
       },
@@ -73,7 +73,7 @@ const EVENT_CARDS = [
   },
   {
     id: 'mindfulness',
-    title: 'Humble Hugs & Mindfulness',
+    title: 'Yoga',
     subtitle: 'A calm mind, a happy heart.',
     themeColor: '#7C3AED',
     bgColor: 'bg-[#FAF5FF]',
@@ -119,7 +119,7 @@ const EVENT_CARDS = [
   },
   {
     id: 'color-days',
-    title: 'Color Days & Theme Celebrations',
+    title: 'Birthday Celebrations',
     subtitle: 'A splash of colors and endless joy.',
     themeColor: '#2563EB',
     bgColor: 'bg-[#EFF6FF]',
