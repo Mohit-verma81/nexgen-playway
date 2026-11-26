@@ -295,7 +295,7 @@ export default function ParentSpeakSection() {
                     loop
                     muted
                     playsInline
-                    preload="metadata"
+                    preload="none"
                     className="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
                   />
 

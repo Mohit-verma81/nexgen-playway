@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="/assets/logo/logo.png" />
+    <link rel="preload" as="image" href="/assets/logo/logo.png" fetchpriority="high" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NexGen Learning Hub Playway | Preschool in Mandi Gobindgarh</title>
     <meta name="description" content="Discover NexGen Learning Hub Playway in Mandi Gobindgarh. Explore play-based preschool learning, activities and admission enquiries. Book a school visit today." />
@@ -13,8 +14,153 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&family=Baloo+2:wght@500;600;700;800&family=Fredoka:wght@400;500;600;700&family=Patrick+Hand&display=swap" rel="stylesheet" />
+    <script>
+      window.__NLH_PRELOADER_START = performance.now();
+      try {
+        if (
+          sessionStorage.getItem('nexgen_intro_shown') === '1' ||
+          window.matchMedia('(prefers-reduced-motion: reduce)').matches
+        ) {
+          document.documentElement.classList.add('nlh-skip-preloader');
+        }
+      } catch (e) {}
+    </script>
+    <style>
+      .nlh-skip-preloader #nlh-preloader {
+        display: none !important;
+      }
+      #nlh-preloader {
+        position: fixed;
+        inset: 0;
+        z-index: 9999;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(160deg, #ffffff 0%, #eff6ff 60%, #dbeafe 100%);
+        opacity: 1;
+        transition: opacity 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+        user-select: none;
+      }
+      #nlh-preloader.nlh-preloader--hiding {
+        opacity: 0;
+        pointer-events: none;
+      }
+      .nlh-pre-blob {
+        position: absolute;
+        border-radius: 50%;
+        pointer-events: none;
+      }
+      .nlh-pre-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        animation: nlh-pop-in 0.65s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+      }
+      .nlh-pre-halo-wrap {
+        position: relative;
+      }
+      .nlh-pre-halo-outer {
+        position: absolute;
+        inset: -14px;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(250, 204, 21, 0.25) 0%, rgba(59, 130, 246, 0.12) 60%, transparent 80%);
+        animation: nlh-pulse-halo 1.8s ease-in-out infinite;
+      }
+      .nlh-pre-halo-inner {
+        position: absolute;
+        inset: -6px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.85);
+        box-shadow: 0 0 0 3px rgba(250, 204, 21, 0.3), 0 8px 32px rgba(59, 130, 246, 0.15);
+      }
+      .nlh-pre-logo {
+        position: relative;
+        width: 96px;
+        height: 96px;
+        border-radius: 50%;
+        object-fit: contain;
+        background: #ffffff;
+        padding: 6px;
+        box-shadow: 0 4px 24px rgba(59, 130, 246, 0.18);
+      }
+      .nlh-pre-dots {
+        display: flex;
+        gap: 10px;
+        margin-top: 4px;
+      }
+      .nlh-pre-dot {
+        display: block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        animation: nlh-bounce 0.9s ease-in-out infinite;
+      }
+      @keyframes nlh-pop-in {
+        0% { opacity: 0; transform: scale(0.76); }
+        65% { transform: scale(1.05); }
+        85% { transform: scale(0.98); }
+        100% { opacity: 1; transform: scale(1); }
+      }
+      @keyframes nlh-bounce {
+        0%, 100% { transform: translateY(0); }
+        45% { transform: translateY(-12px); }
+      }
+      @keyframes nlh-pulse-halo {
+        0%, 100% { transform: scale(1); opacity: 1; }
+        50% { transform: scale(1.12); opacity: 0.7; }
+      }
+      @keyframes nlh-twinkle {
+        0%, 100% { transform: scale(1) rotate(0deg); opacity: 1; }
+        50% { transform: scale(1.4) rotate(20deg); opacity: 0.6; }
+      }
+      @keyframes nlh-float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-10px); }
+      }
+    </style>
   </head>
   <body>
+    <!-- Immediate First-Paint Preloader (prevents blank white screen while JS loads) -->
+    <div id="nlh-preloader" aria-hidden="true">
+      <div class="nlh-pre-blob" style="top:12%;left:8%;width:80px;height:80px;background:radial-gradient(circle,#FEF9C3 0%,transparent 70%);animation:nlh-float 3s ease-in-out infinite;"></div>
+      <div class="nlh-pre-blob" style="bottom:15%;right:10%;width:60px;height:60px;background:radial-gradient(circle,#DBEAFE 0%,transparent 70%);animation:nlh-float 3.5s ease-in-out infinite reverse;"></div>
+      <div class="nlh-pre-blob" style="top:55%;left:5%;width:40px;height:40px;background:radial-gradient(circle,#FFEDD5 0%,transparent 70%);animation:nlh-float 2.8s ease-in-out infinite 0.5s;"></div>
+
+      <div class="nlh-pre-card">
+        <div class="nlh-pre-halo-wrap">
+          <div class="nlh-pre-halo-outer"></div>
+          <div class="nlh-pre-halo-inner"></div>
+          <img class="nlh-pre-logo" src="/assets/logo/logo.png" alt="NexGen Learning Hub" width="96" height="96" />
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#FACC15" aria-hidden="true" style="position:absolute;top:-8px;right:-8px;animation:nlh-twinkle 1.2s ease-in-out infinite;">
+            <path d="M12 2l1.8 6.2H20l-5 3.6 1.9 6.2L12 14l-4.9 4 1.9-6.2L4 8.2h6.2z" />
+          </svg>
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="#3B82F6" aria-hidden="true" style="position:absolute;bottom:-4px;left:-10px;animation:nlh-twinkle 1.2s ease-in-out infinite 0.4s;">
+            <path d="M12 2l1.8 6.2H20l-5 3.6 1.9 6.2L12 14l-4.9 4 1.9-6.2L4 8.2h6.2z" />
+          </svg>
+        </div>
+
+        <div style="text-align:center;line-height:1.2;">
+          <p style="font-family:'Baloo 2',ui-rounded,system-ui,sans-serif;font-size:1.6rem;font-weight:800;color:#0B2545;margin:0;letter-spacing:-0.01em;">
+            NexGen Learning Hub
+          </p>
+          <p style="font-family:'Fredoka',ui-rounded,system-ui,sans-serif;font-size:0.95rem;font-weight:600;color:#3B82F6;margin:2px 0 0;letter-spacing:0.08em;text-transform:uppercase;">
+            PLAYWAY
+          </p>
+          <p style="font-family:'Nunito',system-ui,sans-serif;font-size:0.78rem;color:#64748B;margin:6px 0 0;letter-spacing:0.02em;">
+            Where Little Learners Play, Learn &amp; Grow
+          </p>
+        </div>
+
+        <div class="nlh-pre-dots" role="status" aria-label="Loading">
+          <span class="nlh-pre-dot" style="background:#3B82F6;box-shadow:0 4px 8px rgba(59,130,246,0.35);animation-delay:0ms;"></span>
+          <span class="nlh-pre-dot" style="background:#FACC15;box-shadow:0 4px 8px rgba(250,204,21,0.35);animation-delay:160ms;"></span>
+          <span class="nlh-pre-dot" style="background:#FB923C;box-shadow:0 4px 8px rgba(251,146,60,0.35);animation-delay:320ms;"></span>
+        </div>
+      </div>
+    </div>
+
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>

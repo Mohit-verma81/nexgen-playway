@@ -86,6 +86,26 @@ export default function VideoMomentsSection() {
   const sectionRef = useRef(null);
   const videoRefs = useRef([]);
   const [soundIdx, setSoundIdx] = useState(null);
+  const [inView, setInView] = useState(false);
+
+  useEffect(() => {
+    const el = sectionRef.current;
+    if (!el || typeof IntersectionObserver === "undefined") {
+      setInView(true);
+      return;
+    }
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((e) => e.isIntersecting)) {
+          setInView(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "350px" }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
     const mm = gsap.matchMedia(sectionRef);
@@ -339,12 +359,12 @@ export default function VideoMomentsSection() {
                         }
                       }}
                       className="h-full w-full object-cover"
-                      src={b.src}
-                      autoPlay
+                      src={inView ? b.src : undefined}
+                      autoPlay={inView}
                       muted
                       loop
                       playsInline
-                      preload="metadata"
+                      preload={inView ? "metadata" : "none"}
                       aria-hidden="true"
                     />
                     <div
