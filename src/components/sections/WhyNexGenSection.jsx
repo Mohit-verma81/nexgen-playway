@@ -49,7 +49,7 @@ const HIGHLIGHTS = [
 
 export default function WhyNexGenSection() {
   return (
-    <section id="why-nexgen" className="bg-slate-50 section-pad">
+    <section id="why-nexgen" className="bg-slate-50 pt-12 pb-6 sm:pt-16 sm:pb-8">
       <div className="container-content">
         <SectionHeading
           eyebrow="Why NexGen"

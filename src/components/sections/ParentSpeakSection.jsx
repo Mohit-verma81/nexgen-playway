@@ -1,68 +1,72 @@
 import { useState, useEffect } from 'react'
-import { ChevronLeft, ChevronRight, Play, X, Video, Sparkles, Volume2 } from 'lucide-react'
+import { ChevronLeft, ChevronRight, Play, X, Video, Volume2 } from 'lucide-react'
 
 const TESTIMONIALS = [
   {
     quote:
-      'I admire their dedication towards kids learning and development, from syllabus to extra curricular activities, celebrations and good habits inculcation is just awesome.',
-    author: 'Mehulsinh Jadeja',
-    role: 'Playgroup Parent',
+      "I really enjoyed being part of today's event. The atmosphere was so engaging and fun that I feel like coming back again and again. Thank you so much for such a memorable experience.",
+    author: 'Event Attendee',
+    role: 'Parent · Mandi Gobindgarh',
   },
   {
     quote:
-      'My child was very shy initially, but within weeks she started clapping, singing rhymes, and genuinely looks forward to going to school every morning!',
-    author: 'Simranjit Kaur',
-    role: 'Nursery Parent · Sector 20 B',
+      "I had such a great time at today's event—it was so enjoyable that I'd love to join events like this every day. Huge congratulations on placing first in both diya making and rangoli making, and thank you for hosting such a wonderful celebration.",
+    author: 'Event Attendee',
+    role: 'Parent · Mandi Gobindgarh',
   },
   {
     quote:
-      'The Smart Screen digital lessons make a huge difference. He learns phonics visually, and the caring teachers personally communicate how the child is doing every day.',
-    author: 'Gurpreet Singh',
-    role: 'LKG Parent · Motia Khan',
+      "It felt wonderful to attend today's event. My child studies here and is always coming home having learned something new, and joining today gave me a great experience as well—something I'm excited about for my child's journey ahead.",
+    author: 'Happy Parent',
+    role: 'NexGen Playway · Mandi Gobindgarh',
   },
   {
     quote:
-      'From soft foam flooring to rounded child-safe furniture and individual 1:10 attention, NexGen gives total peace of mind for working parents.',
-    author: 'Pooja Sharma',
-    role: 'UKG Parent · Mandi Gobindgarh',
+      'The event was truly wonderful, and everyone thoroughly enjoyed themselves. Thank you so much for bringing everyone together, and all the best for next year.',
+    author: 'Event Attendee',
+    role: 'Parent · Mandi Gobindgarh',
   },
 ]
 
 const VIDEO_STORIES = [
   {
     id: 'vid-1',
-    src: '/assets/event/parent-videos/parent-video-02.mp4',
-    parent: 'Simranjit Kaur',
-    child: "Aarav's Mother",
-    grade: 'Playgroup',
-    quote: 'Best decision for his early growth and smiles!',
+    src: '/assets/event/parent-videos/parent-video-01.mp4',
+    roleLabel: 'Event Attendee',
+    shortQuote:
+      "I had such a wonderful time at the event—I enjoyed it so much that I'd love to experience it again and again. Truly the best!",
+    longQuote:
+      "I really enjoyed being part of today's event. The atmosphere was so engaging and fun that I feel like coming back again and again. Thank you so much for such a memorable experience.",
     accent: '#FF7043',
   },
   {
     id: 'vid-2',
-    src: '/assets/event/parent-videos/parent-video-01.mp4',
-    parent: 'Mehulsinh Jadeja',
-    child: "Ananya's Father",
-    grade: 'Nursery',
-    quote: 'Caring teachers & wonderful joyful learning.',
+    src: '/assets/event/parent-videos/parent-video-02.mp4',
+    roleLabel: 'Event Attendee',
+    shortQuote:
+      "I enjoyed today's event so much that I feel like attending gatherings like this every single day. Congratulations on coming first in both diya making and rangoli making!",
+    longQuote:
+      "I had such a great time at today's event—it was so enjoyable that I'd love to join events like this every day. Huge congratulations on placing first in both diya making and rangoli making, and thank you for hosting such a wonderful celebration.",
     accent: '#42A5F5',
   },
   {
     id: 'vid-3',
-    src: '/assets/event/parent-videos/parent-video-03.mp4',
-    parent: 'Pooja Sharma',
-    child: "Reyansh's Mother",
-    grade: 'LKG',
-    quote: 'His confidence & speaking skills improved rapidly.',
+    src: '/assets/event/parent-videos/parent-video-04.mp4',
+    roleLabel: 'Parent Attendee',
+    shortQuote:
+      'Coming here felt so welcoming. My child studies here and loves it, learning new things every time, and attending today was a wonderful first-time experience for me too.',
+    longQuote:
+      "It felt wonderful to attend today's event. My child studies here and is always coming home having learned something new, and joining today gave me a great experience as well—something I'm excited about for my child's journey ahead.",
     accent: '#66BB6A',
   },
   {
     id: 'vid-4',
-    src: '/assets/event/parent-videos/parent-video-04.mp4',
-    parent: 'Gurpreet Singh',
-    child: "Harleen's Father",
-    grade: 'UKG',
-    quote: 'Safe environment and attentive mentors every day.',
+    src: '/assets/event/parent-videos/parent-video-03.mp4',
+    roleLabel: 'Event Attendee',
+    shortQuote:
+      'It was a wonderful gathering where everyone had a great time. Wishing everyone all the best for the year ahead!',
+    longQuote:
+      'The event was truly wonderful, and everyone thoroughly enjoyed themselves. Thank you so much for bringing everyone together, and all the best for next year.',
     accent: '#AB47BC',
   },
 ]
@@ -253,8 +257,7 @@ export default function ParentSpeakSection() {
         <div id="parent-video-stories" className="mt-10 sm:mt-16 max-w-6xl mx-auto scroll-mt-24">
           {/* Header */}
           <div className="text-center mb-6 sm:mb-10">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-50 border border-amber-200 text-amber-700 text-xs sm:text-sm font-semibold tracking-wide">
-              <Sparkles size={14} className="text-amber-500" />
+            <div className="inline-flex items-center px-3 py-1 rounded-full bg-amber-50 border border-amber-200 text-amber-700 text-xs sm:text-sm font-semibold tracking-wide">
               <span>Real Parents · Real Smiles</span>
             </div>
             <h3 className="mt-2.5 font-fredoka text-2xl sm:text-3xl md:text-4xl font-bold text-slate-800">
@@ -321,24 +324,7 @@ export default function ParentSpeakSection() {
                     </div>
                   </div>
 
-                  {/* Bottom Info Card */}
-                  <div className="absolute bottom-0 inset-x-0 p-3 sm:p-4 text-white z-10">
-                    <span
-                      className="inline-block rounded-md px-2 py-0.5 text-[10px] sm:text-xs font-bold text-white shadow-sm mb-1.5"
-                      style={{ backgroundColor: item.accent }}
-                    >
-                      {item.grade}
-                    </span>
-                    <h4 className="font-fredoka text-sm sm:text-base font-bold leading-tight text-white drop-shadow-sm">
-                      {item.parent}
-                    </h4>
-                    <p className="text-[11px] sm:text-xs text-white/80 font-medium">
-                      {item.child}
-                    </p>
-                    <p className="mt-1 text-[10px] sm:text-xs text-white/90 italic line-clamp-1 border-t border-white/15 pt-1">
-                      "{item.quote}"
-                    </p>
-                  </div>
+                  {/* Clean video card — no text overlay */}
                 </div>
               </div>
             ))}
@@ -366,10 +352,10 @@ export default function ParentSpeakSection() {
                   className="rounded-full px-2.5 py-0.5 text-xs font-bold text-white"
                   style={{ backgroundColor: activeVideo.accent }}
                 >
-                  {activeVideo.grade}
+                  {activeVideo.roleLabel}
                 </span>
                 <span className="text-xs sm:text-sm font-semibold text-white">
-                  {activeVideo.parent}
+                  NexGen Learning Hub
                 </span>
               </div>
               <button
@@ -394,11 +380,8 @@ export default function ParentSpeakSection() {
 
             {/* Modal Footer */}
             <div className="p-4 bg-slate-800/80 border-t border-white/10">
-              <p className="text-xs sm:text-sm text-slate-200 font-medium">
-                "{activeVideo.quote}"
-              </p>
-              <p className="mt-1 text-[11px] sm:text-xs text-slate-400">
-                {activeVideo.child} · NexGen Learning Hub Playway
+              <p className="text-xs sm:text-sm text-slate-200 font-medium leading-relaxed">
+                "{activeVideo.longQuote}"
               </p>
             </div>
           </div>

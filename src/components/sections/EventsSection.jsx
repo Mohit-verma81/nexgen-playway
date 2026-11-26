@@ -441,8 +441,6 @@ export default function EventsSection() {
   }, [activeEvent, lightboxOpen])
 
   const orderedMedia = getOrderedMedia(activeEvent)
-  const videoItems = orderedMedia.filter((p) => p.type === 'video')
-  const imageItems = orderedMedia.filter((p) => p.type !== 'video')
   const currentPhoto = orderedMedia[modalIndex] || null
 
   return (
@@ -739,9 +737,9 @@ export default function EventsSection() {
               </div>
             </div>
 
-            {/* Square Grid Body (videos first, images flow right after with zero blank gap) */}
+            {/* Justified Photo Wall (Google Photos style: natural proportions, zero bottom gaps, zero radius) */}
             <div className="relative flex-1 overflow-y-auto p-2 sm:p-3 bg-white">
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-1 sm:gap-1.5">
+              <div className="flex flex-wrap gap-1 sm:gap-1.5 after:content-[''] after:flex-grow-[10]">
                 {orderedMedia.map((item, idx) => (
                   <button
                     key={item.src}
@@ -762,7 +760,7 @@ export default function EventsSection() {
                         v.currentTime = 0
                       }
                     }}
-                    className={`group relative aspect-[3/4] w-full overflow-hidden rounded-none transition-all duration-300 hover:brightness-95 focus:outline-none ${
+                    className={`group relative h-36 sm:h-48 md:h-56 flex-auto overflow-hidden rounded-none transition-all duration-300 hover:brightness-95 focus:outline-none ${
                       item.type === 'video' ? 'bg-slate-900' : 'bg-slate-100'
                     }`}
                   >
@@ -774,7 +772,7 @@ export default function EventsSection() {
                           loop
                           playsInline
                           preload="metadata"
-                          className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.03]"
+                          className="block h-full w-full min-w-[110px] object-cover transition-transform duration-300 group-hover:scale-[1.03]"
                         />
                         <span className="pointer-events-none absolute inset-0 flex items-center justify-center bg-black/20 transition-opacity duration-200 group-hover:opacity-0">
                           <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white/90 text-navy shadow-md">
@@ -787,7 +785,7 @@ export default function EventsSection() {
                         src={item.src}
                         alt={item.title}
                         loading="lazy"
-                        className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.03]"
+                        className="block h-full w-full min-w-[110px] object-cover transition-transform duration-300 group-hover:scale-[1.03]"
                       />
                     )}
                   </button>

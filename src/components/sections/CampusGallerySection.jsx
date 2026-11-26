@@ -41,7 +41,7 @@ export default function CampusGallerySection() {
   }, [lightbox])
 
   return (
-    <section id="campus" className="relative overflow-hidden bg-slate-50 section-pad">
+    <section id="campus" className="relative overflow-hidden bg-slate-50 pt-6 pb-12 sm:pt-8 sm:pb-16">
       <div className="container-content">
         <SectionHeading
           eyebrow="Campus Tour &amp; Activities"

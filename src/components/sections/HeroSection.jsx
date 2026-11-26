@@ -176,7 +176,7 @@ export default function HeroSection() {
               </a>
 
               <a
-                href="#parent-video-stories"
+                href="#campus"
                 className="inline-flex w-full sm:w-auto items-center justify-center gap-2.5 rounded-full border border-slate-200/90 bg-white px-5 py-3 text-sm font-bold text-navy shadow-sm transition-all hover:border-blue-200 hover:bg-slate-50"
               >
                 <span className="flex h-7 w-7 items-center justify-center rounded-full bg-navy text-white">
