@@ -23,7 +23,7 @@ export const EVENT_ITEMS = [
     "category": "halloween",
     "categoryLabel": "Halloween & Costumes",
     "type": "image",
-    "src": "/assets/events/halloween-02.jpg",
+    "src": "/assets/events/halloween/halloween-02.jpg",
     "alt": "NexGen Playway children enjoying Halloween celebrations #2"
   },
   {
@@ -32,7 +32,7 @@ export const EVENT_ITEMS = [
     "category": "halloween",
     "categoryLabel": "Halloween & Costumes",
     "type": "image",
-    "src": "/assets/events/halloween-03.jpg",
+    "src": "/assets/events/halloween/halloween-03.jpg",
     "alt": "NexGen Playway children enjoying Halloween celebrations #3"
   },
   {
@@ -41,7 +41,7 @@ export const EVENT_ITEMS = [
     "category": "halloween",
     "categoryLabel": "Halloween & Costumes",
     "type": "image",
-    "src": "/assets/events/halloween-04.jpg",
+    "src": "/assets/events/halloween/halloween-04.jpg",
     "alt": "NexGen Playway children enjoying Halloween celebrations #4"
   },
   {
@@ -50,7 +50,7 @@ export const EVENT_ITEMS = [
     "category": "halloween",
     "categoryLabel": "Halloween & Costumes",
     "type": "image",
-    "src": "/assets/events/halloween-05.jpg",
+    "src": "/assets/events/halloween/halloween-05.jpg",
     "alt": "NexGen Playway children enjoying Halloween celebrations #5"
   },
   {
@@ -59,7 +59,7 @@ export const EVENT_ITEMS = [
     "category": "halloween",
     "categoryLabel": "Halloween & Costumes",
     "type": "image",
-    "src": "/assets/events/halloween-06.jpg",
+    "src": "/assets/events/halloween/halloween-06.jpg",
     "alt": "NexGen Playway children enjoying Halloween celebrations #6"
   },
   {
@@ -68,7 +68,7 @@ export const EVENT_ITEMS = [
     "category": "halloween",
     "categoryLabel": "Halloween & Costumes",
     "type": "image",
-    "src": "/assets/events/halloween-07.jpg",
+    "src": "/assets/events/halloween/halloween-07.jpg",
     "alt": "NexGen Playway children enjoying Halloween celebrations #7"
   },
   {
@@ -77,7 +77,7 @@ export const EVENT_ITEMS = [
     "category": "halloween",
     "categoryLabel": "Halloween & Costumes",
     "type": "image",
-    "src": "/assets/events/halloween-08.jpg",
+    "src": "/assets/events/halloween/halloween-08.jpg",
     "alt": "NexGen Playway children enjoying Halloween celebrations #8"
   },
   {
@@ -86,7 +86,7 @@ export const EVENT_ITEMS = [
     "category": "halloween",
     "categoryLabel": "Halloween & Costumes",
     "type": "image",
-    "src": "/assets/events/halloween-09.jpg",
+    "src": "/assets/events/halloween/halloween-09.jpg",
     "alt": "NexGen Playway children enjoying Halloween celebrations #9"
   },
   {
@@ -95,7 +95,7 @@ export const EVENT_ITEMS = [
     "category": "halloween",
     "categoryLabel": "Halloween & Costumes",
     "type": "image",
-    "src": "/assets/events/halloween-10.jpg",
+    "src": "/assets/events/halloween/halloween-10.jpg",
     "alt": "NexGen Playway children enjoying Halloween celebrations #10"
   },
   {
@@ -104,7 +104,7 @@ export const EVENT_ITEMS = [
     "category": "halloween",
     "categoryLabel": "Halloween & Costumes",
     "type": "image",
-    "src": "/assets/events/halloween-11.jpg",
+    "src": "/assets/events/halloween/halloween-11.jpg",
     "alt": "NexGen Playway children enjoying Halloween celebrations #11"
   },
   {
@@ -113,7 +113,7 @@ export const EVENT_ITEMS = [
     "category": "halloween",
     "categoryLabel": "Halloween & Costumes",
     "type": "image",
-    "src": "/assets/events/halloween-12.jpg",
+    "src": "/assets/events/halloween/halloween-12.jpg",
     "alt": "NexGen Playway children enjoying Halloween celebrations #12"
   },
   {
@@ -122,7 +122,7 @@ export const EVENT_ITEMS = [
     "category": "halloween",
     "categoryLabel": "Halloween & Costumes",
     "type": "image",
-    "src": "/assets/events/halloween-13.jpg",
+    "src": "/assets/events/halloween/halloween-13.jpg",
     "alt": "NexGen Playway children enjoying Halloween celebrations #13"
   },
   {
@@ -131,7 +131,7 @@ export const EVENT_ITEMS = [
     "category": "halloween",
     "categoryLabel": "Halloween & Costumes",
     "type": "image",
-    "src": "/assets/events/halloween-14.jpg",
+    "src": "/assets/events/halloween/halloween-14.jpg",
     "alt": "NexGen Playway children enjoying Halloween celebrations #14"
   },
   {
@@ -140,7 +140,7 @@ export const EVENT_ITEMS = [
     "category": "halloween",
     "categoryLabel": "Halloween & Costumes",
     "type": "image",
-    "src": "/assets/events/halloween-15.jpg",
+    "src": "/assets/events/halloween/halloween-15.jpg",
     "alt": "NexGen Playway children enjoying Halloween celebrations #15"
   },
   {
@@ -149,7 +149,7 @@ export const EVENT_ITEMS = [
     "category": "halloween",
     "categoryLabel": "Halloween & Costumes",
     "type": "image",
-    "src": "/assets/events/halloween-16.jpg",
+    "src": "/assets/events/halloween/halloween-16.jpg",
     "alt": "NexGen Playway children enjoying Halloween celebrations #16"
   },
   {
@@ -158,7 +158,7 @@ export const EVENT_ITEMS = [
     "category": "halloween",
     "categoryLabel": "Halloween & Costumes",
     "type": "image",
-    "src": "/assets/events/halloween-17.jpg",
+    "src": "/assets/events/halloween/halloween-17.jpg",
     "alt": "NexGen Playway children enjoying Halloween celebrations #17"
   },
   {
@@ -167,7 +167,7 @@ export const EVENT_ITEMS = [
     "category": "halloween",
     "categoryLabel": "Halloween & Costumes",
     "type": "image",
-    "src": "/assets/events/halloween-18.jpg",
+    "src": "/assets/events/halloween/halloween-18.jpg",
     "alt": "NexGen Playway children enjoying Halloween celebrations #18"
   },
   {
@@ -176,7 +176,7 @@ export const EVENT_ITEMS = [
     "category": "halloween",
     "categoryLabel": "Halloween & Costumes",
     "type": "image",
-    "src": "/assets/events/halloween-19.jpg",
+    "src": "/assets/events/halloween/halloween-19.jpg",
     "alt": "NexGen Playway children enjoying Halloween celebrations #19"
   },
   {
@@ -194,7 +194,7 @@ export const EVENT_ITEMS = [
     "category": "halloween",
     "categoryLabel": "Halloween & Costumes",
     "type": "image",
-    "src": "/assets/events/halloween-21.jpg",
+    "src": "/assets/events/halloween/halloween-21.jpg",
     "alt": "NexGen Playway children enjoying Halloween celebrations #21"
   },
   {
@@ -203,7 +203,7 @@ export const EVENT_ITEMS = [
     "category": "celebrations",
     "categoryLabel": "Festivals & Visits",
     "type": "image",
-    "src": "/assets/events/gurudwara-01.jpg",
+    "src": "/assets/events/grandparents-visit/gurudwara-01.jpg",
     "alt": "NexGen Playway visit to Gurudwara Sahib"
   },
   {
@@ -212,7 +212,7 @@ export const EVENT_ITEMS = [
     "category": "celebrations",
     "categoryLabel": "Festivals & Visits",
     "type": "image",
-    "src": "/assets/events/gurudwara-02.jpg",
+    "src": "/assets/events/grandparents-visit/gurudwara-02.jpg",
     "alt": "NexGen Playway visit to Gurudwara Sahib"
   },
   {
@@ -221,7 +221,7 @@ export const EVENT_ITEMS = [
     "category": "fitness",
     "categoryLabel": "Yoga & Dance",
     "type": "image",
-    "src": "/assets/events/yoga-01.jpg",
+    "src": "/assets/events/yoga/yoga-01.jpg",
     "alt": "Children practicing yoga poses and stretching at NexGen"
   },
   {
@@ -230,7 +230,7 @@ export const EVENT_ITEMS = [
     "category": "fitness",
     "categoryLabel": "Yoga & Dance",
     "type": "image",
-    "src": "/assets/events/yoga-02.jpg",
+    "src": "/assets/events/yoga/yoga-02.jpg",
     "alt": "Children practicing yoga poses and stretching at NexGen"
   },
   {
@@ -239,7 +239,7 @@ export const EVENT_ITEMS = [
     "category": "fitness",
     "categoryLabel": "Yoga & Dance",
     "type": "image",
-    "src": "/assets/events/yoga-03.jpg",
+    "src": "/assets/events/yoga/yoga-03.jpg",
     "alt": "Children practicing yoga poses and stretching at NexGen"
   },
   {
@@ -248,7 +248,7 @@ export const EVENT_ITEMS = [
     "category": "fitness",
     "categoryLabel": "Yoga & Dance",
     "type": "image",
-    "src": "/assets/events/yoga-04.jpg",
+    "src": "/assets/events/yoga/yoga-04.jpg",
     "alt": "Children practicing yoga poses and stretching at NexGen"
   },
   {
@@ -257,7 +257,7 @@ export const EVENT_ITEMS = [
     "category": "fitness",
     "categoryLabel": "Yoga & Dance",
     "type": "image",
-    "src": "/assets/events/dance-01.jpg",
+    "src": "/assets/events/dance-rhythm/dance-01.jpg",
     "alt": "Children dancing and expressing joy at NexGen"
   },
   {
@@ -266,7 +266,7 @@ export const EVENT_ITEMS = [
     "category": "fitness",
     "categoryLabel": "Yoga & Dance",
     "type": "image",
-    "src": "/assets/events/dance-02.jpg",
+    "src": "/assets/events/dance-rhythm/dance-02.jpg",
     "alt": "Children dancing and expressing joy at NexGen"
   },
   {
@@ -275,7 +275,7 @@ export const EVENT_ITEMS = [
     "category": "fitness",
     "categoryLabel": "Yoga & Dance",
     "type": "image",
-    "src": "/assets/events/dance-03.jpg",
+    "src": "/assets/events/dance-rhythm/dance-03.jpg",
     "alt": "Children dancing and expressing joy at NexGen"
   },
   {
@@ -284,7 +284,7 @@ export const EVENT_ITEMS = [
     "category": "activities",
     "categoryLabel": "Creative Activities",
     "type": "video",
-    "src": "/assets/events/flameless-cooking.mp4",
+    "src": "/assets/events/little-chef/flameless-cooking.mp4",
     "alt": "Kids making yummy snacks during flameless cooking session"
   },
   {
@@ -293,7 +293,7 @@ export const EVENT_ITEMS = [
     "category": "activities",
     "categoryLabel": "Creative Activities",
     "type": "video",
-    "src": "/assets/events/candle-activity.mp4",
+    "src": "/assets/events/craft-festival/candle-activity.mp4",
     "alt": "Hands-on candle craft and festive preparation"
   },
   {
@@ -302,7 +302,7 @@ export const EVENT_ITEMS = [
     "category": "videos",
     "categoryLabel": "Live Videos",
     "type": "video",
-    "src": "/assets/events/event-video-01.mp4",
+    "src": "/assets/events/event-videos/event-video-01.mp4",
     "alt": "Live video moment from NexGen Playway events"
   },
   {
@@ -311,7 +311,7 @@ export const EVENT_ITEMS = [
     "category": "videos",
     "categoryLabel": "Live Videos",
     "type": "video",
-    "src": "/assets/events/event-video-02.mp4",
+    "src": "/assets/events/event-videos/event-video-02.mp4",
     "alt": "Live video moment from NexGen Playway events"
   },
   {
@@ -320,7 +320,7 @@ export const EVENT_ITEMS = [
     "category": "videos",
     "categoryLabel": "Live Videos",
     "type": "video",
-    "src": "/assets/events/event-video-03.mp4",
+    "src": "/assets/events/event-videos/event-video-03.mp4",
     "alt": "Live video moment from NexGen Playway events"
   },
   {
@@ -329,7 +329,7 @@ export const EVENT_ITEMS = [
     "category": "videos",
     "categoryLabel": "Live Videos",
     "type": "video",
-    "src": "/assets/events/event-video-04.mp4",
+    "src": "/assets/events/event-videos/event-video-04.mp4",
     "alt": "Live video moment from NexGen Playway events"
   },
   {
@@ -338,7 +338,7 @@ export const EVENT_ITEMS = [
     "category": "videos",
     "categoryLabel": "Live Videos",
     "type": "video",
-    "src": "/assets/events/event-video-05.mp4",
+    "src": "/assets/events/event-videos/event-video-05.mp4",
     "alt": "Live video moment from NexGen Playway events"
   },
   {
@@ -347,7 +347,7 @@ export const EVENT_ITEMS = [
     "category": "celebrations",
     "categoryLabel": "Festivals & Visits",
     "type": "image",
-    "src": "/assets/events/celebration-01.jpg",
+    "src": "/assets/events/craft-festival/celebration-01.jpg",
     "alt": "Vibrant celebrations and theme days at NexGen"
   },
   {
@@ -356,7 +356,7 @@ export const EVENT_ITEMS = [
     "category": "celebrations",
     "categoryLabel": "Festivals & Visits",
     "type": "image",
-    "src": "/assets/events/celebration-02.jpg",
+    "src": "/assets/events/craft-festival/celebration-02.jpg",
     "alt": "Vibrant celebrations and theme days at NexGen"
   },
   {
@@ -365,7 +365,7 @@ export const EVENT_ITEMS = [
     "category": "celebrations",
     "categoryLabel": "Festivals & Visits",
     "type": "image",
-    "src": "/assets/events/celebration-03.jpg",
+    "src": "/assets/events/craft-festival/celebration-03.jpg",
     "alt": "Vibrant celebrations and theme days at NexGen"
   },
   {
@@ -374,7 +374,7 @@ export const EVENT_ITEMS = [
     "category": "celebrations",
     "categoryLabel": "Festivals & Visits",
     "type": "image",
-    "src": "/assets/events/celebration-04.jpg",
+    "src": "/assets/events/craft-festival/celebration-04.jpg",
     "alt": "Vibrant celebrations and theme days at NexGen"
   },
   {
@@ -383,7 +383,7 @@ export const EVENT_ITEMS = [
     "category": "celebrations",
     "categoryLabel": "Festivals & Visits",
     "type": "image",
-    "src": "/assets/events/celebration-05.jpg",
+    "src": "/assets/events/little-chef/celebration-05.jpg",
     "alt": "Vibrant celebrations and theme days at NexGen"
   },
   {
@@ -392,7 +392,7 @@ export const EVENT_ITEMS = [
     "category": "celebrations",
     "categoryLabel": "Festivals & Visits",
     "type": "image",
-    "src": "/assets/events/celebration-06.jpg",
+    "src": "/assets/events/craft-festival/celebration-06.jpg",
     "alt": "Vibrant celebrations and theme days at NexGen"
   },
   {
@@ -401,7 +401,7 @@ export const EVENT_ITEMS = [
     "category": "celebrations",
     "categoryLabel": "Festivals & Visits",
     "type": "image",
-    "src": "/assets/events/celebration-07.jpg",
+    "src": "/assets/events/craft-festival/celebration-07.jpg",
     "alt": "Vibrant celebrations and theme days at NexGen"
   },
   {
@@ -410,7 +410,7 @@ export const EVENT_ITEMS = [
     "category": "celebrations",
     "categoryLabel": "Festivals & Visits",
     "type": "image",
-    "src": "/assets/events/celebration-08.jpg",
+    "src": "/assets/events/craft-festival/celebration-08.jpg",
     "alt": "Vibrant celebrations and theme days at NexGen"
   },
   {
@@ -419,7 +419,7 @@ export const EVENT_ITEMS = [
     "category": "celebrations",
     "categoryLabel": "Festivals & Visits",
     "type": "image",
-    "src": "/assets/events/celebration-09.jpg",
+    "src": "/assets/events/craft-festival/celebration-09.jpg",
     "alt": "Vibrant celebrations and theme days at NexGen"
   },
   {
@@ -428,7 +428,7 @@ export const EVENT_ITEMS = [
     "category": "celebrations",
     "categoryLabel": "Festivals & Visits",
     "type": "image",
-    "src": "/assets/events/celebration-10.jpg",
+    "src": "/assets/events/craft-festival/celebration-10.jpg",
     "alt": "Vibrant celebrations and theme days at NexGen"
   },
   {
@@ -437,7 +437,7 @@ export const EVENT_ITEMS = [
     "category": "celebrations",
     "categoryLabel": "Festivals & Visits",
     "type": "image",
-    "src": "/assets/events/celebration-11.jpg",
+    "src": "/assets/events/craft-festival/celebration-11.jpg",
     "alt": "Vibrant celebrations and theme days at NexGen"
   },
   {
@@ -446,7 +446,7 @@ export const EVENT_ITEMS = [
     "category": "celebrations",
     "categoryLabel": "Festivals & Visits",
     "type": "image",
-    "src": "/assets/events/celebration-12.jpg",
+    "src": "/assets/events/craft-festival/celebration-12.jpg",
     "alt": "Vibrant celebrations and theme days at NexGen"
   },
   {
@@ -455,7 +455,7 @@ export const EVENT_ITEMS = [
     "category": "celebrations",
     "categoryLabel": "Festivals & Visits",
     "type": "image",
-    "src": "/assets/events/celebration-13.jpg",
+    "src": "/assets/events/craft-festival/celebration-13.jpg",
     "alt": "Vibrant celebrations and theme days at NexGen"
   },
   {
@@ -464,7 +464,7 @@ export const EVENT_ITEMS = [
     "category": "celebrations",
     "categoryLabel": "Festivals & Visits",
     "type": "image",
-    "src": "/assets/events/celebration-14.jpg",
+    "src": "/assets/events/craft-festival/celebration-14.jpg",
     "alt": "Vibrant celebrations and theme days at NexGen"
   },
   {
@@ -473,7 +473,7 @@ export const EVENT_ITEMS = [
     "category": "celebrations",
     "categoryLabel": "Festivals & Visits",
     "type": "image",
-    "src": "/assets/events/celebration-15.jpg",
+    "src": "/assets/events/craft-festival/celebration-15.jpg",
     "alt": "Vibrant celebrations and theme days at NexGen"
   },
   {
@@ -482,7 +482,7 @@ export const EVENT_ITEMS = [
     "category": "celebrations",
     "categoryLabel": "Festivals & Visits",
     "type": "image",
-    "src": "/assets/events/celebration-16.jpg",
+    "src": "/assets/events/craft-festival/celebration-16.jpg",
     "alt": "Vibrant celebrations and theme days at NexGen"
   },
   {
@@ -491,7 +491,7 @@ export const EVENT_ITEMS = [
     "category": "celebrations",
     "categoryLabel": "Festivals & Visits",
     "type": "image",
-    "src": "/assets/events/celebration-17.jpg",
+    "src": "/assets/events/craft-festival/celebration-17.jpg",
     "alt": "Vibrant celebrations and theme days at NexGen"
   },
   {
@@ -500,7 +500,7 @@ export const EVENT_ITEMS = [
     "category": "celebrations",
     "categoryLabel": "Festivals & Visits",
     "type": "image",
-    "src": "/assets/events/celebration-18.jpg",
+    "src": "/assets/events/craft-festival/celebration-18.jpg",
     "alt": "Vibrant celebrations and theme days at NexGen"
   },
   {
@@ -509,7 +509,7 @@ export const EVENT_ITEMS = [
     "category": "celebrations",
     "categoryLabel": "Festivals & Visits",
     "type": "image",
-    "src": "/assets/events/celebration-19.jpg",
+    "src": "/assets/events/craft-festival/celebration-19.jpg",
     "alt": "Vibrant celebrations and theme days at NexGen"
   },
   {
@@ -518,7 +518,7 @@ export const EVENT_ITEMS = [
     "category": "celebrations",
     "categoryLabel": "Festivals & Visits",
     "type": "image",
-    "src": "/assets/events/celebration-20.jpg",
+    "src": "/assets/events/birthday-celebrations/celebration-20.jpg",
     "alt": "Vibrant celebrations and theme days at NexGen"
   },
   {
@@ -527,7 +527,7 @@ export const EVENT_ITEMS = [
     "category": "celebrations",
     "categoryLabel": "Festivals & Visits",
     "type": "image",
-    "src": "/assets/events/celebration-21.jpg",
+    "src": "/assets/events/birthday-celebrations/celebration-21.jpg",
     "alt": "Vibrant celebrations and theme days at NexGen"
   },
   {
@@ -536,7 +536,7 @@ export const EVENT_ITEMS = [
     "category": "celebrations",
     "categoryLabel": "Festivals & Visits",
     "type": "image",
-    "src": "/assets/events/celebration-22.jpg",
+    "src": "/assets/events/birthday-celebrations/celebration-22.jpg",
     "alt": "Vibrant celebrations and theme days at NexGen"
   },
   {
@@ -545,7 +545,7 @@ export const EVENT_ITEMS = [
     "category": "celebrations",
     "categoryLabel": "Festivals & Visits",
     "type": "image",
-    "src": "/assets/events/celebration-23.jpg",
+    "src": "/assets/events/birthday-celebrations/celebration-23.jpg",
     "alt": "Vibrant celebrations and theme days at NexGen"
   },
   {
@@ -554,7 +554,7 @@ export const EVENT_ITEMS = [
     "category": "celebrations",
     "categoryLabel": "Festivals & Visits",
     "type": "image",
-    "src": "/assets/events/celebration-24.jpg",
+    "src": "/assets/events/birthday-celebrations/celebration-24.jpg",
     "alt": "Vibrant celebrations and theme days at NexGen"
   },
   {
@@ -563,7 +563,7 @@ export const EVENT_ITEMS = [
     "category": "celebrations",
     "categoryLabel": "Festivals & Visits",
     "type": "image",
-    "src": "/assets/events/celebration-25.jpg",
+    "src": "/assets/events/birthday-celebrations/celebration-25.jpg",
     "alt": "Vibrant celebrations and theme days at NexGen"
   },
   {
@@ -572,7 +572,7 @@ export const EVENT_ITEMS = [
     "category": "celebrations",
     "categoryLabel": "Festivals & Visits",
     "type": "image",
-    "src": "/assets/events/celebration-26.jpg",
+    "src": "/assets/events/birthday-celebrations/celebration-26.jpg",
     "alt": "Vibrant celebrations and theme days at NexGen"
   },
   {
@@ -581,7 +581,7 @@ export const EVENT_ITEMS = [
     "category": "celebrations",
     "categoryLabel": "Festivals & Visits",
     "type": "image",
-    "src": "/assets/events/celebration-27.jpg",
+    "src": "/assets/events/birthday-celebrations/celebration-27.jpg",
     "alt": "Vibrant celebrations and theme days at NexGen"
   },
   {
@@ -590,7 +590,7 @@ export const EVENT_ITEMS = [
     "category": "celebrations",
     "categoryLabel": "Festivals & Visits",
     "type": "image",
-    "src": "/assets/events/celebration-28.jpg",
+    "src": "/assets/events/birthday-celebrations/celebration-28.jpg",
     "alt": "Vibrant celebrations and theme days at NexGen"
   },
   {
@@ -599,7 +599,7 @@ export const EVENT_ITEMS = [
     "category": "celebrations",
     "categoryLabel": "Festivals & Visits",
     "type": "image",
-    "src": "/assets/events/celebration-29.jpg",
+    "src": "/assets/events/birthday-celebrations/celebration-29.jpg",
     "alt": "Vibrant celebrations and theme days at NexGen"
   },
   {
@@ -608,7 +608,7 @@ export const EVENT_ITEMS = [
     "category": "celebrations",
     "categoryLabel": "Festivals & Visits",
     "type": "image",
-    "src": "/assets/events/celebration-30.jpg",
+    "src": "/assets/events/birthday-celebrations/celebration-30.jpg",
     "alt": "Vibrant celebrations and theme days at NexGen"
   },
   {
@@ -617,7 +617,7 @@ export const EVENT_ITEMS = [
     "category": "celebrations",
     "categoryLabel": "Festivals & Visits",
     "type": "image",
-    "src": "/assets/events/celebration-31.jpg",
+    "src": "/assets/events/birthday-celebrations/celebration-31.jpg",
     "alt": "Vibrant celebrations and theme days at NexGen"
   },
   {
@@ -626,7 +626,7 @@ export const EVENT_ITEMS = [
     "category": "celebrations",
     "categoryLabel": "Festivals & Visits",
     "type": "image",
-    "src": "/assets/events/celebration-32.jpg",
+    "src": "/assets/events/birthday-celebrations/celebration-32.jpg",
     "alt": "Vibrant celebrations and theme days at NexGen"
   },
   {
@@ -635,7 +635,7 @@ export const EVENT_ITEMS = [
     "category": "celebrations",
     "categoryLabel": "Festivals & Visits",
     "type": "image",
-    "src": "/assets/events/celebration-33.jpg",
+    "src": "/assets/events/birthday-celebrations/celebration-33.jpg",
     "alt": "Vibrant celebrations and theme days at NexGen"
   },
   {
@@ -644,7 +644,7 @@ export const EVENT_ITEMS = [
     "category": "celebrations",
     "categoryLabel": "Festivals & Visits",
     "type": "image",
-    "src": "/assets/events/celebration-34.jpg",
+    "src": "/assets/events/birthday-celebrations/celebration-34.jpg",
     "alt": "Vibrant celebrations and theme days at NexGen"
   },
   {
@@ -653,7 +653,7 @@ export const EVENT_ITEMS = [
     "category": "celebrations",
     "categoryLabel": "Festivals & Visits",
     "type": "image",
-    "src": "/assets/events/celebration-35.jpg",
+    "src": "/assets/events/birthday-celebrations/celebration-35.jpg",
     "alt": "Vibrant celebrations and theme days at NexGen"
   },
   {
@@ -662,7 +662,7 @@ export const EVENT_ITEMS = [
     "category": "celebrations",
     "categoryLabel": "Festivals & Visits",
     "type": "image",
-    "src": "/assets/events/celebration-36.jpg",
+    "src": "/assets/events/birthday-celebrations/celebration-36.jpg",
     "alt": "Vibrant celebrations and theme days at NexGen"
   },
   {
@@ -671,7 +671,7 @@ export const EVENT_ITEMS = [
     "category": "celebrations",
     "categoryLabel": "Festivals & Visits",
     "type": "image",
-    "src": "/assets/events/celebration-37.jpg",
+    "src": "/assets/events/birthday-celebrations/celebration-37.jpg",
     "alt": "Vibrant celebrations and theme days at NexGen"
   },
   {
@@ -680,7 +680,7 @@ export const EVENT_ITEMS = [
     "category": "celebrations",
     "categoryLabel": "Festivals & Visits",
     "type": "image",
-    "src": "/assets/events/celebration-38.jpg",
+    "src": "/assets/events/birthday-celebrations/celebration-38.jpg",
     "alt": "Vibrant celebrations and theme days at NexGen"
   },
   {
@@ -689,7 +689,7 @@ export const EVENT_ITEMS = [
     "category": "celebrations",
     "categoryLabel": "Festivals & Visits",
     "type": "image",
-    "src": "/assets/events/celebration-39.jpg",
+    "src": "/assets/events/birthday-celebrations/celebration-39.jpg",
     "alt": "Vibrant celebrations and theme days at NexGen"
   },
   {
@@ -698,7 +698,7 @@ export const EVENT_ITEMS = [
     "category": "celebrations",
     "categoryLabel": "Festivals & Visits",
     "type": "image",
-    "src": "/assets/events/celebration-40.jpg",
+    "src": "/assets/events/birthday-celebrations/celebration-40.jpg",
     "alt": "Vibrant celebrations and theme days at NexGen"
   },
   {
@@ -707,7 +707,7 @@ export const EVENT_ITEMS = [
     "category": "celebrations",
     "categoryLabel": "Festivals & Visits",
     "type": "image",
-    "src": "/assets/events/celebration-41.jpg",
+    "src": "/assets/events/birthday-celebrations/celebration-41.jpg",
     "alt": "Vibrant celebrations and theme days at NexGen"
   },
   {
@@ -716,7 +716,7 @@ export const EVENT_ITEMS = [
     "category": "celebrations",
     "categoryLabel": "Festivals & Visits",
     "type": "image",
-    "src": "/assets/events/celebration-42.jpg",
+    "src": "/assets/events/birthday-celebrations/celebration-42.jpg",
     "alt": "Vibrant celebrations and theme days at NexGen"
   },
   {
@@ -725,7 +725,7 @@ export const EVENT_ITEMS = [
     "category": "celebrations",
     "categoryLabel": "Festivals & Visits",
     "type": "image",
-    "src": "/assets/events/celebration-43.jpg",
+    "src": "/assets/events/birthday-celebrations/celebration-43.jpg",
     "alt": "Vibrant celebrations and theme days at NexGen"
   },
   {
@@ -734,7 +734,7 @@ export const EVENT_ITEMS = [
     "category": "celebrations",
     "categoryLabel": "Festivals & Visits",
     "type": "image",
-    "src": "/assets/events/celebration-44.jpg",
+    "src": "/assets/events/birthday-celebrations/celebration-44.jpg",
     "alt": "Vibrant celebrations and theme days at NexGen"
   },
   {
@@ -743,7 +743,7 @@ export const EVENT_ITEMS = [
     "category": "celebrations",
     "categoryLabel": "Festivals & Visits",
     "type": "image",
-    "src": "/assets/events/celebration-45.jpg",
+    "src": "/assets/events/birthday-celebrations/celebration-45.jpg",
     "alt": "Vibrant celebrations and theme days at NexGen"
   },
   {
@@ -752,7 +752,7 @@ export const EVENT_ITEMS = [
     "category": "celebrations",
     "categoryLabel": "Festivals & Visits",
     "type": "image",
-    "src": "/assets/events/celebration-46.jpg",
+    "src": "/assets/events/birthday-celebrations/celebration-46.jpg",
     "alt": "Vibrant celebrations and theme days at NexGen"
   },
   {
@@ -761,7 +761,7 @@ export const EVENT_ITEMS = [
     "category": "celebrations",
     "categoryLabel": "Festivals & Visits",
     "type": "image",
-    "src": "/assets/events/celebration-47.jpg",
+    "src": "/assets/events/birthday-celebrations/celebration-47.jpg",
     "alt": "Vibrant celebrations and theme days at NexGen"
   },
   {
@@ -770,7 +770,7 @@ export const EVENT_ITEMS = [
     "category": "celebrations",
     "categoryLabel": "Festivals & Visits",
     "type": "image",
-    "src": "/assets/events/celebration-48.jpg",
+    "src": "/assets/events/birthday-celebrations/celebration-48.jpg",
     "alt": "Vibrant celebrations and theme days at NexGen"
   },
   {
@@ -779,7 +779,7 @@ export const EVENT_ITEMS = [
     "category": "celebrations",
     "categoryLabel": "Festivals & Visits",
     "type": "image",
-    "src": "/assets/events/celebration-49.jpg",
+    "src": "/assets/events/birthday-celebrations/celebration-49.jpg",
     "alt": "Vibrant celebrations and theme days at NexGen"
   },
   {
@@ -788,7 +788,7 @@ export const EVENT_ITEMS = [
     "category": "celebrations",
     "categoryLabel": "Festivals & Visits",
     "type": "image",
-    "src": "/assets/events/celebration-50.jpg",
+    "src": "/assets/events/birthday-celebrations/celebration-50.jpg",
     "alt": "Vibrant celebrations and theme days at NexGen"
   },
   {
@@ -797,7 +797,7 @@ export const EVENT_ITEMS = [
     "category": "celebrations",
     "categoryLabel": "Festivals & Visits",
     "type": "image",
-    "src": "/assets/events/celebration-51.jpg",
+    "src": "/assets/events/birthday-celebrations/celebration-51.jpg",
     "alt": "Vibrant celebrations and theme days at NexGen"
   },
   {
@@ -806,7 +806,7 @@ export const EVENT_ITEMS = [
     "category": "celebrations",
     "categoryLabel": "Festivals & Visits",
     "type": "image",
-    "src": "/assets/events/celebration-52.jpg",
+    "src": "/assets/events/birthday-celebrations/celebration-52.jpg",
     "alt": "Vibrant celebrations and theme days at NexGen"
   },
   {
@@ -815,7 +815,7 @@ export const EVENT_ITEMS = [
     "category": "celebrations",
     "categoryLabel": "Festivals & Visits",
     "type": "image",
-    "src": "/assets/events/celebration-53.jpg",
+    "src": "/assets/events/birthday-celebrations/celebration-53.jpg",
     "alt": "Vibrant celebrations and theme days at NexGen"
   },
   {
@@ -824,7 +824,7 @@ export const EVENT_ITEMS = [
     "category": "activities",
     "categoryLabel": "Creative Activities",
     "type": "image",
-    "src": "/assets/events/campus-activity-01.jpg",
+    "src": "/assets/events/campus-activities/campus-activity-01.jpg",
     "alt": "Engaging classroom play and discovery at NexGen"
   },
   {
@@ -833,7 +833,7 @@ export const EVENT_ITEMS = [
     "category": "activities",
     "categoryLabel": "Creative Activities",
     "type": "image",
-    "src": "/assets/events/campus-activity-02.jpg",
+    "src": "/assets/events/campus-activities/campus-activity-02.jpg",
     "alt": "Engaging classroom play and discovery at NexGen"
   },
   {
@@ -842,7 +842,7 @@ export const EVENT_ITEMS = [
     "category": "activities",
     "categoryLabel": "Creative Activities",
     "type": "image",
-    "src": "/assets/events/campus-activity-03.jpg",
+    "src": "/assets/events/campus-activities/campus-activity-03.jpg",
     "alt": "Engaging classroom play and discovery at NexGen"
   },
   {
@@ -851,7 +851,7 @@ export const EVENT_ITEMS = [
     "category": "activities",
     "categoryLabel": "Creative Activities",
     "type": "image",
-    "src": "/assets/events/campus-activity-04.jpg",
+    "src": "/assets/events/campus-activities/campus-activity-04.jpg",
     "alt": "Engaging classroom play and discovery at NexGen"
   },
   {
@@ -860,7 +860,7 @@ export const EVENT_ITEMS = [
     "category": "activities",
     "categoryLabel": "Creative Activities",
     "type": "image",
-    "src": "/assets/events/campus-activity-05.jpg",
+    "src": "/assets/events/campus-activities/campus-activity-05.jpg",
     "alt": "Engaging classroom play and discovery at NexGen"
   },
   {
@@ -869,7 +869,7 @@ export const EVENT_ITEMS = [
     "category": "activities",
     "categoryLabel": "Creative Activities",
     "type": "image",
-    "src": "/assets/events/campus-activity-06.jpg",
+    "src": "/assets/events/little-chef/campus-activity-06.jpg",
     "alt": "Engaging classroom play and discovery at NexGen"
   },
   {
@@ -878,7 +878,7 @@ export const EVENT_ITEMS = [
     "category": "activities",
     "categoryLabel": "Creative Activities",
     "type": "image",
-    "src": "/assets/events/campus-activity-07.jpg",
+    "src": "/assets/events/campus-activities/campus-activity-07.jpg",
     "alt": "Engaging classroom play and discovery at NexGen"
   },
   {
@@ -887,7 +887,7 @@ export const EVENT_ITEMS = [
     "category": "activities",
     "categoryLabel": "Creative Activities",
     "type": "image",
-    "src": "/assets/events/campus-activity-08.jpg",
+    "src": "/assets/events/campus-activities/campus-activity-08.jpg",
     "alt": "Engaging classroom play and discovery at NexGen"
   },
   {
@@ -896,7 +896,7 @@ export const EVENT_ITEMS = [
     "category": "activities",
     "categoryLabel": "Creative Activities",
     "type": "image",
-    "src": "/assets/events/campus-activity-09.jpg",
+    "src": "/assets/events/campus-activities/campus-activity-09.jpg",
     "alt": "Engaging classroom play and discovery at NexGen"
   },
   {
@@ -905,7 +905,7 @@ export const EVENT_ITEMS = [
     "category": "activities",
     "categoryLabel": "Creative Activities",
     "type": "image",
-    "src": "/assets/events/campus-activity-10.jpg",
+    "src": "/assets/events/campus-activities/campus-activity-10.jpg",
     "alt": "Engaging classroom play and discovery at NexGen"
   },
   {
@@ -914,7 +914,7 @@ export const EVENT_ITEMS = [
     "category": "activities",
     "categoryLabel": "Creative Activities",
     "type": "image",
-    "src": "/assets/events/campus-activity-11.jpg",
+    "src": "/assets/events/campus-activities/campus-activity-11.jpg",
     "alt": "Engaging classroom play and discovery at NexGen"
   },
   {
@@ -923,7 +923,7 @@ export const EVENT_ITEMS = [
     "category": "activities",
     "categoryLabel": "Creative Activities",
     "type": "image",
-    "src": "/assets/events/campus-activity-12.jpg",
+    "src": "/assets/events/campus-activities/campus-activity-12.jpg",
     "alt": "Engaging classroom play and discovery at NexGen"
   },
   {
@@ -932,7 +932,7 @@ export const EVENT_ITEMS = [
     "category": "activities",
     "categoryLabel": "Creative Activities",
     "type": "image",
-    "src": "/assets/events/campus-activity-13.jpg",
+    "src": "/assets/events/campus-activities/campus-activity-13.jpg",
     "alt": "Engaging classroom play and discovery at NexGen"
   },
   {
@@ -941,7 +941,7 @@ export const EVENT_ITEMS = [
     "category": "activities",
     "categoryLabel": "Creative Activities",
     "type": "image",
-    "src": "/assets/events/campus-activity-14.jpg",
+    "src": "/assets/events/campus-activities/campus-activity-14.jpg",
     "alt": "Engaging classroom play and discovery at NexGen"
   },
   {
@@ -950,7 +950,7 @@ export const EVENT_ITEMS = [
     "category": "activities",
     "categoryLabel": "Creative Activities",
     "type": "image",
-    "src": "/assets/events/campus-activity-15.jpg",
+    "src": "/assets/events/campus-activities/campus-activity-15.jpg",
     "alt": "Engaging classroom play and discovery at NexGen"
   }
 ];

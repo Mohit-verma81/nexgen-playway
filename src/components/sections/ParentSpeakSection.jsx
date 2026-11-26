@@ -31,7 +31,7 @@ const TESTIMONIALS = [
 const VIDEO_STORIES = [
   {
     id: 'vid-1',
-    src: '/assets/events/parent-video-01.mp4',
+    src: '/assets/event/parent-videos/parent-video-02.mp4',
     parent: 'Simranjit Kaur',
     child: "Aarav's Mother",
     grade: 'Playgroup',
@@ -40,7 +40,7 @@ const VIDEO_STORIES = [
   },
   {
     id: 'vid-2',
-    src: '/assets/events/parent-video-02.mp4',
+    src: '/assets/event/parent-videos/parent-video-01.mp4',
     parent: 'Mehulsinh Jadeja',
     child: "Ananya's Father",
     grade: 'Nursery',
@@ -49,7 +49,7 @@ const VIDEO_STORIES = [
   },
   {
     id: 'vid-3',
-    src: '/assets/events/parent-video-03.mp4',
+    src: '/assets/event/parent-videos/parent-video-03.mp4',
     parent: 'Pooja Sharma',
     child: "Reyansh's Mother",
     grade: 'LKG',
@@ -58,7 +58,7 @@ const VIDEO_STORIES = [
   },
   {
     id: 'vid-4',
-    src: '/assets/events/parent-video-04.mp4',
+    src: '/assets/event/parent-videos/parent-video-04.mp4',
     parent: 'Gurpreet Singh',
     child: "Harleen's Father",
     grade: 'UKG',
@@ -167,7 +167,7 @@ export default function ParentSpeakSection() {
 
           {/* ================= ORGANIC CLOUD / SPEECH BUBBLE TESTIMONIAL ================= */}
           <div className="relative mx-auto flex items-center justify-center py-4 sm:py-8 md:py-10">
-            
+
             {/* Masked Organic Background using .testimonial-one__bg (active on sm+ screens) */}
             <div className="hidden sm:block testimonial-one__bg drop-shadow-2xl" aria-hidden="true" />
 
@@ -180,7 +180,7 @@ export default function ParentSpeakSection() {
 
             {/* Testimonial Content sitting safely inside the card */}
             <div className="relative z-10 w-full max-w-2xl rounded-[32px] bg-[#6FBD30] sm:bg-transparent sm:rounded-none px-6 py-8 sm:px-12 sm:py-16 md:px-14 md:py-20 text-center text-white shadow-xl sm:shadow-none">
-              
+
               {/* Playful Decorative Green Accent Doodle inside */}
               <div
                 className="pointer-events-none absolute right-2 sm:right-6 top-1/4 h-16 w-16 sm:h-20 sm:w-20 opacity-60"
@@ -212,7 +212,7 @@ export default function ParentSpeakSection() {
 
               {/* Bottom Row: Navigation Buttons (Left) & Parent Author (Right) */}
               <div className="mt-6 sm:mt-10 flex flex-row items-center justify-between gap-3 border-t border-white/20 pt-4 sm:pt-6">
-                
+
                 {/* Navigation Pill Circles (Left) */}
                 <div className="flex items-center gap-2.5 sm:gap-3 shrink-0">
                   <button

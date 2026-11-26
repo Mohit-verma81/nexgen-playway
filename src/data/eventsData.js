@@ -17,7 +17,7 @@ export const CURATED_EVENTS = [
       },
       {
         type: 'image',
-        src: '/assets/events/halloween-10.jpg',
+        src: '/assets/events/halloween/halloween-10.jpg',
         title: 'Classroom Costume Parade',
         caption: 'Joyful smiles as little ones share their character stories with friends.',
       },
@@ -35,13 +35,13 @@ export const CURATED_EVENTS = [
     media: [
       {
         type: 'image',
-        src: '/assets/events/gurudwara-01.jpg',
+        src: '/assets/events/grandparents-visit/gurudwara-01.jpg',
         title: 'Gurudwara Sahib Visit',
         caption: 'Children with heads gracefully covered, experiencing serene spiritual warmth.',
       },
       {
         type: 'image',
-        src: '/assets/events/gurudwara-02.jpg',
+        src: '/assets/events/grandparents-visit/gurudwara-02.jpg',
         title: 'Seeking Divine Blessings',
         caption: 'Learning the beauty of folded hands, gratitude and togetherness.',
       },
@@ -59,13 +59,13 @@ export const CURATED_EVENTS = [
     media: [
       {
         type: 'video',
-        src: '/assets/events/flameless-cooking.mp4',
+        src: '/assets/events/little-chef/flameless-cooking.mp4',
         title: 'Flameless Cooking in Action',
         caption: 'Watch our tiny chefs masterfully assemble delicious healthy snacks.',
       },
       {
         type: 'image',
-        src: '/assets/events/celebration-05.jpg',
+        src: '/assets/events/little-chef/celebration-05.jpg',
         title: 'Proud Little Masterchefs',
         caption: 'Displaying their homemade culinary masterpieces with bright smiles.',
       },
@@ -83,13 +83,13 @@ export const CURATED_EVENTS = [
     media: [
       {
         type: 'image',
-        src: '/assets/events/yoga-01.jpg',
+        src: '/assets/events/yoga/yoga-01.jpg',
         title: 'Morning Stretch Circle',
         caption: 'Children following caring teachers through guided gentle yoga poses.',
       },
       {
         type: 'image',
-        src: '/assets/events/yoga-02.jpg',
+        src: '/assets/events/yoga/yoga-02.jpg',
         title: 'Mindful Breathing Postures',
         caption: 'Developing focus and body flexibility in a serene classroom atmosphere.',
       },
@@ -107,13 +107,13 @@ export const CURATED_EVENTS = [
     media: [
       {
         type: 'video',
-        src: '/assets/events/candle-activity.mp4',
+        src: '/assets/events/craft-festival/candle-activity.mp4',
         title: 'Live Candle Decoration Session',
         caption: 'Watch the delicate hand movements and festive joy during candle decor.',
       },
       {
         type: 'image',
-        src: '/assets/events/celebration-12.jpg',
+        src: '/assets/events/craft-festival/celebration-12.jpg',
         title: 'Sparkling Craft Creations',
         caption: 'Proudly showing off handcrafted festival keepsakes made with love.',
       },
@@ -131,13 +131,13 @@ export const CURATED_EVENTS = [
     media: [
       {
         type: 'image',
-        src: '/assets/events/celebration-20.jpg',
+        src: '/assets/events/birthday-celebrations/celebration-20.jpg',
         title: 'Theme Dress Assembly',
         caption: 'Children dressed in themed colors for immersive sensory learning.',
       },
       {
         type: 'image',
-        src: '/assets/events/celebration-35.jpg',
+        src: '/assets/events/birthday-celebrations/celebration-35.jpg',
         title: 'Festive Classroom Smiles',
         caption: 'Celebrating special moments together with classmates and teachers.',
       },
@@ -155,13 +155,13 @@ export const CURATED_EVENTS = [
     media: [
       {
         type: 'image',
-        src: '/assets/events/dance-01.jpg',
+        src: '/assets/events/dance-rhythm/dance-01.jpg',
         title: 'Happy Feet Dance Session',
         caption: 'Children clapping and moving to cheerful nursery beats.',
       },
       {
         type: 'image',
-        src: '/assets/events/dance-02.jpg',
+        src: '/assets/events/dance-rhythm/dance-02.jpg',
         title: 'Synchronized Playful Moves',
         caption: 'Building coordination and lasting friendships through music.',
       },

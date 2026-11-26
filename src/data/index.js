@@ -154,7 +154,7 @@ export const GALLERY_IMAGES = [
     category: 'Campus',
   },
   {
-    src: '/assets/events/campus-activity-01.jpg',
+    src: '/assets/event/campus-activities/campus-01.jpg',
     alt: 'Active kids classroom engagement and toys',
     title: 'Vibrant Play & Learning',
     category: 'Activity',
@@ -166,8 +166,8 @@ export const GALLERY_IMAGES = [
     category: 'Campus',
   },
   {
-    src: '/assets/events/celebration-02.jpg',
-    alt: 'Children enjoying festival celebrations',
+    src: '/assets/event/diwali/diwali-01.jpg',
+    alt: 'Children enjoying Diwali festival celebrations',
     title: 'Festive Celebrations & Costumes',
     category: 'Celebration',
   },
@@ -178,7 +178,7 @@ export const GALLERY_IMAGES = [
     category: 'Classroom',
   },
   {
-    src: '/assets/events/campus-activity-06.jpg',
+    src: '/assets/event/diwali/campus-activity-06.jpg',
     alt: 'Children engrossed in hands-on learning activity',
     title: 'Hands-on Learning Fun',
     category: 'Activity',
@@ -190,7 +190,7 @@ export const GALLERY_IMAGES = [
     category: 'Activity',
   },
   {
-    src: '/assets/events/celebration-15.jpg',
+    src: '/assets/event/birthday-celebrations/celebration-15.jpg',
     alt: 'Kids celebrating theme day at NexGen',
     title: 'Colourful Theme Day Moments',
     category: 'Celebration',
@@ -202,7 +202,7 @@ export const GALLERY_IMAGES = [
     category: 'Activity',
   },
   {
-    src: '/assets/events/campus-activity-08.jpg',
+    src: '/assets/event/campus-activities/campus-08.jpg',
     alt: 'Indoor soft playroom with play blocks',
     title: 'Safe Soft Play Zone',
     category: 'Activity',
@@ -214,7 +214,7 @@ export const GALLERY_IMAGES = [
     category: 'Activity',
   },
   {
-    src: '/assets/events/celebration-30.jpg',
+    src: '/assets/event/birthday-celebrations/celebration-30.jpg',
     alt: 'Joyful smiles during school celebration',
     title: 'Happy Little Faces',
     category: 'Celebration',
@@ -226,7 +226,7 @@ export const GALLERY_IMAGES = [
     category: 'Activity',
   },
   {
-    src: '/assets/events/campus-activity-11.jpg',
+    src: '/assets/event/campus-activities/campus-11.jpg',
     alt: 'Creative art and drawing session',
     title: 'Art, Colors & Imagination',
     category: 'Activity',
@@ -238,7 +238,7 @@ export const GALLERY_IMAGES = [
     category: 'Activity',
   },
   {
-    src: '/assets/events/celebration-45.jpg',
+    src: '/assets/event/campus-activities/campus-activity-18.jpg',
     alt: 'Group activity and friendship moments',
     title: 'Bonding & Social Growth',
     category: 'Celebration',
@@ -250,7 +250,7 @@ export const GALLERY_IMAGES = [
     category: 'Campus',
   },
   {
-    src: '/assets/events/campus-activity-14.jpg',
+    src: '/assets/event/campus-activities/campus-14.jpg',
     alt: 'Interactive playtime with safe toys',
     title: 'Discovery & Motor Play',
     category: 'Activity',
@@ -262,7 +262,7 @@ export const GALLERY_IMAGES = [
     category: 'Campus',
   },
   {
-    src: '/assets/events/celebration-50.jpg',
+    src: '/assets/event/campus-activities/campus-activity-21.jpg',
     alt: 'Little stars enjoying campus life',
     title: 'Little Learners Growing Together',
     category: 'Celebration',

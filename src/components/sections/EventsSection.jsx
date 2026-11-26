@@ -1,5 +1,74 @@
 import { useState, useEffect } from 'react'
-import { Star, ArrowRight, Heart, X, ChevronLeft, ChevronRight } from 'lucide-react'
+import {
+  Star,
+  ArrowRight,
+  Heart,
+  X,
+  ChevronLeft,
+  ChevronRight,
+  Play,
+} from 'lucide-react'
+
+function buildGallery(folder, featured, extraFiles, baseTitle, baseCaption) {
+  const isVideo = (file) => /\.(mp4|webm|mov)$/i.test(file)
+  const featuredSet = new Set(featured.map((p) => p.file))
+  const featuredItems = featured.map((p) => ({
+    src: `/assets/event/${folder}/${p.file}`,
+    type: isVideo(p.file) ? 'video' : 'image',
+    title: p.title,
+    caption: p.caption,
+  }))
+  const extraItems = extraFiles
+    .filter((file) => !featuredSet.has(file))
+    .map((file, idx) => ({
+      src: `/assets/event/${folder}/${file}`,
+      type: isVideo(file) ? 'video' : 'image',
+      title: isVideo(file)
+        ? `${baseTitle} Reel`
+        : `${baseTitle} #${featuredItems.length + idx + 1}`,
+      caption: baseCaption,
+    }))
+  return [...featuredItems, ...extraItems]
+}
+
+const HALLOWEEN_FILES = [
+  'reel.mp4',
+  'halloween-02.jpg', 'halloween-03.jpg', 'halloween-04.jpg', 'halloween-05.jpg',
+  'halloween-06.jpg', 'halloween-07.jpg', 'halloween-08.jpg', 'halloween-09.jpg',
+  'halloween-10.jpg', 'halloween-11.jpg', 'halloween-12.jpg', 'halloween-13.jpg',
+  'halloween-14.jpg', 'halloween-15.jpg', 'halloween-16.jpg', 'halloween-17.jpg',
+  'halloween-18.jpg', 'halloween-19.jpg', 'halloween-21.jpg',
+]
+
+const DIWALI_FILES = [
+  'diwali-01.jpg', 'diwali-02.jpg', 'diwali-03.jpg', 'diwali-04.jpg',
+  'diwali-05.jpg', 'diwali-06.jpg', 'diwali-07.jpg', 'diwali-08.jpg',
+  'diwali-09.jpg', 'diwali-10.jpg', 'diwali-11.jpg', 'diwali-12.jpg',
+  'diwali-13.jpg', 'diwali-14.jpg', 'diwali-15.jpg', 'diwali-video-01.mp4',
+]
+
+const DUSHHERA_FILES = [
+  'dushhera-01.jpg', 'dushhera-02.jpg', 'dushhera-video-01.mp4', 'dushhera-video-02.mp4',
+]
+
+const CAMPUS_ACTIVITY_FILES = [
+  'campus-video-01.mp4', 'event-video-02.mp4', 'event-video-03.mp4', 'event-video-04.mp4', 'event-video-05.mp4',
+  // Activity images (shown first below videos)
+  'campus-activity-16.jpg', 'campus-activity-17.jpg', 'campus-activity-18.jpg', 'campus-activity-19.jpg',
+  'campus-activity-20.jpg', 'campus-activity-21.jpg', 'campus-activity-22.jpg', 'campus-activity-23.jpg',
+  // Campus images (shown below activity images)
+  'campus-01.jpg', 'campus-02.jpg', 'campus-03.jpg', 'campus-04.jpg', 'campus-05.jpg',
+  'campus-07.jpg', 'campus-08.jpg', 'campus-09.jpg', 'campus-10.jpg', 'campus-11.jpg',
+  'campus-12.jpg', 'campus-13.jpg', 'campus-14.jpg', 'campus-15.jpg',
+]
+
+const BIRTHDAY_FILES = [
+  'celebration-15.jpg', 'celebration-17.jpg', 'celebration-18.jpg', 'celebration-19.jpg',
+  'celebration-20.jpg', 'celebration-21.jpg', 'celebration-22.jpg', 'celebration-29.jpg',
+  'celebration-30.jpg', 'celebration-31.jpg', 'celebration-33.jpg', 'celebration-34.jpg',
+  'celebration-35.jpg', 'celebration-36.jpg', 'celebration-37.jpg', 'celebration-38.jpg',
+  'birthday-video-01.mp4', 'event-video-01.mp4',
+]
 
 const EVENT_CARDS = [
   {
@@ -12,64 +81,82 @@ const EVENT_CARDS = [
     iconBg: 'bg-[#FED7D7]/70 text-[#E53E3E]',
     rayColor: '#FF8787',
     iconType: 'diya',
-    photos: [
-      {
-        src: '/assets/events/halloween-02.jpg',
-        title: 'Halloween Costume Assembly',
-        caption: 'Children showcasing their creative and colourful costumes during the morning circle.',
-      },
-      {
-        src: '/assets/events/halloween-13.jpg',
-        title: 'Classroom Costume Parade',
-        caption: 'Joyful smiles as little ones share their character stories with friends.',
-      },
-    ],
+    photos: buildGallery(
+      'halloween',
+      [
+        {
+          file: 'halloween-02.jpg',
+          title: 'Halloween Costume Assembly',
+          caption: 'Children showcasing their creative and colourful costumes during the morning circle.',
+        },
+        {
+          file: 'halloween-13.jpg',
+          title: 'Classroom Costume Parade',
+          caption: 'Joyful smiles as little ones share their character stories with friends.',
+        },
+      ],
+      HALLOWEEN_FILES,
+      'Halloween Fiesta Moment',
+      'Playful costume dress-up, creative expression and Halloween fun at NexGen.'
+    ),
   },
   {
-    id: 'grandparents',
-    title: 'Grandparents Visit & Blessings',
-    subtitle: 'Cherished moments with our grandparents.',
+    id: 'gurudwara',
+    title: 'Gurudwara Visit & Blessings',
+    subtitle: 'Peaceful darshan, gratitude and prayers.',
     themeColor: '#D97706',
     bgColor: 'bg-[#FFFBEB]',
     borderColor: 'border-[#FDE68A]',
     iconBg: 'bg-[#FDE68A]/70 text-[#D97706]',
     rayColor: '#FBB740',
     iconType: 'people',
-    photos: [
-      {
-        src: '/assets/events/gurudwara-01.jpg',
-        title: 'Gurudwara Sahib Darshan',
-        caption: 'Children learning values of gratitude, sharing and seeking elders blessings.',
-      },
-      {
-        src: '/assets/events/gurudwara-02.jpg',
-        title: 'Community Warmth & Prayers',
-        caption: 'Quiet moments of reflection and moral education in early childhood.',
-      },
-    ],
+    photos: buildGallery(
+      'gurudwara-visit',
+      [
+        {
+          file: 'gurudwara-01.jpg',
+          title: 'Gurudwara Sahib Darshan',
+          caption: 'Children learning values of gratitude, sharing and seeking elders blessings.',
+        },
+        {
+          file: 'gurudwara-02.jpg',
+          title: 'Community Warmth & Prayers',
+          caption: 'Quiet moments of reflection and moral education in early childhood.',
+        },
+      ],
+      ['gurudwara-01.jpg', 'gurudwara-02.jpg'],
+      'Blessings & Visit',
+      'Cherished moments of warmth, respect and community bonding.'
+    ),
   },
   {
-    id: 'little-chef',
-    title: 'Little Chef: Flawless Cooking',
-    subtitle: 'Tiny chefs, big talents!',
+    id: 'campus-activities',
+    title: 'Campus Activities',
+    subtitle: 'Playful learning, art and everyday joy!',
     themeColor: '#16A34A',
     bgColor: 'bg-[#F0FDF4]',
     borderColor: 'border-[#BBF7D0]',
     iconBg: 'bg-[#BBF7D0]/70 text-[#16A34A]',
     rayColor: '#34D399',
-    iconType: 'chef',
-    photos: [
-      {
-        src: '/assets/events/celebration-05.jpg',
-        title: 'Tiny Chefs in Action',
-        caption: 'Hands-on flameless food assembly fostering fine motor skills and healthy eating.',
-      },
-      {
-        src: '/assets/events/campus-activity-06.jpg',
-        title: 'Proud Culinary Masterpieces',
-        caption: 'Children joyfully assembling colourful salads and snacks with zero fire.',
-      },
-    ],
+    iconType: 'palette',
+    photos: buildGallery(
+      'campus-activities',
+      [
+        {
+          file: 'campus-activity-16.jpg',
+          title: 'Active Classroom Engagement',
+          caption: 'Hands-on play, motor skill games and joyful learning moments at NexGen.',
+        },
+        {
+          file: 'campus-activity-18.jpg',
+          title: 'Safe Soft Play & Discovery',
+          caption: 'Children exploring creativity, blocks and group activities with caring mentors.',
+        },
+      ],
+      CAMPUS_ACTIVITY_FILES,
+      'Campus Activity',
+      'Joyful everyday classroom activities and play-based learning at NexGen.'
+    ),
   },
   {
     id: 'mindfulness',
@@ -81,41 +168,82 @@ const EVENT_CARDS = [
     iconBg: 'bg-[#E9D5FF]/70 text-[#7C3AED]',
     rayColor: '#A78BFA',
     iconType: 'mindful',
-    photos: [
-      {
-        src: '/assets/events/yoga-01.jpg',
-        title: 'Morning Yoga Stretch Circle',
-        caption: 'Gentle stretching and breathing exercises on child-safe soft mats.',
-      },
-      {
-        src: '/assets/events/yoga-03.jpg',
-        title: 'Calm Postures & Animal Poses',
-        caption: 'Building agility, bodily balance and calm concentration every morning.',
-      },
-    ],
+    photos: buildGallery(
+      'yoga',
+      [
+        {
+          file: 'yoga-01.jpg',
+          title: 'Morning Yoga Stretch Circle',
+          caption: 'Gentle stretching and breathing exercises on child-safe soft mats.',
+        },
+        {
+          file: 'yoga-03.jpg',
+          title: 'Calm Postures & Animal Poses',
+          caption: 'Building agility, bodily balance and calm concentration every morning.',
+        },
+      ],
+      ['yoga-01.jpg', 'yoga-02.jpg', 'yoga-03.jpg', 'yoga-04.jpg'],
+      'Morning Yoga Session',
+      'Building balance, mindfulness and cheerful energy on soft mats.'
+    ),
   },
   {
-    id: 'craft-festival',
-    title: 'Creative Craft & Festival Prep',
-    subtitle: 'Crafting happiness for every festival.',
+    id: 'diwali',
+    title: 'Diwali Celebrations & Crafts',
+    subtitle: 'Crafting happiness for the festival of lights.',
     themeColor: '#65A30D',
     bgColor: 'bg-[#F7FEE7]',
     borderColor: 'border-[#D9F99D]',
     iconBg: 'bg-[#D9F99D]/70 text-[#65A30D]',
     rayColor: '#A3E635',
     iconType: 'palette',
-    photos: [
-      {
-        src: '/assets/events/celebration-12.jpg',
-        title: 'Handmade Candle & Sparkle Art',
-        caption: 'Developing fine hand-eye coordination with tactile festival craft projects.',
-      },
-      {
-        src: '/assets/events/celebration-15.jpg',
-        title: 'Festival Keepsakes',
-        caption: 'Creating handmade art gifts to bring festive warmth home to parents.',
-      },
-    ],
+    photos: buildGallery(
+      'diwali',
+      [
+        {
+          file: 'diwali-01.jpg',
+          title: 'Diwali Art & Rangoli Prep',
+          caption: 'Developing fine hand-eye coordination with tactile festival craft projects.',
+        },
+        {
+          file: 'diwali-08.jpg',
+          title: 'Festival of Lights Smiles',
+          caption: 'Creating handmade diyas and festive keepsakes to bring warmth home.',
+        },
+      ],
+      DIWALI_FILES,
+      'Diwali Celebration',
+      'Tactile art, festive crafts and joyful Diwali classroom celebrations.'
+    ),
+  },
+  {
+    id: 'dushhera',
+    title: 'Dushhera Celebrations',
+    subtitle: 'Storytelling, culture and joyful traditions.',
+    themeColor: '#EA580C',
+    bgColor: 'bg-[#FFF7ED]',
+    borderColor: 'border-[#FED7AA]',
+    iconBg: 'bg-[#FED7AA]/70 text-[#EA580C]',
+    rayColor: '#FB923C',
+    iconType: 'diya',
+    photos: buildGallery(
+      'dushhera',
+      [
+        {
+          file: 'dushhera-01.jpg',
+          title: 'Dushhera Cultural Assembly',
+          caption: 'Children learning timeless values of good triumphing over evil.',
+        },
+        {
+          file: 'dushhera-02.jpg',
+          title: 'Festive Dress-Up & Joy',
+          caption: 'Celebrating Indian heritage with music, props and cheerful smiles.',
+        },
+      ],
+      DUSHHERA_FILES,
+      'Dushhera Celebration',
+      'Joyful cultural storytelling and Dushhera festivities at NexGen.'
+    ),
   },
   {
     id: 'color-days',
@@ -127,18 +255,24 @@ const EVENT_CARDS = [
     iconBg: 'bg-[#BFDBFE]/70 text-[#2563EB]',
     rayColor: '#60A5FA',
     iconType: 'masks',
-    photos: [
-      {
-        src: '/assets/events/celebration-20.jpg',
-        title: 'Themed Costume Assembly',
-        caption: 'Sensory discovery through color identification, group rhymes and theme dressing.',
-      },
-      {
-        src: '/assets/events/celebration-35.jpg',
-        title: 'Vibrant Theme Day Smiles',
-        caption: 'Immersive themed activities bringing preschool storytelling alive.',
-      },
-    ],
+    photos: buildGallery(
+      'birthday-celebrations',
+      [
+        {
+          file: 'celebration-20.jpg',
+          title: 'Themed Costume Assembly',
+          caption: 'Sensory discovery through color identification, group rhymes and theme dressing.',
+        },
+        {
+          file: 'celebration-35.jpg',
+          title: 'Vibrant Theme Day Smiles',
+          caption: 'Immersive themed activities bringing preschool storytelling alive.',
+        },
+      ],
+      BIRTHDAY_FILES,
+      'Birthday & Theme Celebration',
+      'Smiling faces, colourful themes and joyful classroom celebrations.'
+    ),
   },
   {
     id: 'dance-rhythm',
@@ -150,18 +284,24 @@ const EVENT_CARDS = [
     iconBg: 'bg-[#F5D0FE]/70 text-[#C026D3]',
     rayColor: '#F472B6',
     iconType: 'dance',
-    photos: [
-      {
-        src: '/assets/events/dance-01.jpg',
-        title: 'Happy Feet Dance Steps',
-        caption: 'Rhythmic coordination, stage presence and uninhibited musical joy.',
-      },
-      {
-        src: '/assets/events/dance-02.jpg',
-        title: 'Musical Expression',
-        caption: 'Encouraging every child to step up, clap and shine with friends.',
-      },
-    ],
+    photos: buildGallery(
+      'dance-rhythm',
+      [
+        {
+          file: 'dance-01.jpg',
+          title: 'Happy Feet Dance Steps',
+          caption: 'Rhythmic coordination, stage presence and uninhibited musical joy.',
+        },
+        {
+          file: 'dance-02.jpg',
+          title: 'Musical Expression',
+          caption: 'Encouraging every child to step up, clap and shine with friends.',
+        },
+      ],
+      ['dance-01.jpg', 'dance-02.jpg', 'dance-03.jpg'],
+      'Dance & Rhythm',
+      'Music, movement and cheerful stage confidence.'
+    ),
   },
 ]
 
@@ -231,38 +371,62 @@ function BrushRays({ color }) {
 }
 
 export default function EventsSection() {
-  const [modalMedia, setModalMedia] = useState(null)
+  const [activeEvent, setActiveEvent] = useState(null)
+  const [lightboxOpen, setLightboxOpen] = useState(false)
   const [modalIndex, setModalIndex] = useState(0)
-  const [modalPhotos, setModalPhotos] = useState([])
 
-  const openModal = (photos, initialIndex = 0) => {
-    setModalPhotos(photos)
-    setModalIndex(initialIndex)
-    setModalMedia(photos[initialIndex])
+  const getOrderedMedia = (card) => {
+    if (!card) return []
+    const videos = card.photos.filter((p) => p.type === 'video')
+    const images = card.photos.filter((p) => p.type !== 'video')
+    return [...videos, ...images]
+  }
+
+  const openGridModal = (card) => {
+    setActiveEvent(card)
+    setModalIndex(0)
+    setLightboxOpen(false)
+  }
+
+  const openPhotoLightbox = (card, index = 0) => {
+    const ordered = getOrderedMedia(card)
+    const targetSrc = card.photos[index]?.src
+    const mappedIndex = Math.max(0, ordered.findIndex((p) => p.src === targetSrc))
+    setActiveEvent(card)
+    setModalIndex(mappedIndex)
+    setLightboxOpen(true)
+  }
+
+  const closeModal = () => {
+    setLightboxOpen(false)
+    setActiveEvent(null)
   }
 
   const nextModal = (e) => {
     e?.stopPropagation()
-    const nextIdx = (modalIndex + 1) % modalPhotos.length
-    setModalIndex(nextIdx)
-    setModalMedia(modalPhotos[nextIdx])
+    if (!activeEvent) return
+    setModalIndex((idx) => (idx + 1) % activeEvent.photos.length)
   }
 
   const prevModal = (e) => {
     e?.stopPropagation()
-    const prevIdx = (modalIndex - 1 + modalPhotos.length) % modalPhotos.length
-    setModalIndex(prevIdx)
-    setModalMedia(modalPhotos[prevIdx])
+    if (!activeEvent) return
+    setModalIndex((idx) => (idx - 1 + activeEvent.photos.length) % activeEvent.photos.length)
   }
 
   // Keyboard navigation & body scroll lock for modal
   useEffect(() => {
-    if (!modalMedia) return
+    if (!activeEvent) return
 
     const handleKeyDown = (e) => {
-      if (e.key === 'Escape') setModalMedia(null)
-      else if (e.key === 'ArrowRight') nextModal()
-      else if (e.key === 'ArrowLeft') prevModal()
+      if (e.key === 'Escape') {
+        if (lightboxOpen) setLightboxOpen(false)
+        else closeModal()
+      } else if (lightboxOpen && e.key === 'ArrowRight') {
+        nextModal()
+      } else if (lightboxOpen && e.key === 'ArrowLeft') {
+        prevModal()
+      }
     }
 
     document.addEventListener('keydown', handleKeyDown)
@@ -272,7 +436,12 @@ export default function EventsSection() {
       document.removeEventListener('keydown', handleKeyDown)
       document.body.style.overflow = ''
     }
-  }, [modalMedia, modalIndex, modalPhotos.length])
+  }, [activeEvent, lightboxOpen])
+
+  const orderedMedia = getOrderedMedia(activeEvent)
+  const videoItems = orderedMedia.filter((p) => p.type === 'video')
+  const imageItems = orderedMedia.filter((p) => p.type !== 'video')
+  const currentPhoto = orderedMedia[modalIndex] || null
 
   return (
     <section id="events" className="relative overflow-hidden bg-white py-16 sm:py-20 md:py-24">
@@ -355,7 +524,17 @@ export default function EventsSection() {
           {EVENT_CARDS.map((card) => (
             <div
               key={card.id}
-              className={`relative overflow-hidden rounded-2xl sm:rounded-3xl border ${card.borderColor} ${card.bgColor} p-4 sm:p-5 lg:p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 flex flex-row items-center justify-between gap-3 sm:gap-4`}
+              role="button"
+              tabIndex={0}
+              onClick={() => openGridModal(card)}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault()
+                  openGridModal(card)
+                }
+              }}
+              className={`group relative overflow-hidden rounded-none border ${card.borderColor} ${card.bgColor} p-4 sm:p-5 lg:p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 flex flex-row items-center justify-between gap-3 sm:gap-4 cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary`}
+              style={{ borderRadius: '0px' }}
             >
               {/* Left Column: Icon + Title + Subtitle + Link */}
               <div className="flex-1 min-w-0 pr-1">
@@ -380,21 +559,23 @@ export default function EventsSection() {
                 </p>
 
                 {/* View Gallery Link */}
-                <button
-                  onClick={() => openModal(card.photos, 0)}
-                  className="mt-3 inline-flex items-center gap-1 text-xs sm:text-sm font-bold tracking-wide transition-transform hover:translate-x-0.5 focus:outline-none"
+                <span
+                  className="mt-3 inline-flex items-center gap-1 text-xs sm:text-sm font-bold tracking-wide transition-transform group-hover:translate-x-1"
                   style={{ color: card.themeColor }}
                 >
                   <span>View Gallery</span>
                   <ArrowRight size={14} />
-                </button>
+                </span>
               </div>
 
               {/* Right Column: 2 Overlapping Polaroids with White Border & Rotation */}
               <div className="relative flex shrink-0 items-center justify-center w-28 sm:w-36 md:w-36 lg:w-44 py-2">
                 {/* Photo 1 (Tilted Left) */}
                 <div
-                  onClick={() => openModal(card.photos, 0)}
+                  onClick={(e) => {
+                    e.stopPropagation()
+                    openPhotoLightbox(card, 0)
+                  }}
                   className="absolute left-0 -rotate-6 transform cursor-pointer rounded-lg sm:rounded-xl bg-white p-1 sm:p-1.5 shadow-md ring-1 ring-black/5 transition-all duration-300 hover:rotate-0 hover:scale-105 hover:z-30"
                 >
                   <img
@@ -407,7 +588,10 @@ export default function EventsSection() {
 
                 {/* Photo 2 (Tilted Right, Overlapping) */}
                 <div
-                  onClick={() => openModal(card.photos, 1)}
+                  onClick={(e) => {
+                    e.stopPropagation()
+                    openPhotoLightbox(card, 1)
+                  }}
                   className="relative ml-8 sm:ml-12 rotate-6 transform cursor-pointer rounded-lg sm:rounded-xl bg-white p-1 sm:p-1.5 shadow-lg ring-1 ring-black/5 transition-all duration-300 hover:rotate-0 hover:scale-105 hover:z-30"
                 >
                   <img
@@ -421,8 +605,11 @@ export default function EventsSection() {
             </div>
           ))}
 
-          {/* ================= 8TH CARD: CELEBRATING LITTLE MOMENTS BANNER ================= */}
-          <div className="relative overflow-hidden rounded-2xl sm:rounded-3xl border border-amber-200/70 bg-gradient-to-br from-[#FFFBEB] via-[#F4F8FF] to-[#FFF1F2] p-5 sm:p-6 lg:p-7 flex items-center justify-between shadow-xs">
+          {/* ================= BANNER: CELEBRATING LITTLE MOMENTS ================= */}
+          <div
+            className="md:col-span-2 relative overflow-hidden rounded-none border border-amber-200/70 bg-gradient-to-br from-[#FFFBEB] via-[#F4F8FF] to-[#FFF1F2] p-5 sm:p-6 lg:p-7 flex items-center justify-between shadow-xs"
+            style={{ borderRadius: '0px' }}
+          >
             {/* Background Little Stars */}
             <div className="pointer-events-none absolute right-16 top-4 select-none opacity-80">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="#FBB740">
@@ -463,63 +650,43 @@ export default function EventsSection() {
                 aria-hidden="true"
               >
                 {/* --- Boy (Left) --- */}
-                {/* Boy Hair */}
                 <path
                   d="M 35,42 C 32,25 45,15 62,15 C 78,15 88,25 85,42 C 82,32 72,28 60,28 C 48,28 38,32 35,42 Z"
                   fill="#33241C"
                 />
-                {/* Boy Head */}
                 <ellipse cx="60" cy="45" rx="20" ry="21" fill="#FFDFC4" />
-                {/* Boy Hair Forehead */}
                 <path d="M 42,32 Q 55,30 62,35 Q 70,30 78,34 Q 70,25 60,25 Q 50,25 42,32 Z" fill="#33241C" />
-                {/* Boy Eyes & Cheeks */}
                 <circle cx="53" cy="44" r="2.8" fill="#1E293B" />
                 <circle cx="67" cy="44" r="2.8" fill="#1E293B" />
                 <circle cx="49" cy="49" r="3.5" fill="#FFA4A4" fillOpacity="0.6" />
                 <circle cx="71" cy="49" r="3.5" fill="#FFA4A4" fillOpacity="0.6" />
-                {/* Boy Smile */}
                 <path d="M 55,51 Q 60,57 65,51" stroke="#881337" strokeWidth="2.2" strokeLinecap="round" fill="none" />
-                {/* Boy Shirt */}
                 <path d="M 44,65 L 76,65 L 72,110 L 48,110 Z" fill="#FFFFFF" stroke="#E2E8F0" strokeWidth="1" />
-                {/* Boy Tie */}
                 <path d="M 58,65 L 62,65 L 61,85 L 59,85 Z" fill="#2563EB" />
                 <polygon points="57,65 63,65 62,69 58,69" fill="#1D4ED8" />
-                {/* Boy Blue Shorts */}
                 <path d="M 48,105 L 72,105 L 73,130 L 61,130 L 60,115 L 59,130 L 47,130 Z" fill="#1D4ED8" />
-                {/* Boy Left Arm (Down) */}
                 <path d="M 45,67 Q 38,82 40,95" stroke="#FFDFC4" strokeWidth="7" strokeLinecap="round" fill="none" />
-                {/* Boy Right Arm (Waving Up) */}
                 <path d="M 75,67 Q 85,55 92,42" stroke="#FFDFC4" strokeWidth="7" strokeLinecap="round" fill="none" />
                 <circle cx="93" cy="40" r="4.5" fill="#FFDFC4" />
 
                 {/* --- Girl (Right) --- */}
-                {/* Girl Pigtails Hair */}
                 <path
                   d="M 102,40 C 98,22 112,14 128,14 C 145,14 156,22 152,40 C 148,30 138,26 128,26 C 118,26 106,30 102,40 Z"
                   fill="#33241C"
                 />
-                {/* Left & Right Pigtails */}
                 <path d="M 104,36 Q 92,38 94,50" stroke="#33241C" strokeWidth="6" strokeLinecap="round" fill="none" />
                 <path d="M 150,36 Q 162,38 160,50" stroke="#33241C" strokeWidth="6" strokeLinecap="round" fill="none" />
-                {/* Girl Head */}
                 <ellipse cx="127" cy="45" rx="19" ry="20" fill="#FFE2CB" />
-                {/* Girl Bangs */}
                 <path d="M 110,33 Q 120,31 127,35 Q 135,31 144,34 Q 136,25 127,25 Q 118,25 110,33 Z" fill="#33241C" />
-                {/* Girl Eyes & Cheeks */}
                 <circle cx="121" cy="44" r="2.8" fill="#1E293B" />
                 <circle cx="133" cy="44" r="2.8" fill="#1E293B" />
                 <circle cx="117" cy="49" r="3.5" fill="#FFA4A4" fillOpacity="0.7" />
                 <circle cx="137" cy="49" r="3.5" fill="#FFA4A4" fillOpacity="0.7" />
-                {/* Girl Smile */}
                 <path d="M 123,51 Q 127,57 131,51" stroke="#881337" strokeWidth="2.2" strokeLinecap="round" fill="none" />
-                {/* Girl Pinafore Dress */}
                 <path d="M 114,64 L 140,64 L 146,115 L 108,115 Z" fill="#1D4ED8" />
-                {/* White Inner Shirt */}
                 <path d="M 118,64 L 136,64 L 132,80 L 122,80 Z" fill="#FFFFFF" />
-                {/* Girl Left Arm (Waving Up) */}
                 <path d="M 115,66 Q 104,52 98,38" stroke="#FFE2CB" strokeWidth="6.5" strokeLinecap="round" fill="none" />
                 <circle cx="97" cy="36" r="4" fill="#FFE2CB" />
-                {/* Girl Right Arm (Waving Up) */}
                 <path d="M 139,66 Q 150,55 156,42" stroke="#FFE2CB" strokeWidth="6.5" strokeLinecap="round" fill="none" />
                 <circle cx="157" cy="40" r="4" fill="#FFE2CB" />
               </svg>
@@ -528,74 +695,168 @@ export default function EventsSection() {
         </div>
       </div>
 
-      {/* ================= FULL SCREEN LIGHTBOX MODAL ================= */}
-      {modalMedia && (
+      {/* ================= MASONRY GALLERY SHEET + FLOATING CENTER LIGHTBOX ================= */}
+      {activeEvent && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-navy/90 p-3 sm:p-5 backdrop-blur-md"
-          onClick={() => setModalMedia(null)}
+          className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/60 p-3 sm:p-6 backdrop-blur-sm"
+          onClick={closeModal}
           role="dialog"
           aria-modal="true"
         >
-          {/* Close button */}
-          <button
-            onClick={() => setModalMedia(null)}
-            aria-label="Close modal"
-            className="absolute right-3 top-3 sm:right-6 sm:top-6 z-20 flex h-11 w-11 items-center justify-center rounded-full bg-white/20 text-white backdrop-blur-sm transition-all hover:bg-white/40 hover:scale-105 active:scale-95"
-          >
-            <X size={22} />
-          </button>
-
-          {/* Navigation Previous */}
-          {modalPhotos.length > 1 && (
-            <button
-              onClick={prevModal}
-              aria-label="Previous photo"
-              className="absolute left-2 sm:left-5 top-1/2 -translate-y-1/2 z-20 flex h-11 w-11 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-white/20 text-white backdrop-blur-sm transition-all hover:bg-white/40 hover:scale-105 active:scale-95"
-            >
-              <ChevronLeft size={24} />
-            </button>
-          )}
-
-          {/* Navigation Next */}
-          {modalPhotos.length > 1 && (
-            <button
-              onClick={nextModal}
-              aria-label="Next photo"
-              className="absolute right-2 sm:right-5 top-1/2 -translate-y-1/2 z-20 flex h-11 w-11 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-white/20 text-white backdrop-blur-sm transition-all hover:bg-white/40 hover:scale-105 active:scale-95"
-            >
-              <ChevronRight size={24} />
-            </button>
-          )}
-
-          {/* Modal Container */}
           <div
-            className="relative max-h-[92vh] max-w-4xl w-full overflow-hidden rounded-3xl bg-white shadow-2xl flex flex-col"
+            className="relative flex max-h-[92vh] w-full max-w-6xl flex-col overflow-hidden rounded-none bg-white shadow-2xl"
+            style={{ borderRadius: '0px' }}
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="relative flex items-center justify-center bg-black max-h-[72vh] overflow-hidden">
-              <img
-                src={modalMedia.src}
-                alt={modalMedia.title}
-                className="max-h-[70vh] w-full object-contain"
-              />
+            {/* Header Bar matching mockup */}
+            <div className="flex items-center justify-between gap-3 border-b border-slate-100 bg-white px-4 py-3.5 sm:px-7 sm:py-5 shrink-0">
+              <div className="flex items-center gap-3 sm:gap-4 min-w-0">
+                <div
+                  className={`flex h-11 w-11 sm:h-12 sm:w-12 shrink-0 items-center justify-center rounded-full shadow-xs ${activeEvent.iconBg}`}
+                >
+                  <CardIcon type={activeEvent.iconType} />
+                </div>
+                <div className="min-w-0">
+                  <h3 className="truncate font-fredoka text-lg sm:text-2xl font-bold text-[#0B2545] leading-tight">
+                    {activeEvent.title}
+                  </h3>
+                  <p className="truncate text-xs sm:text-sm text-slate-500 font-medium mt-0.5">
+                    {activeEvent.subtitle}
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-2 shrink-0">
+                <button
+                  onClick={closeModal}
+                  aria-label="Close gallery"
+                  className="flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-full bg-slate-100 text-slate-600 transition-colors hover:bg-slate-200 hover:text-navy"
+                >
+                  <X size={18} />
+                </button>
+              </div>
             </div>
 
-            <div className="p-4 sm:p-5 bg-white border-t flex items-center justify-between">
-              <div>
-                <h3 className="font-fredoka text-base sm:text-lg font-bold text-navy">
-                  {modalMedia.title}
-                </h3>
-                {modalMedia.caption && (
-                  <p className="text-xs sm:text-sm text-slate-600 mt-0.5 font-medium">
-                    {modalMedia.caption}
-                  </p>
-                )}
+            {/* Square Grid Body (videos first, images flow right after with zero blank gap) */}
+            <div className="relative flex-1 overflow-y-auto p-2 sm:p-3 bg-white">
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-1 sm:gap-1.5">
+                {orderedMedia.map((item, idx) => (
+                  <button
+                    key={item.src}
+                    onClick={() => {
+                      setModalIndex(idx)
+                      setLightboxOpen(true)
+                    }}
+                    className={`group relative aspect-[3/4] w-full overflow-hidden rounded-none transition-all duration-300 hover:brightness-95 focus:outline-none ${
+                      item.type === 'video' ? 'bg-slate-900' : 'bg-slate-100'
+                    }`}
+                  >
+                    {item.type === 'video' ? (
+                      <>
+                        <video
+                          src={item.src}
+                          muted
+                          loop
+                          autoPlay
+                          playsInline
+                          preload="metadata"
+                          className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.03]"
+                        />
+                        <span className="pointer-events-none absolute inset-0 flex items-center justify-center bg-black/20">
+                          <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white/90 text-navy shadow-md transition-transform group-hover:scale-110">
+                            <Play size={16} className="ml-0.5 fill-current" />
+                          </span>
+                        </span>
+                      </>
+                    ) : (
+                      <img
+                        src={item.src}
+                        alt={item.title}
+                        loading="lazy"
+                        className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.03]"
+                      />
+                    )}
+                  </button>
+                ))}
               </div>
-              {modalPhotos.length > 1 && (
-                <span className="text-xs font-bold text-slate-400 shrink-0 ml-4">
-                  {modalIndex + 1} of {modalPhotos.length}
-                </span>
+            </div>
+
+          </div>
+        </div>
+      )}
+
+      {/* ================= FLOATING CENTER LIGHTBOX (ABOVE MASONRY MODAL, NEVER CLIPPED) ================= */}
+      {activeEvent && lightboxOpen && currentPhoto && (
+        <div
+          className="fixed inset-0 z-[60] flex items-center justify-center bg-slate-900/45 p-4 sm:p-8 backdrop-blur-[2px]"
+          onClick={() => setLightboxOpen(false)}
+          role="dialog"
+          aria-modal="true"
+        >
+          <div
+            className="relative w-full max-w-2xl overflow-hidden rounded-none bg-white shadow-[0_25px_70px_rgba(15,23,42,0.5)] ring-4 ring-white"
+            style={{ borderRadius: '0px' }}
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Image / Video Stage */}
+            <div className="relative flex items-center justify-center bg-slate-950 h-[50vh] sm:h-[60vh] overflow-hidden">
+              {currentPhoto.type === 'video' ? (
+                <video
+                  key={currentPhoto.src}
+                  src={currentPhoto.src}
+                  controls
+                  autoPlay
+                  playsInline
+                  className="h-full w-full object-contain"
+                />
+              ) : (
+                <img
+                  src={currentPhoto.src}
+                  alt={currentPhoto.title}
+                  className="h-full w-full object-contain"
+                />
               )}
+
+              {/* Top-Left Counter Pill */}
+              <span className="absolute left-3 top-3 sm:left-4 sm:top-4 rounded-full bg-black/60 px-3 py-1 text-xs font-bold text-white backdrop-blur-sm">
+                {modalIndex + 1} / {activeEvent.photos.length}
+              </span>
+
+              {/* Top-Right Close Lightbox Button */}
+              <button
+                onClick={() => setLightboxOpen(false)}
+                aria-label="Close photo preview"
+                className="absolute right-3 top-3 sm:right-4 sm:top-4 flex h-8 w-8 sm:h-9 sm:w-9 items-center justify-center rounded-full bg-black/60 text-white backdrop-blur-sm transition-colors hover:bg-black/80"
+              >
+                <X size={16} />
+              </button>
+
+              {/* Prev / Next Arrows */}
+              {activeEvent.photos.length > 1 && (
+                <>
+                  <button
+                    onClick={prevModal}
+                    aria-label="Previous photo"
+                    className="absolute left-2.5 sm:left-4 top-1/2 -translate-y-1/2 flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-full bg-white/25 text-white backdrop-blur-sm transition-all hover:bg-white/45"
+                  >
+                    <ChevronLeft size={20} />
+                  </button>
+                  <button
+                    onClick={nextModal}
+                    aria-label="Next photo"
+                    className="absolute right-2.5 sm:right-4 top-1/2 -translate-y-1/2 flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-full bg-white/25 text-white backdrop-blur-sm transition-all hover:bg-white/45"
+                  >
+                    <ChevronRight size={20} />
+                  </button>
+                </>
+              )}
+            </div>
+
+            {/* Clean White Footer Strip */}
+            <div className="bg-white px-4 py-3 sm:px-5 sm:py-3.5 border-t border-slate-100">
+              <h4 className="font-fredoka text-sm sm:text-base font-bold text-[#0B2545]">
+                {currentPhoto.title}
+              </h4>
             </div>
           </div>
         </div>

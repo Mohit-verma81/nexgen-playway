@@ -86,7 +86,7 @@ export default function EarlyEducationSection() {
               <div className="relative z-10 overflow-hidden rounded-[28px] sm:rounded-[34px] border-4 border-white bg-amber-50 shadow-2xl transition-transform duration-500 hover:scale-[1.01]">
                 <div className="aspect-[4/3] w-full">
                   <img
-                    src="/assets/events/celebration-15.jpg"
+                    src="/assets/event/birthday-celebrations/celebration-15.jpg"
                     alt="NexGen Kindergarten & Early Education Classroom"
                     className="h-full w-full object-cover"
                     loading="lazy"
