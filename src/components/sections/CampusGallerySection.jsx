@@ -1,16 +1,31 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useMemo } from 'react'
 import { X } from 'lucide-react'
 import { GALLERY_IMAGES } from '../../data/index.js'
 import SectionHeading from '../ui/SectionHeading.jsx'
 
+function shuffleArray(items) {
+  const arr = [...items]
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1))
+    ;[arr[i], arr[j]] = [arr[j], arr[i]]
+  }
+  return arr
+}
+
 export default function CampusGallerySection() {
   const [lightbox, setLightbox] = useState(null)
 
-  // Duplicate arrays for seamless 100% infinite marquee loops
-  const topList = [...GALLERY_IMAGES, ...GALLERY_IMAGES]
-  // Bottom row uses offset order for visual diversity across the two strips
-  const bottomImages = [...GALLERY_IMAGES.slice(5), ...GALLERY_IMAGES.slice(0, 5)]
-  const bottomList = [...bottomImages, ...bottomImages]
+  // Shuffle once per page load so Yoga, Dance, Halloween, Campus & Celebrations mix naturally
+  const { topList, bottomList } = useMemo(() => {
+    const shuffled = shuffleArray(GALLERY_IMAGES)
+    const midpoint = Math.ceil(shuffled.length / 2)
+    const topImages = shuffled.slice(0, midpoint)
+    const bottomImages = shuffled.slice(midpoint)
+    return {
+      topList: [...topImages, ...topImages],
+      bottomList: [...bottomImages, ...bottomImages],
+    }
+  }, [])
 
   useEffect(() => {
     if (!lightbox) return

@@ -147,17 +147,12 @@ export const ACTIVITIES = [
 ]
 
 export const GALLERY_IMAGES = [
+  // Campus Highlights (8 curated)
   {
     src: '/assets/images/campus-tour/building.jpg',
     alt: 'NexGen Playway & Academy Building Exterior',
     title: 'School Campus Building',
     category: 'Campus',
-  },
-  {
-    src: '/assets/event/campus-activities/campus-01.jpg',
-    alt: 'Active kids classroom engagement and toys',
-    title: 'Vibrant Play & Learning',
-    category: 'Activity',
   },
   {
     src: '/assets/images/campus-tour/entrance.jpg',
@@ -166,52 +161,164 @@ export const GALLERY_IMAGES = [
     category: 'Campus',
   },
   {
-    src: '/assets/event/diwali/diwali-01.jpg',
-    alt: 'Children enjoying Diwali festival celebrations',
-    title: 'Festive Celebrations & Costumes',
-    category: 'Celebration',
-  },
-  {
     src: '/assets/images/campus-tour/classroom-1.jpg',
     alt: 'Classroom with mushroom mural and kid desks',
     title: 'Activity Classroom',
     category: 'Classroom',
   },
   {
-    src: '/assets/event/diwali/campus-activity-06.jpg',
-    alt: 'Children engrossed in hands-on learning activity',
-    title: 'Hands-on Learning Fun',
-    category: 'Activity',
-  },
-  {
     src: '/assets/images/campus-tour/smart-tv.jpg',
     alt: 'Smart TV panel in classroom',
     title: 'Smart Screen Learning',
-    category: 'Activity',
-  },
-  {
-    src: '/assets/event/birthday-celebrations/celebration-15.jpg',
-    alt: 'Kids celebrating theme day at NexGen',
-    title: 'Colourful Theme Day Moments',
-    category: 'Celebration',
+    category: 'Campus',
   },
   {
     src: '/assets/images/campus-tour/activity-hall.jpg',
     alt: 'Activity hall with soft green carpet',
     title: 'Activity & Movement Hall',
-    category: 'Activity',
-  },
-  {
-    src: '/assets/event/campus-activities/campus-08.jpg',
-    alt: 'Indoor soft playroom with play blocks',
-    title: 'Safe Soft Play Zone',
-    category: 'Activity',
+    category: 'Campus',
   },
   {
     src: '/assets/images/campus-tour/artist-wall.jpg',
     alt: 'Every Child is an Artist wall decoration',
     title: 'Creative Art Wall',
+    category: 'Campus',
+  },
+  {
+    src: '/assets/images/campus-tour/play-area.jpg',
+    alt: 'Indoor safe play area',
+    title: 'Indoor Play Zone',
+    category: 'Campus',
+  },
+  {
+    src: '/assets/images/campus-tour/reception.jpg',
+    alt: 'NexGen reception and counselling desk',
+    title: 'Reception & Help Desk',
+    category: 'Campus',
+  },
+  // Yoga (all 4 photos)
+  {
+    src: '/assets/event/yoga/yoga-01.jpg',
+    alt: 'Children practicing morning yoga on soft mats',
+    title: 'Morning Yoga Circle',
     category: 'Activity',
+  },
+  {
+    src: '/assets/event/yoga/yoga-02.jpg',
+    alt: 'Preschoolers doing calm breathing exercises',
+    title: 'Mindfulness & Breathing',
+    category: 'Activity',
+  },
+  {
+    src: '/assets/event/yoga/yoga-03.jpg',
+    alt: 'Kids practicing playful yoga postures',
+    title: 'Animal Yoga Poses',
+    category: 'Activity',
+  },
+  {
+    src: '/assets/event/yoga/yoga-04.jpg',
+    alt: 'Morning stretch and balance session',
+    title: 'Yoga & Balance Fun',
+    category: 'Activity',
+  },
+  // Dance & Rhythm (all 3 photos)
+  {
+    src: '/assets/event/dance-rhythm/dance-01.jpg',
+    alt: 'Children dancing during rhythm session',
+    title: 'Dance & Rhythm Fun',
+    category: 'Activity',
+  },
+  {
+    src: '/assets/event/dance-rhythm/dance-02.jpg',
+    alt: 'Kids expressing joy through music and dance',
+    title: 'Musical Expression',
+    category: 'Activity',
+  },
+  {
+    src: '/assets/event/dance-rhythm/dance-03.jpg',
+    alt: 'Group dance performance by little learners',
+    title: 'Happy Feet Dance Steps',
+    category: 'Activity',
+  },
+  // Halloween (6 photos)
+  {
+    src: '/assets/event/halloween/halloween-02.jpg',
+    alt: 'Halloween costume assembly at NexGen',
+    title: 'Halloween Costume Fiesta',
+    category: 'Celebration',
+  },
+  {
+    src: '/assets/event/halloween/halloween-05.jpg',
+    alt: 'Creative Halloween dress-up celebration',
+    title: 'Spooky Dress-Up Fun',
+    category: 'Celebration',
+  },
+  {
+    src: '/assets/event/halloween/halloween-08.jpg',
+    alt: 'Kids smiling in Halloween character outfits',
+    title: 'Little Stars in Costumes',
+    category: 'Celebration',
+  },
+  {
+    src: '/assets/event/halloween/halloween-10.jpg',
+    alt: 'Halloween classroom party and props',
+    title: 'Halloween Classroom Parade',
+    category: 'Celebration',
+  },
+  {
+    src: '/assets/event/halloween/halloween-13.jpg',
+    alt: 'Playful Halloween celebration moments',
+    title: 'Halloween Smiles',
+    category: 'Celebration',
+  },
+  {
+    src: '/assets/event/halloween/halloween-17.jpg',
+    alt: 'Children enjoying Halloween theme day',
+    title: 'Halloween Theme Day',
+    category: 'Celebration',
+  },
+  // Campus Activities & Celebrations (Diwali, Birthday, Gurudwara, Play)
+  {
+    src: '/assets/event/playway-activities/campus-activity-16.jpg',
+    alt: 'Children enjoying indoor ride-on play',
+    title: 'Active Indoor Playtime',
+    category: 'Activity',
+  },
+  {
+    src: '/assets/event/playway-activities/campus-activity-17.jpg',
+    alt: 'Kids playing together on soft foam mats',
+    title: 'Play & Motor Skills',
+    category: 'Activity',
+  },
+  {
+    src: '/assets/event/playway-activities/campus-activity-18.jpg',
+    alt: 'Group activity and friendship moments',
+    title: 'Bonding & Social Growth',
+    category: 'Activity',
+  },
+  {
+    src: '/assets/event/playway-activities/campus-activity-20.jpg',
+    alt: 'Kids engaged in playful learning',
+    title: 'Hands-On Learning Fun',
+    category: 'Activity',
+  },
+  {
+    src: '/assets/event/diwali/diwali-01.jpg',
+    alt: 'Children enjoying Diwali festival celebrations',
+    title: 'Festive Diwali Celebrations',
+    category: 'Celebration',
+  },
+  {
+    src: '/assets/event/diwali/diwali-08.jpg',
+    alt: 'Kids crafting diyas and festival art',
+    title: 'Festival of Lights Craft',
+    category: 'Celebration',
+  },
+  {
+    src: '/assets/event/birthday-celebrations/celebration-15.jpg',
+    alt: 'Kids celebrating birthday & theme day at NexGen',
+    title: 'Colourful Theme Day Moments',
+    category: 'Celebration',
   },
   {
     src: '/assets/event/birthday-celebrations/celebration-30.jpg',
@@ -220,64 +327,10 @@ export const GALLERY_IMAGES = [
     category: 'Celebration',
   },
   {
-    src: '/assets/images/programs/playgroup-girl.jpg',
-    alt: 'Children dance and musical session',
-    title: 'Dance & Music Sessions',
-    category: 'Activity',
-  },
-  {
-    src: '/assets/event/campus-activities/campus-11.jpg',
-    alt: 'Creative art and drawing session',
-    title: 'Art, Colors & Imagination',
-    category: 'Activity',
-  },
-  {
-    src: '/assets/images/campus-tour/play-area.jpg',
-    alt: 'Indoor safe play area',
-    title: 'Indoor Play Zone',
-    category: 'Activity',
-  },
-  {
-    src: '/assets/event/campus-activities/campus-activity-18.jpg',
-    alt: 'Group activity and friendship moments',
-    title: 'Bonding & Social Growth',
+    src: '/assets/event/gurudwara-visit/gurudwara-01.jpg',
+    alt: 'Children visiting Gurudwara Sahib for blessings',
+    title: 'Gurudwara Visit & Blessings',
     category: 'Celebration',
-  },
-  {
-    src: '/assets/images/campus-tour/reception.jpg',
-    alt: 'NexGen reception and counselling desk',
-    title: 'Reception & Help Desk',
-    category: 'Campus',
-  },
-  {
-    src: '/assets/event/campus-activities/campus-14.jpg',
-    alt: 'Interactive playtime with safe toys',
-    title: 'Discovery & Motor Play',
-    category: 'Activity',
-  },
-  {
-    src: '/assets/images/campus-tour/counselling-room.jpg',
-    alt: 'Parent counselling room',
-    title: 'Parent Counselling Room',
-    category: 'Campus',
-  },
-  {
-    src: '/assets/event/campus-activities/campus-activity-21.jpg',
-    alt: 'Little stars enjoying campus life',
-    title: 'Little Learners Growing Together',
-    category: 'Celebration',
-  },
-  {
-    src: '/assets/images/campus-tour/welcome.jpg',
-    alt: 'Welcome board with monkey mural',
-    title: 'Welcome Board Mural',
-    category: 'Campus',
-  },
-  {
-    src: '/assets/images/campus-tour/classroom-2.jpg',
-    alt: 'Classroom layout with study benches',
-    title: 'Study & Learning Area',
-    category: 'Classroom',
   },
 ]
 

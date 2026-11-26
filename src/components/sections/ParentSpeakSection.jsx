@@ -271,14 +271,24 @@ export default function ParentSpeakSection() {
               <div
                 key={item.id}
                 onClick={() => setActiveVideo(item)}
+                onMouseEnter={(e) => {
+                  const v = e.currentTarget.querySelector('video')
+                  if (v) v.play().catch(() => {})
+                }}
+                onMouseLeave={(e) => {
+                  const v = e.currentTarget.querySelector('video')
+                  if (v) {
+                    v.pause()
+                    v.currentTime = 0
+                  }
+                }}
                 className="group relative cursor-pointer overflow-hidden rounded-2xl sm:rounded-3xl bg-slate-900 shadow-md hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1.5 ring-1 ring-slate-200/60"
               >
                 {/* 9:14 Reel Aspect Ratio Container */}
                 <div className="relative aspect-[9/14] sm:aspect-[9/15] w-full overflow-hidden">
-                  {/* Background Video looping silently */}
+                  {/* Background Video: plays on hover, paused on idle */}
                   <video
                     src={item.src}
-                    autoPlay
                     loop
                     muted
                     playsInline
@@ -304,8 +314,8 @@ export default function ParentSpeakSection() {
                     </span>
                   </div>
 
-                  {/* Centered Play Button */}
-                  <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                  {/* Centered Play Button (fades out on hover while preview plays) */}
+                  <div className="absolute inset-0 flex items-center justify-center pointer-events-none transition-opacity duration-200 group-hover:opacity-0">
                     <div className="flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-full bg-white/90 text-primary shadow-xl backdrop-blur-sm transition-all duration-300 group-hover:scale-110 group-hover:bg-primary group-hover:text-white">
                       <Play size={20} className="ml-1 sm:w-6 sm:h-6 fill-current" />
                     </div>

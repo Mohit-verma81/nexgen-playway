@@ -17,10 +17,15 @@ export default function Header() {
   return (
     <header
       role="banner"
-      className={`fixed inset-x-0 top-0 z-50 bg-white transition-all duration-200 ${scrolled ? 'shadow-md py-1' : 'py-1.5 sm:py-2'
-        }`}
+      className="pointer-events-none fixed inset-x-0 top-0 z-50 px-3 pt-2.5 sm:px-6 sm:pt-3.5 transition-all duration-300"
     >
-      <div className="container-content flex h-14 sm:h-16 items-center justify-between md:h-[72px]">
+      <div
+        className={`pointer-events-auto mx-auto flex h-14 sm:h-16 max-w-6xl items-center justify-between rounded-full border border-slate-200/70 bg-white/92 px-4 sm:px-6 backdrop-blur-md transition-all duration-300 ${
+          scrolled
+            ? 'shadow-[0_14px_38px_rgba(15,23,42,0.12)] bg-white/98'
+            : 'shadow-[0_8px_28px_rgba(15,23,42,0.07)]'
+        }`}
+      >
         {/* Logo */}
         <a href="#" onClick={close} className="flex shrink-0 items-center gap-2 sm:gap-2.5">
           <img
@@ -86,8 +91,11 @@ export default function Header() {
       {/* Mobile drawer */}
       <div
         id="mobile-menu"
-        className={`overflow-hidden transition-all duration-300 ease-in-out lg:hidden ${menuOpen ? 'max-h-96 border-t border-gray-100 bg-white shadow-lg' : 'max-h-0'
-          }`}
+        className={`pointer-events-auto mx-auto max-w-6xl overflow-hidden rounded-2xl transition-all duration-300 ease-in-out lg:hidden ${
+          menuOpen
+            ? 'mt-2 max-h-96 border border-slate-100 bg-white/98 shadow-xl backdrop-blur-md'
+            : 'max-h-0'
+        }`}
       >
         <div className="container-content flex flex-col gap-1 py-4">
           {NAV_LINKS.map((link) => (

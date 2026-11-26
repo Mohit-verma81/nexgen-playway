@@ -52,6 +52,8 @@ const DUSHHERA_FILES = [
 ]
 
 const CAMPUS_ACTIVITY_FILES = [
+  'insta-reel-01.mp4', 'insta-reel-02.mp4', 'insta-reel-03.mp4',
+  'collecting-balls-activity.mp4', 'mud-magic-sand-activity.mp4', 'navratri-activity.mp4',
   'campus-video-01.mp4', 'event-video-02.mp4', 'event-video-03.mp4', 'event-video-04.mp4', 'event-video-05.mp4',
   // Activity images (shown first below videos)
   'campus-activity-16.jpg', 'campus-activity-17.jpg', 'campus-activity-18.jpg', 'campus-activity-19.jpg',
@@ -130,8 +132,8 @@ const EVENT_CARDS = [
     ),
   },
   {
-    id: 'campus-activities',
-    title: 'Campus Activities',
+    id: 'playway-activities',
+    title: 'Playway Fun & Activities',
     subtitle: 'Playful learning, art and everyday joy!',
     themeColor: '#16A34A',
     bgColor: 'bg-[#F0FDF4]',
@@ -140,7 +142,7 @@ const EVENT_CARDS = [
     rayColor: '#34D399',
     iconType: 'palette',
     photos: buildGallery(
-      'campus-activities',
+      'playway-activities',
       [
         {
           file: 'campus-activity-16.jpg',
@@ -747,6 +749,19 @@ export default function EventsSection() {
                       setModalIndex(idx)
                       setLightboxOpen(true)
                     }}
+                    onMouseEnter={(e) => {
+                      if (item.type !== 'video') return
+                      const v = e.currentTarget.querySelector('video')
+                      if (v) v.play().catch(() => {})
+                    }}
+                    onMouseLeave={(e) => {
+                      if (item.type !== 'video') return
+                      const v = e.currentTarget.querySelector('video')
+                      if (v) {
+                        v.pause()
+                        v.currentTime = 0
+                      }
+                    }}
                     className={`group relative aspect-[3/4] w-full overflow-hidden rounded-none transition-all duration-300 hover:brightness-95 focus:outline-none ${
                       item.type === 'video' ? 'bg-slate-900' : 'bg-slate-100'
                     }`}
@@ -757,13 +772,12 @@ export default function EventsSection() {
                           src={item.src}
                           muted
                           loop
-                          autoPlay
                           playsInline
                           preload="metadata"
                           className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.03]"
                         />
-                        <span className="pointer-events-none absolute inset-0 flex items-center justify-center bg-black/20">
-                          <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white/90 text-navy shadow-md transition-transform group-hover:scale-110">
+                        <span className="pointer-events-none absolute inset-0 flex items-center justify-center bg-black/20 transition-opacity duration-200 group-hover:opacity-0">
+                          <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white/90 text-navy shadow-md">
                             <Play size={16} className="ml-0.5 fill-current" />
                           </span>
                         </span>
