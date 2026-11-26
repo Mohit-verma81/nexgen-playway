@@ -32,6 +32,7 @@ const VIDEO_STORIES = [
   {
     id: 'vid-1',
     src: '/assets/event/parent-videos/parent-video-01.mp4',
+    poster: '/assets/event/parent-videos/parent-poster-01.webp',
     roleLabel: 'Event Attendee',
     shortQuote:
       "I had such a wonderful time at the event—I enjoyed it so much that I'd love to experience it again and again. Truly the best!",
@@ -42,6 +43,7 @@ const VIDEO_STORIES = [
   {
     id: 'vid-2',
     src: '/assets/event/parent-videos/parent-video-02.mp4',
+    poster: '/assets/event/parent-videos/parent-poster-02.webp',
     roleLabel: 'Event Attendee',
     shortQuote:
       "I enjoyed today's event so much that I feel like attending gatherings like this every single day. Congratulations on coming first in both diya making and rangoli making!",
@@ -52,6 +54,7 @@ const VIDEO_STORIES = [
   {
     id: 'vid-3',
     src: '/assets/event/parent-videos/parent-video-04.mp4',
+    poster: '/assets/event/parent-videos/parent-poster-04.webp',
     roleLabel: 'Parent Attendee',
     shortQuote:
       'Coming here felt so welcoming. My child studies here and loves it, learning new things every time, and attending today was a wonderful first-time experience for me too.',
@@ -62,6 +65,7 @@ const VIDEO_STORIES = [
   {
     id: 'vid-4',
     src: '/assets/event/parent-videos/parent-video-03.mp4',
+    poster: '/assets/event/parent-videos/parent-poster-03.webp',
     roleLabel: 'Event Attendee',
     shortQuote:
       'It was a wonderful gathering where everyone had a great time. Wishing everyone all the best for the year ahead!',
@@ -110,7 +114,7 @@ export default function ParentSpeakSection() {
   return (
     <section
       id="parent-speak"
-      className="relative overflow-hidden bg-white pt-14 pb-0 sm:pt-20 sm:pb-0"
+      className="relative overflow-hidden bg-white pt-6 pb-0 sm:pt-8 sm:pb-0"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
@@ -170,20 +174,108 @@ export default function ParentSpeakSection() {
         <div className="relative mx-auto max-w-4xl">
 
           {/* ================= ORGANIC CLOUD / SPEECH BUBBLE TESTIMONIAL ================= */}
-          <div className="relative mx-auto flex items-center justify-center py-4 sm:py-8 md:py-10">
+          <div className="relative mx-auto flex flex-col items-center justify-center py-2 sm:py-4 md:py-4">
 
             {/* Masked Organic Background using .testimonial-one__bg (active on sm+ screens) */}
             <div className="hidden sm:block testimonial-one__bg drop-shadow-2xl" aria-hidden="true" />
 
-            {/* Mobile Cloud Puffs */}
-            <div className="sm:hidden pointer-events-none absolute -top-3 left-6 h-8 w-20 rounded-full bg-[#6FBD30]" aria-hidden="true" />
-            <div className="sm:hidden pointer-events-none absolute -top-5 left-20 h-12 w-28 rounded-full bg-[#6FBD30]" aria-hidden="true" />
-            <div className="sm:hidden pointer-events-none absolute -top-3 right-6 h-9 w-24 rounded-full bg-[#6FBD30]" aria-hidden="true" />
-            <div className="sm:hidden pointer-events-none absolute -bottom-3 left-8 h-8 w-20 rounded-full bg-[#6FBD30]" aria-hidden="true" />
-            <div className="sm:hidden pointer-events-none absolute -bottom-4 right-10 h-10 w-24 rounded-full bg-[#6FBD30]" aria-hidden="true" />
+            {/* Mobile Top-Left White Cloud + Top-Right Smiling Sun */}
+            <div className="relative mt-14 sm:mt-0 w-full max-w-2xl flex items-center justify-center">
+              {/* Mobile Top-Left Cute White Cloud (in front of green edge) */}
+              <svg
+                viewBox="0 0 100 58"
+                className="sm:hidden pointer-events-none absolute -top-13 left-2 z-20 w-24 drop-shadow-sm"
+                style={{ top: '-3.25rem' }}
+                aria-hidden="true"
+              >
+                <path
+                  d="M22,48 H76 C86,48 93,41 93,32 C93,24 87,18 79,17 C75,8 66,3 55,3 C44,3 35,9 32,18 C30,17 28,17 26,17 C15,17 7,24 7,33 C7,41 14,48 22,48 Z"
+                  fill="#FFFFFF"
+                  stroke="#E2E8F0"
+                  strokeWidth="1.5"
+                />
+              </svg>
 
-            {/* Testimonial Content sitting safely inside the card */}
-            <div className="relative z-10 w-full max-w-2xl rounded-[32px] bg-[#6FBD30] sm:bg-transparent sm:rounded-none px-6 py-8 sm:px-12 sm:py-16 md:px-14 md:py-20 text-center text-white shadow-xl sm:shadow-none">
+              {/* Mobile Top-Right Cute Smiling Sun (rising from behind the curved green bend) */}
+              <svg
+                viewBox="0 0 100 90"
+                className="sm:hidden pointer-events-none absolute right-3 z-0 w-24"
+                style={{ top: '-4.75rem' }}
+                aria-hidden="true"
+              >
+                {/* Sun Rays */}
+                <g stroke="#FACC15" strokeWidth="3.5" strokeLinecap="round">
+                  <line x1="50" y1="6" x2="50" y2="14" />
+                  <line x1="25" y1="15" x2="31" y2="21" />
+                  <line x1="75" y1="15" x2="69" y2="21" />
+                  <line x1="12" y1="36" x2="20" y2="39" />
+                  <line x1="88" y1="36" x2="80" y2="39" />
+                  <line x1="37" y1="9" x2="40" y2="16" />
+                  <line x1="63" y1="9" x2="60" y2="16" />
+                </g>
+                {/* Sun Circle */}
+                <circle cx="50" cy="48" r="25" fill="#FDE047" />
+                {/* Rosy Cheeks */}
+                <circle cx="38" cy="51" r="3.2" fill="#FB923C" opacity="0.55" />
+                <circle cx="62" cy="51" r="3.2" fill="#FB923C" opacity="0.55" />
+                {/* Eyes & Smile */}
+                <circle cx="42" cy="44" r="2.2" fill="#1E293B" />
+                <circle cx="58" cy="44" r="2.2" fill="#1E293B" />
+                <path d="M44,52 Q50,58 56,52" fill="none" stroke="#1E293B" strokeWidth="2.2" strokeLinecap="round" />
+              </svg>
+
+              {/* Mobile Top-Right Mini White Cloud (in front of sun & green edge) */}
+              <svg
+                viewBox="0 0 72 44"
+                className="sm:hidden pointer-events-none absolute right-1 z-20 w-16 drop-shadow-sm"
+                style={{ top: '-0.85rem' }}
+                aria-hidden="true"
+              >
+                <path
+                  d="M16,36 H55 C62,36 67,31 67,25 C67,19 63,14 57,13 C54,6 47,3 39,3 C31,3 24,7 22,14 C21,14 19,13 18,13 C10,13 5,19 5,25 C5,31 10,36 16,36 Z"
+                  fill="#FFFFFF"
+                  stroke="#E2E8F0"
+                  strokeWidth="1.5"
+                />
+              </svg>
+
+              {/* Testimonial Content sitting safely inside the card */}
+              <div className="relative z-10 w-full max-w-2xl rounded-b-[32px] rounded-t-none bg-[#6FBD30] sm:bg-transparent sm:rounded-none px-6 pt-3 pb-8 sm:px-16 sm:pt-20 sm:pb-24 md:px-20 md:pt-24 md:pb-28 text-center text-white shadow-xl sm:shadow-none">
+
+                {/* Mobile Organic Top Hill Cap (deep curved bend on top-right so sun rises from it) */}
+                <svg
+                  viewBox="0 0 360 56"
+                  preserveAspectRatio="none"
+                  className="sm:hidden pointer-events-none absolute bottom-full left-0 w-full h-14 -mb-px"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M0,56 C0,20 26,8 68,7 Q155,2 225,16 C275,26 305,46 335,48 C350,49 360,52 360,56 Z"
+                    fill="#6FBD30"
+                  />
+                </svg>
+
+                {/* Mobile Bottom-Left & Bottom-Right Decorative Curves */}
+                <svg
+                  viewBox="0 0 36 36"
+                  className="sm:hidden pointer-events-none absolute bottom-4 left-4 w-7 h-7 stroke-[#A6E272] fill-none"
+                  strokeWidth="2.6"
+                  strokeLinecap="round"
+                  aria-hidden="true"
+                >
+                  <path d="M6,10 C6,22 14,28 26,28" />
+                  <path d="M12,8 C12,17 18,22 27,22" opacity="0.7" />
+                </svg>
+                <svg
+                  viewBox="0 0 36 36"
+                  className="sm:hidden pointer-events-none absolute bottom-4 right-4 w-7 h-7 stroke-[#A6E272] fill-none"
+                  strokeWidth="2.6"
+                  strokeLinecap="round"
+                  aria-hidden="true"
+                >
+                  <path d="M30,10 C30,22 22,28 10,28" />
+                  <path d="M24,8 C24,17 18,22 9,22" opacity="0.7" />
+                </svg>
 
               {/* Playful Decorative Green Accent Doodle inside */}
               <div
@@ -200,6 +292,7 @@ export default function ParentSpeakSection() {
               <span className="font-hand text-xl sm:text-3xl text-white/95 tracking-wide block">
                 Parent Testimonials
               </span>
+              <span className="sm:hidden mx-auto mt-1.5 mb-2 block h-[1.5px] w-12 rounded-full bg-white/50" aria-hidden="true" />
 
               {/* Bubbly Headline: Fredoka font */}
               <h2 className="mt-1 font-fredoka text-xl font-bold text-white sm:text-4xl md:text-5xl leading-snug sm:leading-tight tracking-tight">
@@ -208,35 +301,35 @@ export default function ParentSpeakSection() {
               </h2>
 
               {/* Testimonial Quote Paragraph */}
-              <div className="mx-auto mt-4 sm:mt-8 max-w-xl min-h-[90px] sm:min-h-[80px] flex items-center justify-center">
+              <div className="mx-auto mt-4 sm:mt-6 max-w-xl min-h-[140px] sm:min-h-[124px] flex items-center justify-center">
                 <p className="font-fredoka text-sm sm:text-base md:text-lg leading-relaxed text-white/95 font-medium transition-opacity duration-300">
                   "{t.quote}"
                 </p>
               </div>
 
-              {/* Bottom Row: Navigation Buttons (Left) & Parent Author (Right) */}
-              <div className="mt-6 sm:mt-10 flex flex-row items-center justify-between gap-3 border-t border-white/20 pt-4 sm:pt-6">
+              {/* Bottom Row: On mobile, centered Author above centered Arrows; on sm+, Arrows left & Author right */}
+              <div className="mt-5 sm:mt-7 flex flex-col-reverse sm:flex-row items-center justify-between gap-4 sm:gap-3 border-t border-white/20 pt-5 sm:pt-5 sm:px-4">
 
-                {/* Navigation Pill Circles (Left) */}
-                <div className="flex items-center gap-2.5 sm:gap-3 shrink-0">
+                {/* Navigation Pill Circles */}
+                <div className="flex items-center gap-3 shrink-0">
                   <button
                     onClick={prev}
                     aria-label="Previous Testimonial"
-                    className="flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-[#529320] text-white shadow-md transition-all hover:scale-105 hover:bg-[#437A1A] active:scale-95 focus:outline-none focus:ring-2 focus:ring-white"
+                    className="flex h-11 w-11 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-[#529320] text-white shadow-md transition-all hover:scale-105 hover:bg-[#437A1A] active:scale-95 focus:outline-none focus:ring-2 focus:ring-white"
                   >
                     <ChevronLeft size={20} className="sm:w-[22px] sm:h-[22px]" />
                   </button>
                   <button
                     onClick={next}
                     aria-label="Next Testimonial"
-                    className="flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-[#529320] text-white shadow-md transition-all hover:scale-105 hover:bg-[#437A1A] active:scale-95 focus:outline-none focus:ring-2 focus:ring-white"
+                    className="flex h-11 w-11 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-[#529320] text-white shadow-md transition-all hover:scale-105 hover:bg-[#437A1A] active:scale-95 focus:outline-none focus:ring-2 focus:ring-white"
                   >
                     <ChevronRight size={20} className="sm:w-[22px] sm:h-[22px]" />
                   </button>
                 </div>
 
-                {/* Parent Name & Details (Right) */}
-                <div className="text-right">
+                {/* Parent Name & Details */}
+                <div className="text-center sm:text-right">
                   <h3 className="font-fredoka text-base sm:text-xl font-bold text-white tracking-wide leading-tight">
                     {t.author}
                   </h3>
@@ -247,6 +340,23 @@ export default function ParentSpeakSection() {
 
               </div>
 
+            </div>
+            </div>
+
+            {/* Mobile Pagination Dots */}
+            <div className="sm:hidden mt-4 flex items-center justify-center gap-2" role="tablist" aria-label="Testimonial slides">
+              {TESTIMONIALS.map((_, i) => (
+                <button
+                  key={i}
+                  type="button"
+                  onClick={() => setCurrent(i)}
+                  aria-label={`Go to testimonial ${i + 1}`}
+                  aria-selected={i === current}
+                  className={`h-2.5 rounded-full transition-all duration-300 ${
+                    i === current ? 'w-2.5 bg-[#6FBD30]' : 'w-2.5 bg-[#6FBD30]/30 hover:bg-[#6FBD30]/60'
+                  }`}
+                />
+              ))}
             </div>
 
           </div>
@@ -292,6 +402,7 @@ export default function ParentSpeakSection() {
                   {/* Background Video: plays on hover, paused on idle */}
                   <video
                     src={item.src}
+                    poster={item.poster}
                     loop
                     muted
                     playsInline

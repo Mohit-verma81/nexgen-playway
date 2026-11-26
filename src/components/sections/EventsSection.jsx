@@ -444,7 +444,7 @@ export default function EventsSection() {
   const currentPhoto = orderedMedia[modalIndex] || null
 
   return (
-    <section id="events" className="relative overflow-hidden bg-white py-16 sm:py-20 md:py-24">
+    <section id="events" className="relative overflow-hidden bg-white pt-16 pb-8 sm:pt-20 sm:pb-10 md:pt-24 md:pb-12">
       {/* ================= BACKGROUND PLAYFUL DOODLES ================= */}
       {/* Top Left Dotted Line with Paper Plane */}
       <div className="pointer-events-none absolute left-3 top-6 sm:left-8 sm:top-10 select-none opacity-60 hidden md:block">
