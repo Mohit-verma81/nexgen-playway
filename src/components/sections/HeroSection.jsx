@@ -189,7 +189,7 @@ export default function HeroSection() {
 
           {/* ================= RIGHT COLUMN: ORGANIC WAVE PHOTO WITH DOODLES ================= */}
           <div className="order-1 relative w-full lg:order-2 lg:w-[54%] pt-2 lg:pt-0">
-            <div className="relative mx-auto w-full max-w-[540px] lg:max-w-none lg:w-[calc(100%+max(0px,(100vw-1240px)/2)+1.5rem)] lg:-mr-6">
+            <div className="relative mx-auto lg:mx-0 w-full max-w-[540px] lg:max-w-none lg:w-[calc(100%+max(0px,(100vw-1240px)/2)+2.5rem)]">
 
               {/* Soft Yellow Crescent Hug along Top-Left Edge */}
               <svg

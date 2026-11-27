@@ -56,7 +56,7 @@ const CAMPUS_ACTIVITY_FILES = [
   'collecting-balls-activity.mp4', 'mud-magic-sand-activity.mp4', 'navratri-activity.mp4',
   'campus-video-01.mp4', 'event-video-02.mp4', 'event-video-03.mp4', 'event-video-04.mp4', 'event-video-05.mp4',
   // Activity images (shown first below videos)
-  'campus-activity-16.jpg', 'campus-activity-17.jpg', 'campus-activity-18.jpg', 'campus-activity-19.jpg',
+  'campus-activity-16.jpg', 'campus-activity-17.jpg', 'campus-activity-19.jpg',
   'campus-activity-20.jpg', 'campus-activity-21.jpg', 'campus-activity-22.jpg', 'campus-activity-23.jpg',
   // Campus images (shown below activity images)
   'campus-01.jpg', 'campus-02.jpg', 'campus-03.jpg', 'campus-04.jpg', 'campus-05.jpg',
@@ -65,10 +65,10 @@ const CAMPUS_ACTIVITY_FILES = [
 ]
 
 const BIRTHDAY_FILES = [
-  'celebration-15.jpg', 'celebration-17.jpg', 'celebration-18.jpg', 'celebration-19.jpg',
+  'celebration-15.jpg', 'celebration-17.jpg',
   'celebration-20.jpg', 'celebration-21.jpg', 'celebration-22.jpg', 'celebration-29.jpg',
   'celebration-30.jpg', 'celebration-31.jpg', 'celebration-33.jpg', 'celebration-34.jpg',
-  'celebration-35.jpg', 'celebration-36.jpg', 'celebration-37.jpg', 'celebration-38.jpg',
+  'celebration-36.jpg', 'celebration-37.jpg',
   'birthday-video-01.mp4', 'event-video-01.mp4',
 ]
 
@@ -150,7 +150,7 @@ const EVENT_CARDS = [
           caption: 'Hands-on play, motor skill games and joyful learning moments at NexGen.',
         },
         {
-          file: 'campus-activity-18.jpg',
+          file: 'campus-activity-17.jpg',
           title: 'Safe Soft Play & Discovery',
           caption: 'Children exploring creativity, blocks and group activities with caring mentors.',
         },
@@ -266,7 +266,7 @@ const EVENT_CARDS = [
           caption: 'Sensory discovery through color identification, group rhymes and theme dressing.',
         },
         {
-          file: 'celebration-35.jpg',
+          file: 'celebration-30.jpg',
           title: 'Vibrant Theme Day Smiles',
           caption: 'Immersive themed activities bringing preschool storytelling alive.',
         },

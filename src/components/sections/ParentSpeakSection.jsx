@@ -5,13 +5,13 @@ const TESTIMONIALS = [
   {
     quote:
       "I really enjoyed being part of today's event. The atmosphere was so engaging and fun that I feel like coming back again and again. Thank you so much for such a memorable experience.",
-    author: 'Event Attendee',
+    author: 'Happy Parent',
     role: 'Parent · Mandi Gobindgarh',
   },
   {
     quote:
       "I had such a great time at today's event—it was so enjoyable that I'd love to join events like this every day. Huge congratulations on placing first in both diya making and rangoli making, and thank you for hosting such a wonderful celebration.",
-    author: 'Event Attendee',
+    author: 'Happy Parent',
     role: 'Parent · Mandi Gobindgarh',
   },
   {
@@ -23,7 +23,7 @@ const TESTIMONIALS = [
   {
     quote:
       'The event was truly wonderful, and everyone thoroughly enjoyed themselves. Thank you so much for bringing everyone together, and all the best for next year.',
-    author: 'Event Attendee',
+    author: 'Happy Parent',
     role: 'Parent · Mandi Gobindgarh',
   },
 ]
@@ -33,7 +33,7 @@ const VIDEO_STORIES = [
     id: 'vid-1',
     src: '/assets/event/parent-videos/parent-video-01.mp4',
     poster: '/assets/event/parent-videos/parent-poster-01.webp',
-    roleLabel: 'Event Attendee',
+    roleLabel: 'Happy Parent',
     shortQuote:
       "I had such a wonderful time at the event—I enjoyed it so much that I'd love to experience it again and again. Truly the best!",
     longQuote:
@@ -44,7 +44,7 @@ const VIDEO_STORIES = [
     id: 'vid-2',
     src: '/assets/event/parent-videos/parent-video-02.mp4',
     poster: '/assets/event/parent-videos/parent-poster-02.webp',
-    roleLabel: 'Event Attendee',
+    roleLabel: 'Happy Parent',
     shortQuote:
       "I enjoyed today's event so much that I feel like attending gatherings like this every single day. Congratulations on coming first in both diya making and rangoli making!",
     longQuote:
@@ -66,7 +66,7 @@ const VIDEO_STORIES = [
     id: 'vid-4',
     src: '/assets/event/parent-videos/parent-video-03.mp4',
     poster: '/assets/event/parent-videos/parent-poster-03.webp',
-    roleLabel: 'Event Attendee',
+    roleLabel: 'Happy Parent',
     shortQuote:
       'It was a wonderful gathering where everyone had a great time. Wishing everyone all the best for the year ahead!',
     longQuote:
@@ -466,7 +466,7 @@ export default function ParentSpeakSection() {
                   {activeVideo.roleLabel}
                 </span>
                 <span className="text-xs sm:text-sm font-semibold text-white">
-                  NexGen Learning Hub
+                  NexGen Playway &amp; Academy
                 </span>
               </div>
               <button

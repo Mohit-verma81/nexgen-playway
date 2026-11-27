@@ -1,13 +1,15 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { Menu, X, ArrowRight } from 'lucide-react'
 import { NAV_LINKS } from '../../data/index.js'
 
-const ALL_NAV_LINKS = [{ label: 'Home', href: '#' }, ...NAV_LINKS]
+const ALL_NAV_LINKS = NAV_LINKS
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
-  const [activeHref, setActiveHref] = useState('#')
+  const [activeHref, setActiveHref] = useState('')
+  const [hidden, setHidden] = useState(false)
+  const lastScrollY = useRef(0)
 
   useEffect(() => {
     const sectionIds = NAV_LINKS.map((l) => l.href.replace('#', '')).filter(Boolean)
@@ -16,8 +18,16 @@ export default function Header() {
       const y = window.scrollY
       setScrolled(y > 15)
 
+      if (y < 100) {
+        setHidden(false)
+        lastScrollY.current = y
+      } else if (Math.abs(y - lastScrollY.current) > 8) {
+        setHidden(y > lastScrollY.current)
+        lastScrollY.current = y
+      }
+
       if (y < 140) {
-        setActiveHref('#')
+        setActiveHref('')
         return
       }
 
@@ -42,11 +52,14 @@ export default function Header() {
   }, [])
 
   const close = () => setMenuOpen(false)
+  const isHidden = hidden && !menuOpen
 
   return (
     <header
       role="banner"
-      className="pointer-events-none fixed inset-x-0 top-0 z-50 px-3 pt-2.5 sm:px-6 sm:pt-3.5 transition-all duration-300"
+      className={`pointer-events-none fixed inset-x-0 top-0 z-50 px-3 pt-2.5 sm:px-6 sm:pt-3.5 transition-all duration-300 ease-out ${
+        isHidden ? '-translate-y-28 opacity-0' : 'translate-y-0 opacity-100'
+      }`}
     >
       <div className="relative mx-auto max-w-6xl">
         {/* Top-Right Playful Yellow Spark Rays (outside pill, matching mockup) */}
@@ -65,7 +78,9 @@ export default function Header() {
         </svg>
 
         <div
-          className={`pointer-events-auto relative flex h-14 sm:h-[68px] items-center justify-between overflow-hidden rounded-full border border-slate-100 bg-white/95 px-3 sm:px-5 backdrop-blur-md transition-all duration-300 ${
+          className={`${
+            isHidden ? 'pointer-events-none' : 'pointer-events-auto'
+          } relative flex h-14 sm:h-[68px] items-center justify-between overflow-hidden rounded-full border border-slate-100 bg-white/95 px-3 sm:px-5 backdrop-blur-md transition-all duration-300 ${
             scrolled
               ? 'shadow-[0_14px_38px_rgba(15,23,42,0.12)]'
               : 'shadow-[0_8px_30px_rgba(15,23,42,0.08)]'
@@ -89,7 +104,7 @@ export default function Header() {
             >
               <img
                 src="/assets/logo/logo.png"
-                alt="NexGen Learning Hub"
+                alt="NexGen Playway & Academy"
                 className="h-9 sm:h-11 w-auto"
                 width={44}
                 height={44}
@@ -98,11 +113,8 @@ export default function Header() {
                 <p className="font-baloo text-sm font-extrabold text-navy leading-none sm:text-base">
                   NexGen
                 </p>
-                <p className="text-[11px] sm:text-xs font-bold text-slate-600 leading-none mt-0.5">
-                  Learning Hub
-                </p>
-                <p className="text-[10px] font-black tracking-widest text-[#3B82F6] leading-none mt-0.5">
-                  PLAYWAY
+                <p className="text-[11px] sm:text-xs font-extrabold tracking-wide text-[#3B82F6] leading-none mt-0.5">
+                  Playway &amp; Academy
                 </p>
               </div>
             </a>

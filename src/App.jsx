@@ -3,6 +3,7 @@ import Header from './components/layout/Header.jsx'
 import HeroSection from './components/sections/HeroSection.jsx'
 import FlyingButterfly from './components/ui/FlyingButterfly.jsx'
 import Preloader from './components/ui/Preloader.jsx'
+import CaterpillarScrollbar from './components/ui/CaterpillarScrollbar.jsx'
 import { MessageCircle, Phone } from 'lucide-react'
 
 const Footer = lazy(() => import('./components/layout/Footer.jsx'))
@@ -36,6 +37,9 @@ export default function App() {
 
       {/* Playful animated butterfly */}
       <FlyingButterfly />
+
+      {/* Custom playful caterpillar & vine scrollbar (desktop) */}
+      <CaterpillarScrollbar />
 
       <Header />
 

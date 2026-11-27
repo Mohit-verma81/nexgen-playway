@@ -117,16 +117,16 @@ export default function Footer() {
               <div className="inline-block rounded-2xl bg-white p-3 shadow-md ring-2 ring-sunshine/40">
                 <img
                   src="/assets/logo/logo.png"
-                  alt="NexGen Learning Hub Playway"
+                  alt="NexGen Playway & Academy"
                   className="h-14 sm:h-16 w-auto object-contain"
                 />
               </div>
 
               <h3 className="mt-4 font-fredoka text-xl font-bold text-white tracking-wide">
-                NexGen Learning Hub
+                NexGen
               </h3>
-              <p className="text-[11px] font-black uppercase tracking-[0.2em] text-sunshine">
-                P L A Y W A Y
+              <p className="text-[11px] font-black uppercase tracking-[0.18em] text-sunshine">
+                Playway &amp; Academy
               </p>
               
               <p className="mt-2 text-xs leading-relaxed text-slate-300 max-w-sm">
@@ -245,7 +245,7 @@ export default function Footer() {
           {/* ================= BOTTOM COPYRIGHT BAR ================= */}
           <div className="mt-8 flex flex-col items-center justify-between gap-4 text-center sm:flex-row text-xs text-slate-400">
             <p>
-              Copyright © 2026 by <span className="font-bold text-white">NexGen Learning Hub Playway</span>. All Rights Reserved.
+              Copyright © 2026 by <span className="font-bold text-white">NexGen Playway &amp; Academy</span>. All Rights Reserved.
             </p>
             <p className="flex items-center gap-1.5">
               Made with <Heart size={12} className="text-rose-500 fill-rose-500" /> for joyful young learners.

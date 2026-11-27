@@ -64,7 +64,7 @@ export default function ContactSection() {
           {/* Right: Map */}
           <div className="overflow-hidden rounded-3xl shadow-sm ring-1 ring-black/5">
             <iframe
-              title="Map of NexGen Learning Hub Playway"
+              title="Map of NexGen Playway & Academy"
               loading="lazy"
               src={CONTACT.mapSrc}
               className="h-72 w-full lg:h-80"

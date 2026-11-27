@@ -291,7 +291,7 @@ export const GALLERY_IMAGES = [
     category: 'Activity',
   },
   {
-    src: '/assets/event/playway-activities/campus-activity-18.jpg',
+    src: '/assets/event/playway-activities/campus-activity-19.jpg',
     alt: 'Group activity and friendship moments',
     title: 'Bonding & Social Growth',
     category: 'Activity',
