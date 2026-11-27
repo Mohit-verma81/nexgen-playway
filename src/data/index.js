@@ -13,12 +13,12 @@ export const CONTACT = {
   phone1Tel: 'tel:+919914300819',
   phone2Tel: 'tel:+919463150819',
   whatsappLink: 'https://wa.me/919914300819?text=Hi%2C%20I%20want%20to%20know%20about%20Playway%20admission.',
-  directionsLink: 'https://www.google.com/maps/search/?api=1&query=NexGen+Learning+Hub+Motia+Khan+Mandi+Gobindgarh',
-  address: 'House No. 7, Sector 20 B, Motia Khan, Mandi Gobindgarh',
-  instagram: 'https://www.instagram.com/nexgenhub123',
-  instagramHandle: '@nexgenhub123',
+  directionsLink: 'https://maps.app.goo.gl/9rc3h27E93yb8E4m7',
+  address: 'H No 7, Sec 20 B, Motia Khan, Mandi Gobindgarh, Punjab 147301',
+  instagram: 'https://www.instagram.com/nexgenplayway?cnvx=ZDNlZDc0MzIxNw==',
+  instagramHandle: '@nexgenplayway',
   founder: 'Sonia Arya',
-  mapSrc: 'https://maps.google.com/maps?q=Motia%20Khan%20Sector%2020B%20Mandi%20Gobindgarh&output=embed',
+  mapSrc: 'https://maps.google.com/maps?q=M76R%2BH9%20Mandi%20Gobindgarh%2C%20Punjab&output=embed',
 }
 
 export const PROGRAMS = [

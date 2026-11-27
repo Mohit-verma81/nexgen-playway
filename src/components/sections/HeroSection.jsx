@@ -226,7 +226,7 @@ export default function HeroSection() {
                 }}
               >
                 <img
-                  src="/assets/hero-toddler-photo.jpg"
+                  src="/assets/hero-toddler-photo.png"
                   alt="Happy child playing with teddy bear and colourful rings at NexGen Playway"
                   className="h-full w-full object-cover object-center"
                   loading="eager"
